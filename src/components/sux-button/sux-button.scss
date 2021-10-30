@@ -1,0 +1,11 @@
+// @import '../../assets/tokens/base/base.scss';
+@import '../../assets/tokens/components/button';
+:host {
+  display: block;
+  padding: 16px;
+  border: solid 2px rgb(11, 55, 121);
+  background-color: $button-background-color;
+}
+.disabled {
+  background-color: burlywood;
+}
