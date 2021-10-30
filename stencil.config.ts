@@ -6,7 +6,7 @@ export const config: Config = {
   plugins: [
     sass({
       injectGlobalPaths: [
-        // './src/assets/tokens/base/base.scss'
+        './src/assets/tokens/base/_base.scss'
       ]
     })
     // sass()

@@ -15,7 +15,8 @@ Buttons allow users to trigger actions.
 export const Default = (args) => {
     return html`
         <div style="padding: 10%; display: flex; justify-content: center;">
-            <sux-button iconEnd>Don't show me</sux-button>
+            <sux-button 
+            icon-start="${args.iconStart}">Don't show me</sux-button>
         </div>
     `
 }
