@@ -1,0 +1,128 @@
+{
+  "timestamp": "2021-10-30T17:24:01",
+  "compiler": {
+    "name": "@stencil/core",
+    "version": "2.9.0",
+    "typescriptVersion": "4.2.3"
+  },
+  "components": [
+    {
+      "filePath": "./src/components/sux-button/sux-button.tsx",
+      "encapsulation": "shadow",
+      "tag": "sux-button",
+      "readme": "# sux-button\n\n\n",
+      "docs": "",
+      "docsTags": [],
+      "usage": {},
+      "props": [
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "disabled",
+          "reflectToAttr": true,
+          "docs": "is the button disabled",
+          "docsTags": [],
+          "default": "false",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": true,
+          "required": false
+        },
+        {
+          "name": "iconEnd",
+          "type": "string",
+          "mutable": false,
+          "attr": "icon-end",
+          "reflectToAttr": true,
+          "docs": "optionally pass an icon to display at the end of a button - accepts ui icon names",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": true,
+          "required": false
+        },
+        {
+          "name": "iconStart",
+          "type": "string",
+          "mutable": false,
+          "attr": "icon-start",
+          "reflectToAttr": true,
+          "docs": "optionally pass an icon to display at the start of a button - accepts ui icon names",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": true,
+          "required": false
+        },
+        {
+          "name": "isLoading",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "is-loading",
+          "reflectToAttr": true,
+          "docs": "optionally add a sux-loader component to the button, disabling interaction.",
+          "docsTags": [],
+          "default": "false",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": true,
+          "required": false
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "mutable": false,
+          "attr": "name",
+          "reflectToAttr": false,
+          "docs": "The name attribute to apply to the button",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": true,
+          "required": false
+        },
+        {
+          "name": "type",
+          "type": "string",
+          "mutable": true,
+          "attr": "type",
+          "reflectToAttr": false,
+          "docs": "The type attribute to apply to the button",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": true,
+          "required": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "listeners": [],
+      "styles": [],
+      "slots": [],
+      "parts": [],
+      "dependents": [],
+      "dependencies": [],
+      "dependencyGraph": {}
+    }
+  ]
+}

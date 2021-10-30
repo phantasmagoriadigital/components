@@ -1,0 +1,32 @@
+import { extractArgTypes } from '@pxtrn/storybook-addon-docs-stencil'
+import { Meta, Story, Canvas, ArgsTable } from '@storybook/addon-docs/blocks'
+import { html, render } from 'lit-html'
+
+<Meta
+    title="Components/Button"
+    component="sux-button"
+    argTypes={extractArgTypes('sux-button')}
+/>
+
+# Button
+
+Buttons allow users to trigger actions.
+
+export const Default = (args) => {
+    return html`
+        <div style="padding: 10%; display: flex; justify-content: center;">
+            <sux-button
+            >
+                Button
+            </sux-button>
+        </div>
+    `
+}
+
+<Canvas>
+    <Story name="Default">{Default.bind()}</Story>
+</Canvas>
+
+## API
+
+<ArgsTable of="sux-button" />

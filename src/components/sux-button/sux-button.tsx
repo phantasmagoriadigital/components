@@ -22,8 +22,8 @@ export class SuxButton {
   /** The type attribute to apply to the button  */
   @Prop({ mutable: true }) type?: string;
 
-   /** is the button disabled  */
-   @Prop({ reflect: true }) disabled?: boolean = false;
+  /** is the button disabled  */
+  @Prop({ reflect: true }) disabled?: boolean = false;
 
   // render() {
   //   return (
@@ -43,21 +43,21 @@ export class SuxButton {
         loader
       </div>
     );
-    
+
     /** Icon Start (left side)  */
     const iconStartEl = (
       <div class={'iconStart'}>
         iconStart
       </div>
     );
-    
+
     /** Content element with slot  */
     const contentEl = (
       <span class={'content'}>
         contentEl: <slot />
       </span>
     );
-    
+
     /** Icon End (right side) */
     const iconEndEl = (
       <div class={'iconStart'}>
@@ -67,9 +67,9 @@ export class SuxButton {
 
     return (
       <Tag
-      class={
-        this.disabled ? 'disabled' : null
-      }
+        class={
+          this.disabled ? 'disabled' : null
+        }
       >
         {this.isLoading ? loaderEl : null}
         {this.iconStart ? iconStartEl : null}
@@ -85,6 +85,6 @@ export class SuxButton {
   //
   //--------------------------------------------------------------------------
 
-  /** determine if there is slotted content for styling purposes */
+  /** determine if there is slotted content */
   // @State() private hasContent = false;
 }

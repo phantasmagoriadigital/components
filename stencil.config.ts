@@ -19,8 +19,15 @@ export const config: Config = {
     {
       type: 'dist-custom-elements-bundle',
     },
+    // {
+    //   type: 'dist-custom-elements',
+    // },
     {
       type: 'docs-readme',
+    },
+    {
+      type: 'docs-json',
+      file: './docs.json'
     },
     {
       type: 'www',
