@@ -2,11 +2,11 @@ import { Config } from '@stencil/core';
 import { sass } from '@stencil/sass';
 
 export const config: Config = {
-  namespace: 'substrate-rnd',
+  namespace: 'substrate-ds',
   plugins: [
     sass({
       injectGlobalPaths: [
-        'src/assets/tokens/base/base'
+        // './src/assets/tokens/base/base.scss'
       ]
     })
     // sass()

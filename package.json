@@ -9,7 +9,7 @@
   "types": "dist/custom-elements/index.d.ts",
   "collection": "dist/collection/collection-manifest.json",
   "collection:main": "dist/collection/index.js",
-  "unpkg": "dist/substrate-rnd/substrate-rnd.esm.js",
+  "unpkg": "dist/substrate-ds/substrate-ds.esm.js",
   "files": [
     "dist/",
     "loader/"
@@ -20,8 +20,8 @@
     "test": "stencil test --spec --e2e",
     "test.watch": "stencil test --spec --e2e --watchAll",
     "generate": "stencil generate",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "storybook": "start-storybook -p 6006 -s ./dist",
+    "build-storybook": "build-storybook -s ./dist"
   },
   "dependencies": {
     "@stencil/core": "^2.7.0"
