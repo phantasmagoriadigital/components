@@ -40,7 +40,7 @@ const Tag = this.tag;
     /** Content element with slot  */
     const contentEl = (
       <span class={'content'}>
-        contentEl: <slot />
+         <slot />
       </span>
     );
     const { size, variant, weight } = this
