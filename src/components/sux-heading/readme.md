@@ -10,7 +10,7 @@
 | Property  | Attribute | Description     | Type                                           | Default     |
 | --------- | --------- | --------------- | ---------------------------------------------- | ----------- |
 | `size`    | `size`    | Heading  size   | `"l" \| "m" \| "s" \| "xl" \| "xs" \| "xxl"`   | `"m"`       |
-| `tag`     | `tag`     | Overwrite Tag   | `string`                                       | `""`        |
+| `tag`     | `tag`     | Overwrite Tag   | `string`                                       | `"h1"`      |
 | `variant` | `variant` | Heading variant | `"primary" \| "secondary"`                     | `"primary"` |
 | `weight`  | `weight`  | Heading weight  | `"bold" \| "light" \| "regular" \| "semibold"` | `"regular"` |
 

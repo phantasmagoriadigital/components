@@ -15,14 +15,18 @@ export const parameters = {
       color: /(background|color)$/i,
       date: /Date$/,
     },
+    expanded: true
   },
-  // docs: {
-  //   extractArgTypes,
-  //   extractComponentDescription,
-  // },
+  docs: {
+    extractArgTypes,
+    extractComponentDescription,
+  },
   hideNoControlsWarning: true,
   docs: {
     extractArgTypes,
     extractComponentDescription,
-  }
+  },
+  backgrounds: {
+    default: 'light'
+  },
 }
