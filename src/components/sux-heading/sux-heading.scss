@@ -1,0 +1,42 @@
+@import '../../assets/tokens/components/_heading.scss';
+:host {
+  display: block;
+}
+.sux-heading {
+  &--primary {
+    font-family: $heading-primary-font-family;
+  }
+  &--secondary {
+    font-family: $heading-secondary-font-family;
+  }
+  &--xs {
+    font-size: $heading-xs-text-size;
+  }
+  &--s {
+    font-size: $heading-s-text-size;
+  }
+  &--m {
+    font-size: $heading-m-text-size;
+  }
+  &--l {
+    font-size: $heading-l-text-size;
+  }
+  &--xl {
+    font-size: $heading-xl-text-size;
+  }
+  &--xxl {
+    font-size: $heading-xxl-text-size;
+  }
+  &--light {
+    font-weight: $heading-light-font-weight;
+  }
+  &--regular {
+    font-weight: $heading-regular-font-weight;
+  }
+  &--semibold {
+    font-weight: $heading-semi-bold-font-weight;
+  }
+  &--bold {
+    font-weight: $heading-bold-font-weight;
+  }
+}

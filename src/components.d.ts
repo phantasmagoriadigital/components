@@ -6,6 +6,7 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 import { ButtonSize, ButtonVariant } from "./components/sux-button/interfaces";
+import { HeadingSize, HeadingVariant, HeadingWeight } from "./components/sux-heading/interfaces";
 export namespace Components {
     interface SuxButton {
         /**
@@ -49,6 +50,24 @@ export namespace Components {
          */
         "variant": ButtonVariant;
     }
+    interface SuxHeading {
+        /**
+          * Heading  size
+         */
+        "size": HeadingSize;
+        /**
+          * Overwrite Tag
+         */
+        "tag": string;
+        /**
+          * Heading variant
+         */
+        "variant": HeadingVariant;
+        /**
+          * Heading weight
+         */
+        "weight": HeadingWeight;
+    }
 }
 declare global {
     interface HTMLSuxButtonElement extends Components.SuxButton, HTMLStencilElement {
@@ -57,8 +76,15 @@ declare global {
         prototype: HTMLSuxButtonElement;
         new (): HTMLSuxButtonElement;
     };
+    interface HTMLSuxHeadingElement extends Components.SuxHeading, HTMLStencilElement {
+    }
+    var HTMLSuxHeadingElement: {
+        prototype: HTMLSuxHeadingElement;
+        new (): HTMLSuxHeadingElement;
+    };
     interface HTMLElementTagNameMap {
         "sux-button": HTMLSuxButtonElement;
+        "sux-heading": HTMLSuxHeadingElement;
     }
 }
 declare namespace LocalJSX {
@@ -104,8 +130,27 @@ declare namespace LocalJSX {
          */
         "variant"?: ButtonVariant;
     }
+    interface SuxHeading {
+        /**
+          * Heading  size
+         */
+        "size"?: HeadingSize;
+        /**
+          * Overwrite Tag
+         */
+        "tag"?: string;
+        /**
+          * Heading variant
+         */
+        "variant"?: HeadingVariant;
+        /**
+          * Heading weight
+         */
+        "weight"?: HeadingWeight;
+    }
     interface IntrinsicElements {
         "sux-button": SuxButton;
+        "sux-heading": SuxHeading;
     }
 }
 export { LocalJSX as JSX };
@@ -113,6 +158,7 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "sux-button": LocalJSX.SuxButton & JSXBase.HTMLAttributes<HTMLSuxButtonElement>;
+            "sux-heading": LocalJSX.SuxHeading & JSXBase.HTMLAttributes<HTMLSuxHeadingElement>;
         }
     }
 }
