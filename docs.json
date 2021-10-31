@@ -1,5 +1,5 @@
 {
-  "timestamp": "2021-10-31T10:28:48",
+  "timestamp": "2021-10-31T12:23:00",
   "compiler": {
     "name": "@stencil/core",
     "version": "2.9.0",
@@ -284,31 +284,35 @@
           "reflectToAttr": true,
           "docs": "Overwrite Tag",
           "docsTags": [],
-          "default": "\"\"",
+          "default": "null",
           "values": [
             {
               "type": "string"
             }
           ],
-          "optional": false,
+          "optional": true,
           "required": false
         },
         {
           "name": "variant",
-          "type": "\"primary\" | \"secondary\"",
+          "type": "\"mono\" | \"sans-serif\" | \"serif\"",
           "mutable": false,
           "attr": "variant",
           "reflectToAttr": true,
           "docs": "Heading variant",
           "docsTags": [],
-          "default": "\"primary\"",
+          "default": "\"serif\"",
           "values": [
             {
-              "value": "primary",
+              "value": "mono",
               "type": "string"
             },
             {
-              "value": "secondary",
+              "value": "sans-serif",
+              "type": "string"
+            },
+            {
+              "value": "serif",
               "type": "string"
             }
           ],

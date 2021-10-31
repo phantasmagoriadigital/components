@@ -58,7 +58,7 @@ export namespace Components {
         /**
           * Overwrite Tag
          */
-        "tag": string;
+        "tag"?: string;
         /**
           * Heading variant
          */
