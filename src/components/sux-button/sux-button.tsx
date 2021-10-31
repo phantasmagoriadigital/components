@@ -84,7 +84,7 @@ export class SuxButton {
     /** Content element with slot  */
     const contentEl = (
       <span class={'content'}>
-        contentEl: <slot />
+        <slot />
       </span>
     );
 

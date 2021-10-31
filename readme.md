@@ -31,7 +31,7 @@ Substrate is not ready for use in production. Currently you will need to buidl a
 
 ## Contributing
 
-We welcome contributions to this project. See [CONTRIBUTING.md](./CONTRIBUTING.md) for an overview of contribution guidelines.
+We welcome contributions to this project. See [contributing.md](./contributing.md) for an overview of contribution guidelines.
 
 ## License
 
