@@ -1,6 +1,6 @@
 
 // Do not edit directly
-// Generated on Sat, 30 Oct 2021 19:45:26 GMT
+// Generated on Sun, 31 Oct 2021 08:25:40 GMT
 
 $button-extra-large-padding-bottom: $space-250;
 $button-extra-large-padding-top: $space-250;
@@ -22,12 +22,30 @@ $button-small-padding-top: $space-100;
 $button-small-padding-right: $space-200;
 $button-small-padding-left: $space-200;
 $button-small-text-size: $font-size-3;
-$button-secondary-color: $color-blue;
-$button-secondary-background-color: $color-blue;
-$button-primary-border-color: $color-blue;
-$button-primary-color: $color-red;
-$button-primary-background-color: $color-blue;
+$button-disabled-border-color: $color-neutral-300;
+$button-disabled-text-color: $color-neutral-500;
+$button-disabled-background-color: $color-neutral-300;
+$button-negative-text-color-hover: $color-secondary-dark-15;
+$button-negative-background-color-hover: $color-secondary-100;
+$button-negative-border-color: $color-secondary-100;
+$button-negative-text-color: $color-secondary-100;
+$button-negative-background-color: $color-secondary-100;
+$button-secondary-text-color-hover: $color-neutral-700;
+$button-secondary-background-color-hover: $color-neutral-500;
+$button-secondary-border-color: $color-neutral-500;
+$button-secondary-text-color: $color-neutral-500;
+$button-secondary-background-color: $color-secondary-100;
+$button-primary-text-color-hover: $color-neutral-800;
+$button-primary-background-color-hover: $color-neutral-700;
+$button-primary-border-color: $color-neutral-700;
+$button-primary-text-color: $color-neutral-700;
+$button-primary-background-color: $color-primary-100;
+$button-cta-text-color-hover: $color-white;
+$button-cta-background-color-hover: $color-primary-dark-15;
+$button-cta-border-color: $color-primary-100;
+$button-cta-text-color: $color-white;
+$button-cta-background-color: $color-primary-100;
 $button-font-weight: $font-weight-bold;
 $button-font-family: $font-family-primary;
 $button-border-width: $border-width-1;
-$button-border-radius: $border-radius-2;
+$button-border-radius: $border-radius-4;

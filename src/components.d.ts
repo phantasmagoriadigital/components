@@ -5,6 +5,7 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
+import { ButtonSize, ButtonVariant } from "./components/sux-button/interfaces";
 export namespace Components {
     interface SuxButton {
         /**
@@ -24,13 +25,29 @@ export namespace Components {
          */
         "isLoading"?: boolean;
         /**
+          * Applies to the aria-label attribute on the button or hyperlink
+         */
+        "label": string;
+        /**
           * The name attribute to apply to the button
          */
         "name"?: string;
         /**
+          * Is quiet makes the button appear with least prominence.
+         */
+        "quiet": boolean;
+        /**
+          * specify the size of the button, defaults to m
+         */
+        "size": ButtonSize;
+        /**
           * The type attribute to apply to the button
          */
         "type"?: string;
+        /**
+          * specify the appearance style of the button, defaults to solid.
+         */
+        "variant": ButtonVariant;
     }
 }
 declare global {
@@ -63,13 +80,29 @@ declare namespace LocalJSX {
          */
         "isLoading"?: boolean;
         /**
+          * Applies to the aria-label attribute on the button or hyperlink
+         */
+        "label"?: string;
+        /**
           * The name attribute to apply to the button
          */
         "name"?: string;
         /**
+          * Is quiet makes the button appear with least prominence.
+         */
+        "quiet"?: boolean;
+        /**
+          * specify the size of the button, defaults to m
+         */
+        "size"?: ButtonSize;
+        /**
           * The type attribute to apply to the button
          */
         "type"?: string;
+        /**
+          * specify the appearance style of the button, defaults to solid.
+         */
+        "variant"?: ButtonVariant;
     }
     interface IntrinsicElements {
         "sux-button": SuxButton;

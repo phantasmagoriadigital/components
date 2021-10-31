@@ -16,14 +16,18 @@ export const Default = (args) => {
     return html`
         <div style="padding: 10%; display: flex; justify-content: center;">
             <sux-button 
-            ?icon-start="${args.iconStart}"
-            ?icon-end="${args.iconEnd}"
-            ?disabled="${args.disabled}"
-            ?is-loading="${args.isLoading}"
-            ?name="${args.name}"
-            ?type="${args.type}"
+            .label="${args.label}"
+            .name="${args.name}"
+            .type="${args.type}"
+            .variant="${args.variant}"
+            .size="${args.size}"
+            .quiet="${args.quiet}"
+            .disabled="${args.disabled}"
+            .icon-start="${args.iconStart}"
+            .icon-end="${args.iconEnd}"
+            .is-loading="${args.isLoading}"
             >
-                Don't show me
+                Button Label
             </sux-button>
         </div>
     `

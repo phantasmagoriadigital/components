@@ -1,5 +1,5 @@
 {
-  "timestamp": "2021-10-31T07:21:00",
+  "timestamp": "2021-10-31T08:36:30",
   "compiler": {
     "name": "@stencil/core",
     "version": "2.9.0",
@@ -92,11 +92,28 @@
           "required": false
         },
         {
+          "name": "label",
+          "type": "string",
+          "mutable": false,
+          "attr": "label",
+          "reflectToAttr": true,
+          "docs": "Applies to the aria-label attribute on the button or hyperlink",
+          "docsTags": [],
+          "default": "'Button label'",
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
           "name": "name",
           "type": "string",
           "mutable": false,
           "attr": "name",
-          "reflectToAttr": false,
+          "reflectToAttr": true,
           "docs": "The name attribute to apply to the button",
           "docsTags": [],
           "default": "'button-'",
@@ -106,6 +123,53 @@
             }
           ],
           "optional": true,
+          "required": false
+        },
+        {
+          "name": "quiet",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "quiet",
+          "reflectToAttr": true,
+          "docs": "Is quiet makes the button appear with least prominence.",
+          "docsTags": [],
+          "default": "false",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "size",
+          "type": "\"l\" | \"m\" | \"s\" | \"xl\"",
+          "mutable": false,
+          "attr": "size",
+          "reflectToAttr": true,
+          "docs": "specify the size of the button, defaults to m",
+          "docsTags": [],
+          "default": "\"m\"",
+          "values": [
+            {
+              "value": "l",
+              "type": "string"
+            },
+            {
+              "value": "m",
+              "type": "string"
+            },
+            {
+              "value": "s",
+              "type": "string"
+            },
+            {
+              "value": "xl",
+              "type": "string"
+            }
+          ],
+          "optional": false,
           "required": false
         },
         {
@@ -122,6 +186,36 @@
             }
           ],
           "optional": true,
+          "required": false
+        },
+        {
+          "name": "variant",
+          "type": "\"cta\" | \"negative\" | \"primary\" | \"secondary\"",
+          "mutable": false,
+          "attr": "variant",
+          "reflectToAttr": true,
+          "docs": "specify the appearance style of the button, defaults to solid.",
+          "docsTags": [],
+          "default": "\"cta\"",
+          "values": [
+            {
+              "value": "cta",
+              "type": "string"
+            },
+            {
+              "value": "negative",
+              "type": "string"
+            },
+            {
+              "value": "primary",
+              "type": "string"
+            },
+            {
+              "value": "secondary",
+              "type": "string"
+            }
+          ],
+          "optional": false,
           "required": false
         }
       ],
