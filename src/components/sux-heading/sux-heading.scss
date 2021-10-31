@@ -3,11 +3,16 @@
   display: block;
 }
 .sux-heading {
-  &--primary {
-    font-family: $heading-primary-font-family;
+  line-height: 130%;
+
+  &--serif {
+    font-family: $heading-serif-font-family;
   }
-  &--secondary {
-    font-family: $heading-secondary-font-family;
+  &--sans-serif {
+    font-family: $heading-sans-serif-font-family;
+  }
+  &--mono {
+    font-family: $heading-mono-font-family;
   }
   &--xs {
     font-size: $heading-xs-text-size;
