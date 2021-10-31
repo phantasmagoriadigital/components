@@ -14,11 +14,11 @@ export namespace Components {
         /**
           * optionally pass an icon to display at the end of a button - accepts ui icon names
          */
-        "iconEnd"?: string;
+        "iconEnd"?: 'icon-close' | 'icon-open' | 'icon-info';
         /**
           * optionally pass an icon to display at the start of a button - accepts ui icon names
          */
-        "iconStart"?: string;
+        "iconStart"?: boolean;
         /**
           * optionally add a sux-loader component to the button, disabling interaction.
          */
@@ -53,11 +53,11 @@ declare namespace LocalJSX {
         /**
           * optionally pass an icon to display at the end of a button - accepts ui icon names
          */
-        "iconEnd"?: string;
+        "iconEnd"?: 'icon-close' | 'icon-open' | 'icon-info';
         /**
           * optionally pass an icon to display at the start of a button - accepts ui icon names
          */
-        "iconStart"?: string;
+        "iconStart"?: boolean;
         /**
           * optionally add a sux-loader component to the button, disabling interaction.
          */

@@ -3,7 +3,7 @@ import { Meta, Story, Canvas, ArgsTable } from '@storybook/addon-docs/blocks'
 import { html, render } from 'lit-html'
 
 <Meta
-    title="Components/Button"
+    title="Controls/Button"
     component="sux-button"
     argTypes={extractArgTypes('sux-button')}
 />
@@ -16,7 +16,15 @@ export const Default = (args) => {
     return html`
         <div style="padding: 10%; display: flex; justify-content: center;">
             <sux-button 
-            icon-start="${args.iconStart}">Don't show me</sux-button>
+            ?icon-start="${args.iconStart}"
+            ?icon-end="${args.iconEnd}"
+            ?disabled="${args.disabled}"
+            ?is-loading="${args.isLoading}"
+            ?name="${args.name}"
+            ?type="${args.type}"
+            >
+                Don't show me
+            </sux-button>
         </div>
     `
 }
@@ -28,3 +36,31 @@ export const Default = (args) => {
 ## API
 
 <ArgsTable of="sux-button" />
+
+## Variants
+
+### With Slotted Icon
+
+The component auto-imports the default Astro Icon Web Component for icons, if you specify one. Also, you can use [Slots](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_templates_and_slots#Adding_flexibility_with_slots) to define icons within buttons. This method is best if you need to override the default icon library SVG file.
+
+export const slottedIconButton = (args) => {
+    const { size, disabled, secondary, iconOnly } = args
+    return html`
+        <div style="padding: 10%; display: flex; justify-content: center;">
+            <rux-button
+                ?disabled="${args.disabled}"
+                ?icon-only="${args.iconOnly}"
+                ?secondary="${args.secondary}"
+                .size="${args.size}"
+                .icon="${args.icon}"
+            >
+                <rux-icon icon="palette"></rux-icon>
+                Slotted icon button
+            </rux-button>
+        </div>
+    `
+}
+
+<Canvas>
+    <Story name="With Slotted Icon">{slottedIconButton.bind()}</Story>
+</Canvas>

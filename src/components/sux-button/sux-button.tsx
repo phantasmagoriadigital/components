@@ -8,16 +8,16 @@ import { Component, h, Prop } from '@stencil/core';
 export class SuxButton {
 
   /** optionally pass an icon to display at the start of a button - accepts ui icon names  */
-  @Prop({ reflect: true }) iconStart?: string;
+  @Prop({ reflect: true }) iconStart?: boolean = false;
 
   /** optionally pass an icon to display at the end of a button - accepts ui icon names  */
-  @Prop({ reflect: true }) iconEnd?: string;
+  @Prop({ reflect: false }) iconEnd?: 'icon-close' | 'icon-open' | 'icon-info';
 
   /** optionally add a sux-loader component to the button, disabling interaction.  */
   @Prop({ reflect: true }) isLoading?: boolean = false;
 
   /** The name attribute to apply to the button  */
-  @Prop() name?: string;
+  @Prop() name?: string = 'button-';
 
   /** The type attribute to apply to the button  */
   @Prop({ mutable: true }) type?: string;

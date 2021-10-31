@@ -1,0 +1,21 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+
+<Meta title="Substrate DS/Theming" />
+
+# Theming
+
+Substrate DS supports a dark theme along with the original, default light theme.
+
+## Enabling the Dark Theme
+
+To enable the dark theme, simply add the `dark-theme` CSS class to your body element. This will apply the dark theme globally.
+
+## Mixed Use
+
+Individual sections or components can override their inherited theme on a case-by-case basis, enabling the render of an element with a light theme in an predominantly dark-themed interface and vice versa.
+
+You can also apply the `light-theme` class on individual components. For example:
+
+```html
+<sux-button class="light-theme">Submit</rux-button>
+```

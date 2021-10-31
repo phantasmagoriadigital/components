@@ -1,5 +1,5 @@
 {
-  "timestamp": "2021-10-30T19:14:22",
+  "timestamp": "2021-10-31T07:21:00",
   "compiler": {
     "name": "@stencil/core",
     "version": "2.9.0",
@@ -34,14 +34,23 @@
         },
         {
           "name": "iconEnd",
-          "type": "string",
+          "type": "\"icon-close\" | \"icon-info\" | \"icon-open\"",
           "mutable": false,
           "attr": "icon-end",
-          "reflectToAttr": true,
+          "reflectToAttr": false,
           "docs": "optionally pass an icon to display at the end of a button - accepts ui icon names",
           "docsTags": [],
           "values": [
             {
+              "value": "icon-close",
+              "type": "string"
+            },
+            {
+              "value": "icon-info",
+              "type": "string"
+            },
+            {
+              "value": "icon-open",
               "type": "string"
             }
           ],
@@ -50,15 +59,16 @@
         },
         {
           "name": "iconStart",
-          "type": "string",
+          "type": "boolean",
           "mutable": false,
           "attr": "icon-start",
           "reflectToAttr": true,
           "docs": "optionally pass an icon to display at the start of a button - accepts ui icon names",
           "docsTags": [],
+          "default": "false",
           "values": [
             {
-              "type": "string"
+              "type": "boolean"
             }
           ],
           "optional": true,
@@ -89,6 +99,7 @@
           "reflectToAttr": false,
           "docs": "The name attribute to apply to the button",
           "docsTags": [],
+          "default": "'button-'",
           "values": [
             {
               "type": "string"

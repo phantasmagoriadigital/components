@@ -1,10 +1,10 @@
-// @import '../../assets/tokens/base/base';
-@import '../../assets/tokens/components/button';
+@import '../../assets/tokens/components/_button';
 :host {
   display: block;
   padding: 16px;
   border: solid 2px rgb(11, 55, 121);
-  background-color: $button-background-color;
+  background-color: $button-primary-background-color;
+  color: $button-primary-color;
 }
 .disabled {
   background-color: burlywood;

@@ -1,0 +1,31 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+
+<Meta title="Substrate DS/Customization" />
+
+# Customization
+
+If you're new to using Web Components, you'll quickly notice that the traditional way of styling elements with CSS doesn't work with Astro components.
+
+For example, this won't work:
+
+```html
+<sux-button style="background:red;">button</rux-button>
+```
+
+This is a feature of the Shadow DOM--outside styles cannot be applied to content inside the Shadow DOM. Shadow DOM gives us a clean, native way
+of encapsulating styles and protects your applications from breaking changes. Luckily, the Shadow DOM API provides two solutions
+to this problem: CSS Custom Properties and CSS Shadow Parts.
+
+## Using CSS Custom Properties
+
+Each component API has a set of CSS Custom Properties defined. These are variables that you can set externally that will reflect inside the Shadow DOM.
+CSS Custom Properties are a lot like SASS variables, with one significant difference--they can be swapped at run time and do not require any build process.
+These CSS Custom Properties will usually be mapped to some CSS property (color, font-size, border-radius, etc).
+
+If you wanted to change the Button background, you could use the `--button-background-color` custom property like so:
+
+```css
+sux-button {
+    --button-background-color: red;
+}
+```
