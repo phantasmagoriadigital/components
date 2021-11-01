@@ -1,6 +1,6 @@
 
 // Do not edit directly
-// Generated on Sun, 31 Oct 2021 12:15:45 GMT
+// Generated on Mon, 01 Nov 2021 09:44:05 GMT
 
 $space-800: 64px;
 $space-400: 32px;
@@ -40,6 +40,8 @@ $opacity-20: 20%;
 $opacity-15: 15%;
 $opacity-10: 10%;
 $opacity-5: 5%;
+$line-height-2: 150%;
+$line-height-1: 130%;
 $font-weight-bold: 700;
 $font-weight-light: 300;
 $font-weight-regular: 400;
@@ -69,9 +71,9 @@ $font-size-3: 14px;
 $font-size-2: 12px;
 $font-size-1: 10px;
 $font-size-0:  8px;
-$font-family-mono: IBM Plex Mono;
-$font-family-sans-serif: IBM Plex Sans;
-$font-family-serif: IBM Plex Serif;
+$font-family-mono: 'IBM Plex Mono', monospace;
+$font-family-sans-serif: 'IBM Plex Sans', sans-serif;
+$font-family-serif: 'IBM Plex Serif', serif;
 $color-white: #ffffff;
 $color-neutral-900: #323232;
 $color-neutral-800: #505050;
@@ -180,3 +182,13 @@ $button-font-weight: $font-weight-bold;
 $button-font-family: $font-family-serif;
 $button-border-width: $border-width-1;
 $button-border-radius: $border-radius-4;
+$body-xs-text-size: $font-size-2;
+$body-s-text-size: $font-size-3;
+$body-m-text-size: $font-size-4;
+$body-l-text-size: $font-size-5;
+$body-xl-text-size: $font-size-6;
+$body-xxl-text-size: $font-size-7;
+$body-xxxl-text-size: $font-size-8;
+$body-mono-font-family: $font-family-mono;
+$body-sans-serif-font-family: $font-family-sans-serif;
+$body-serif-font-family: $font-family-serif;
