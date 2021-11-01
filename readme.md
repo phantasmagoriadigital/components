@@ -2,31 +2,39 @@
 
 # Substrate Design System - Stencil Web Component Library
 
-This repository contains only the web component library. The Design tokens are managed using Style Dictionary [Github repository](https://github.com/phantasmagoriadigital/sux-style-dictionary)
+This repository contains only the web component library. Check out our [Substrate DS StoryBook](https://sb.nextds.design)
+
+The Design tokens are managed using Style Dictionary [Github repository](https://github.com/phantasmagoriadigital/sux-style-dictionary)
 
 ## Getting Started - DEVELOPMENT
 
 To get the project running:
 
 Install dependencies
+
 ```bash
 npm install
 ```
 
 To start development wit StencilJS & Storybook run `start-dev` in the terminal
+
 ```bash
 npm run start-dev
 ```
 
 Or run the Stencil and Storybook manually using:
+
 ```bash
 npm run build
 npm run start
 npm run storybook
 ```
+
 ## Getting Started - CONSUMING COMPONENTS
 
 Substrate is not ready for use in production. Currently you will need to buidl and manually integrate components to experiment.
+
+Check out our [Substrate DS StoryBook](https://sb.nextds.design) to see they components in their current state
 
 ## Contributing
 
