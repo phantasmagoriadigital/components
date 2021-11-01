@@ -1,0 +1,46 @@
+:host {
+  display: block;
+}
+
+.sux-heading {
+  line-height: 130%;
+}
+.sux-heading--serif {
+  font-family: "IBM Plex Serif", serif;
+}
+.sux-heading--sans-serif {
+  font-family: "IBM Plex Sans", sans-serif;
+}
+.sux-heading--mono {
+  font-family: "IBM Plex Mono", monospace;
+}
+.sux-heading--xs {
+  font-size: 24px;
+}
+.sux-heading--s {
+  font-size: 28px;
+}
+.sux-heading--m {
+  font-size: 32px;
+}
+.sux-heading--l {
+  font-size: 42px;
+}
+.sux-heading--xl {
+  font-size: 48px;
+}
+.sux-heading--xxl {
+  font-size: 64px;
+}
+.sux-heading--light {
+  font-weight: 300;
+}
+.sux-heading--regular {
+  font-weight: 400;
+}
+.sux-heading--semibold {
+  font-weight: 600;
+}
+.sux-heading--bold {
+  font-weight: 700;
+}

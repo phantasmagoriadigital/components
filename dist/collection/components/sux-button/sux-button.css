@@ -1,0 +1,94 @@
+:host {
+  display: block;
+}
+
+.sux-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  border-width: 1px;
+  border-style: solid;
+  background-color: transparent;
+  font-family: "IBM Plex Serif", serif;
+  font-weight: 700;
+}
+.sux-button:disabled {
+  cursor: not-allowed;
+  pointer-events: none;
+  color: #bbbbbb;
+  background-color: #ebebeb;
+  border-color: #ebebeb;
+}
+.sux-button:focus {
+  outline: 2px solid #343e97;
+  outline-offset: 2px;
+}
+.sux-button:hover:not([disabled]) {
+  cursor: pointer;
+}
+.sux-button--quiet {
+  border: none !important;
+}
+.sux-button--sizeS {
+  font-size: 14px;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+.sux-button--sizeM {
+  font-size: 16px;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+.sux-button--sizeL {
+  font-size: 18px;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+.sux-button--sizeXL {
+  font-size: 20px;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.sux-button--cta {
+  background-color: #0052cc;
+  color: #ffffff;
+  border-color: #0052cc;
+}
+.sux-button--cta:hover {
+  background-color: #003d99;
+  color: #ffffff;
+}
+.sux-button--primary {
+  color: #747474;
+  border-color: #747474;
+}
+.sux-button--primary:hover {
+  background-color: #747474;
+  color: #505050;
+}
+.sux-button--secondary {
+  color: #bbbbbb;
+  border-color: #bbbbbb;
+}
+.sux-button--secondary:hover {
+  background-color: #bbbbbb;
+  color: #747474;
+}
+.sux-button--negative {
+  color: #ff6246;
+  border-color: #ff6246;
+}
+.sux-button--negative:hover {
+  background-color: #ff6246;
+  color: #d9533c;
+}

@@ -1,0 +1,37 @@
+:host {
+  display: block;
+}
+
+.sux-body {
+  line-height: 150%;
+}
+.sux-body--serif {
+  font-family: "IBM Plex Serif", serif;
+}
+.sux-body--sans-serif {
+  font-family: "IBM Plex Sans", sans-serif;
+}
+.sux-body--mono {
+  font-family: "IBM Plex Mono", monospace;
+}
+.sux-body--xs {
+  font-size: 12px;
+}
+.sux-body--s {
+  font-size: 14px;
+}
+.sux-body--m {
+  font-size: 16px;
+}
+.sux-body--l {
+  font-size: 18px;
+}
+.sux-body--xl {
+  font-size: 20px;
+}
+.sux-body--xxl {
+  font-size: 22px;
+}
+.sux-body--xxxl {
+  font-size: 24px;
+}
