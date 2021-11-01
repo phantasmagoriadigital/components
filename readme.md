@@ -8,28 +8,29 @@ This repository contains only the web component library. The Design tokens are m
 
 To get the project running:
 
-Install dependencies & build
+Install dependencies
 ```bash
 npm install
+```
+
+To start development wit StencilJS & Storybook run `start-dev` in the terminal
+```bash
+npm run start-dev
+```
+
+Or run the Stencil and Storybook manually using:
+```bash
 npm run build
-```
-Start Stencil & Storybook, both need to run in a separate terminal
-
-terminal 1:
-```bash
 npm run start
-```
-
-terminal 2:
-```bash
 npm run storybook
 ```
-
 ## Getting Started - CONSUMING COMPONENTS
 
 Substrate is not ready for use in production. Currently you will need to buidl and manually integrate components to experiment.
 
 ## Contributing
+
+Check out our [roadmap](./roadmap.mdx) to see what we're working on and where we need help.
 
 We welcome contributions to this project. See [contributing.md](./contributing.md) for an overview of contribution guidelines.
 
