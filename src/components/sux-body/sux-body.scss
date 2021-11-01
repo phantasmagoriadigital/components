@@ -1,0 +1,38 @@
+@import '../../assets/tokens/components/_body.scss';
+:host {
+  display: block;
+}
+.sux-body {
+  line-height: 150%;
+
+  &--serif {
+    font-family: $body-serif-font-family;
+  }
+  &--sans-serif {
+    font-family: $body-sans-serif-font-family;
+  }
+  &--mono {
+    font-family: $body-mono-font-family;
+  }
+  &--xs {
+    font-size: $body-xs-text-size;
+  }
+  &--s {
+    font-size: $body-s-text-size;
+  }
+  &--m {
+    font-size: $body-m-text-size;
+  }
+  &--l {
+    font-size: $body-l-text-size;
+  }
+  &--xl {
+    font-size: $body-xl-text-size;
+  }
+  &--xxl {
+    font-size: $body-xxl-text-size;
+  }
+  &--xxxl {
+    font-size: $body-xxxl-text-size;
+  }
+}

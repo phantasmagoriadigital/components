@@ -5,9 +5,20 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
+import { BodySize, BodyVariant } from "./components/sux-body/interfaces";
 import { ButtonSize, ButtonVariant } from "./components/sux-button/interfaces";
 import { HeadingSize, HeadingVariant, HeadingWeight } from "./components/sux-heading/interfaces";
 export namespace Components {
+    interface SuxBody {
+        /**
+          * Size
+         */
+        "size": BodySize;
+        /**
+          * Variant
+         */
+        "variant": BodyVariant;
+    }
     interface SuxButton {
         /**
           * is the button disabled
@@ -70,6 +81,12 @@ export namespace Components {
     }
 }
 declare global {
+    interface HTMLSuxBodyElement extends Components.SuxBody, HTMLStencilElement {
+    }
+    var HTMLSuxBodyElement: {
+        prototype: HTMLSuxBodyElement;
+        new (): HTMLSuxBodyElement;
+    };
     interface HTMLSuxButtonElement extends Components.SuxButton, HTMLStencilElement {
     }
     var HTMLSuxButtonElement: {
@@ -83,11 +100,22 @@ declare global {
         new (): HTMLSuxHeadingElement;
     };
     interface HTMLElementTagNameMap {
+        "sux-body": HTMLSuxBodyElement;
         "sux-button": HTMLSuxButtonElement;
         "sux-heading": HTMLSuxHeadingElement;
     }
 }
 declare namespace LocalJSX {
+    interface SuxBody {
+        /**
+          * Size
+         */
+        "size"?: BodySize;
+        /**
+          * Variant
+         */
+        "variant"?: BodyVariant;
+    }
     interface SuxButton {
         /**
           * is the button disabled
@@ -149,6 +177,7 @@ declare namespace LocalJSX {
         "weight"?: HeadingWeight;
     }
     interface IntrinsicElements {
+        "sux-body": SuxBody;
         "sux-button": SuxButton;
         "sux-heading": SuxHeading;
     }
@@ -157,6 +186,7 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "sux-body": LocalJSX.SuxBody & JSXBase.HTMLAttributes<HTMLSuxBodyElement>;
             "sux-button": LocalJSX.SuxButton & JSXBase.HTMLAttributes<HTMLSuxButtonElement>;
             "sux-heading": LocalJSX.SuxHeading & JSXBase.HTMLAttributes<HTMLSuxHeadingElement>;
         }
