@@ -1,0 +1,35 @@
+@import '../../assets/tokens/components/_detail.scss';
+:host {
+  display: block;
+}
+.sux-detail {
+  line-height: 130%;
+
+  &--serif {
+    font-family: $detail-serif-font-family;
+  }
+  &--sans-serif {
+    font-family: $detail-sans-serif-font-family;
+  }
+  &--mono {
+    font-family: $detail-mono-font-family;
+  }
+  &--s {
+    font-size: $detail-s-text-size;
+  }
+  &--m {
+    font-size: $detail-m-text-size;
+  }
+  &--l {
+    font-size: $detail-l-text-size;
+  }
+  &--xl {
+    font-size: $detail-xl-text-size;
+  }
+  &--light {
+    font-weight: $detail-light-font-weight;
+  }
+  &--regular {
+    font-weight: $detail-regular-font-weight;
+  }
+}

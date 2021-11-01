@@ -1,1 +1,5 @@
 export const BODY_SIZE = "m"
+export const BODY_VARIANT = "serif"
+export const DETAIL_SIZE = "m"
+export const DETAIL_VARIANT = "sans-serif"
+export const DETAIL_WEIGHT = "regular"

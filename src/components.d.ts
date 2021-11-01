@@ -7,6 +7,7 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 import { BodySize, BodyVariant } from "./components/sux-body/interfaces";
 import { ButtonSize, ButtonVariant } from "./components/sux-button/interfaces";
+import { DetailSize, DetailVariant, DetailWeight } from "./components/sux-detail/interfaces";
 import { HeadingSize, HeadingVariant, HeadingWeight } from "./components/sux-heading/interfaces";
 export namespace Components {
     interface SuxBody {
@@ -61,6 +62,20 @@ export namespace Components {
          */
         "variant": ButtonVariant;
     }
+    interface SuxDetail {
+        /**
+          * Size
+         */
+        "size": DetailSize;
+        /**
+          * Variant
+         */
+        "variant": DetailVariant;
+        /**
+          * Variant
+         */
+        "weight": DetailWeight;
+    }
     interface SuxHeading {
         /**
           * Heading  size
@@ -93,6 +108,12 @@ declare global {
         prototype: HTMLSuxButtonElement;
         new (): HTMLSuxButtonElement;
     };
+    interface HTMLSuxDetailElement extends Components.SuxDetail, HTMLStencilElement {
+    }
+    var HTMLSuxDetailElement: {
+        prototype: HTMLSuxDetailElement;
+        new (): HTMLSuxDetailElement;
+    };
     interface HTMLSuxHeadingElement extends Components.SuxHeading, HTMLStencilElement {
     }
     var HTMLSuxHeadingElement: {
@@ -102,6 +123,7 @@ declare global {
     interface HTMLElementTagNameMap {
         "sux-body": HTMLSuxBodyElement;
         "sux-button": HTMLSuxButtonElement;
+        "sux-detail": HTMLSuxDetailElement;
         "sux-heading": HTMLSuxHeadingElement;
     }
 }
@@ -158,6 +180,20 @@ declare namespace LocalJSX {
          */
         "variant"?: ButtonVariant;
     }
+    interface SuxDetail {
+        /**
+          * Size
+         */
+        "size"?: DetailSize;
+        /**
+          * Variant
+         */
+        "variant"?: DetailVariant;
+        /**
+          * Variant
+         */
+        "weight"?: DetailWeight;
+    }
     interface SuxHeading {
         /**
           * Heading  size
@@ -179,6 +215,7 @@ declare namespace LocalJSX {
     interface IntrinsicElements {
         "sux-body": SuxBody;
         "sux-button": SuxButton;
+        "sux-detail": SuxDetail;
         "sux-heading": SuxHeading;
     }
 }
@@ -188,6 +225,7 @@ declare module "@stencil/core" {
         interface IntrinsicElements {
             "sux-body": LocalJSX.SuxBody & JSXBase.HTMLAttributes<HTMLSuxBodyElement>;
             "sux-button": LocalJSX.SuxButton & JSXBase.HTMLAttributes<HTMLSuxButtonElement>;
+            "sux-detail": LocalJSX.SuxDetail & JSXBase.HTMLAttributes<HTMLSuxDetailElement>;
             "sux-heading": LocalJSX.SuxHeading & JSXBase.HTMLAttributes<HTMLSuxHeadingElement>;
         }
     }
