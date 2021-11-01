@@ -8,13 +8,13 @@ import { html, render } from 'lit-html'
     argTypes={extractArgTypes('sux-heading')}
 />
 
-# Heading
+# Typography / Heading
 
 Heading is a typography component used to create various levels of hierarchies between text.
 
 export const DefaultHeading = (args) => {
     return html`
-        <div style="padding: 10%; justify-content: center; gap:16px;">
+    <div style="padding: 10%; justify-content: center; gap:16px;">
             <sux-heading 
                 .size="${args.size}"
                 .variant="${args.variant}"
@@ -40,7 +40,7 @@ export const DefaultHeading = (args) => {
                 Headings are great to create hierarchy.
             </sux-heading>
         </div>
-    `
+        `
 }
 
 <Canvas>
