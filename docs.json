@@ -1,0 +1,452 @@
+{
+  "timestamp": "2021-11-01T14:13:54",
+  "compiler": {
+    "name": "@stencil/core",
+    "version": "2.9.0",
+    "typescriptVersion": "4.2.3"
+  },
+  "components": [
+    {
+      "filePath": "./src/components/sux-body/sux-body.tsx",
+      "encapsulation": "shadow",
+      "tag": "sux-body",
+      "readme": "# sux-body\n\n\n",
+      "docs": "",
+      "docsTags": [],
+      "usage": {},
+      "props": [
+        {
+          "name": "size",
+          "type": "\"l\" | \"m\" | \"s\" | \"xl\" | \"xs\" | \"xxl\" | \"xxxl\"",
+          "mutable": false,
+          "attr": "size",
+          "reflectToAttr": true,
+          "docs": "Size",
+          "docsTags": [],
+          "default": "BODY_SIZE",
+          "values": [
+            {
+              "value": "l",
+              "type": "string"
+            },
+            {
+              "value": "m",
+              "type": "string"
+            },
+            {
+              "value": "s",
+              "type": "string"
+            },
+            {
+              "value": "xl",
+              "type": "string"
+            },
+            {
+              "value": "xs",
+              "type": "string"
+            },
+            {
+              "value": "xxl",
+              "type": "string"
+            },
+            {
+              "value": "xxxl",
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "variant",
+          "type": "\"mono\" | \"sans-serif\" | \"serif\"",
+          "mutable": false,
+          "attr": "variant",
+          "reflectToAttr": true,
+          "docs": "Variant",
+          "docsTags": [],
+          "default": "\"serif\"",
+          "values": [
+            {
+              "value": "mono",
+              "type": "string"
+            },
+            {
+              "value": "sans-serif",
+              "type": "string"
+            },
+            {
+              "value": "serif",
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "listeners": [],
+      "styles": [],
+      "slots": [],
+      "parts": [],
+      "dependents": [],
+      "dependencies": [],
+      "dependencyGraph": {}
+    },
+    {
+      "filePath": "./src/components/sux-button/sux-button.tsx",
+      "encapsulation": "shadow",
+      "tag": "sux-button",
+      "readme": "# sux-button\n\n\n",
+      "docs": "",
+      "docsTags": [],
+      "usage": {},
+      "props": [
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "disabled",
+          "reflectToAttr": true,
+          "docs": "is the button disabled",
+          "docsTags": [],
+          "default": "false",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": true,
+          "required": false
+        },
+        {
+          "name": "iconEnd",
+          "type": "\"icon-close\" | \"icon-info\" | \"icon-open\"",
+          "mutable": false,
+          "attr": "icon-end",
+          "reflectToAttr": false,
+          "docs": "optionally pass an icon to display at the end of a button - accepts ui icon names",
+          "docsTags": [],
+          "values": [
+            {
+              "value": "icon-close",
+              "type": "string"
+            },
+            {
+              "value": "icon-info",
+              "type": "string"
+            },
+            {
+              "value": "icon-open",
+              "type": "string"
+            }
+          ],
+          "optional": true,
+          "required": false
+        },
+        {
+          "name": "iconStart",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "icon-start",
+          "reflectToAttr": true,
+          "docs": "optionally pass an icon to display at the start of a button - accepts ui icon names",
+          "docsTags": [],
+          "default": "false",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": true,
+          "required": false
+        },
+        {
+          "name": "isLoading",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "is-loading",
+          "reflectToAttr": true,
+          "docs": "optionally add a sux-loader component to the button, disabling interaction.",
+          "docsTags": [],
+          "default": "false",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": true,
+          "required": false
+        },
+        {
+          "name": "label",
+          "type": "string",
+          "mutable": false,
+          "attr": "label",
+          "reflectToAttr": true,
+          "docs": "Applies to the aria-label attribute on the button or hyperlink",
+          "docsTags": [],
+          "default": "'Button label'",
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "mutable": false,
+          "attr": "name",
+          "reflectToAttr": true,
+          "docs": "The name attribute to apply to the button",
+          "docsTags": [],
+          "default": "'button-'",
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": true,
+          "required": false
+        },
+        {
+          "name": "quiet",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "quiet",
+          "reflectToAttr": true,
+          "docs": "Is quiet makes the button appear with least prominence.",
+          "docsTags": [],
+          "default": "false",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "size",
+          "type": "\"l\" | \"m\" | \"s\" | \"xl\"",
+          "mutable": false,
+          "attr": "size",
+          "reflectToAttr": true,
+          "docs": "specify the size of the button, defaults to m",
+          "docsTags": [],
+          "default": "\"m\"",
+          "values": [
+            {
+              "value": "l",
+              "type": "string"
+            },
+            {
+              "value": "m",
+              "type": "string"
+            },
+            {
+              "value": "s",
+              "type": "string"
+            },
+            {
+              "value": "xl",
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "type",
+          "type": "string",
+          "mutable": true,
+          "attr": "type",
+          "reflectToAttr": false,
+          "docs": "The type attribute to apply to the button",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": true,
+          "required": false
+        },
+        {
+          "name": "variant",
+          "type": "\"cta\" | \"negative\" | \"primary\" | \"secondary\"",
+          "mutable": false,
+          "attr": "variant",
+          "reflectToAttr": true,
+          "docs": "specify the appearance style of the button, defaults to solid.",
+          "docsTags": [],
+          "default": "\"cta\"",
+          "values": [
+            {
+              "value": "cta",
+              "type": "string"
+            },
+            {
+              "value": "negative",
+              "type": "string"
+            },
+            {
+              "value": "primary",
+              "type": "string"
+            },
+            {
+              "value": "secondary",
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "listeners": [],
+      "styles": [],
+      "slots": [],
+      "parts": [],
+      "dependents": [],
+      "dependencies": [],
+      "dependencyGraph": {}
+    },
+    {
+      "filePath": "./src/components/sux-heading/sux-heading.tsx",
+      "encapsulation": "shadow",
+      "tag": "sux-heading",
+      "readme": "# sux-heading\n\n\n",
+      "docs": "",
+      "docsTags": [],
+      "usage": {},
+      "props": [
+        {
+          "name": "size",
+          "type": "\"l\" | \"m\" | \"s\" | \"xl\" | \"xs\" | \"xxl\"",
+          "mutable": false,
+          "attr": "size",
+          "reflectToAttr": true,
+          "docs": "Heading  size",
+          "docsTags": [],
+          "default": "\"m\"",
+          "values": [
+            {
+              "value": "l",
+              "type": "string"
+            },
+            {
+              "value": "m",
+              "type": "string"
+            },
+            {
+              "value": "s",
+              "type": "string"
+            },
+            {
+              "value": "xl",
+              "type": "string"
+            },
+            {
+              "value": "xs",
+              "type": "string"
+            },
+            {
+              "value": "xxl",
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "tag",
+          "type": "string",
+          "mutable": false,
+          "attr": "tag",
+          "reflectToAttr": true,
+          "docs": "Overwrite Tag",
+          "docsTags": [],
+          "default": "null",
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": true,
+          "required": false
+        },
+        {
+          "name": "variant",
+          "type": "\"mono\" | \"sans-serif\" | \"serif\"",
+          "mutable": false,
+          "attr": "variant",
+          "reflectToAttr": true,
+          "docs": "Heading variant",
+          "docsTags": [],
+          "default": "\"serif\"",
+          "values": [
+            {
+              "value": "mono",
+              "type": "string"
+            },
+            {
+              "value": "sans-serif",
+              "type": "string"
+            },
+            {
+              "value": "serif",
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "weight",
+          "type": "\"bold\" | \"light\" | \"regular\" | \"semibold\"",
+          "mutable": false,
+          "attr": "weight",
+          "reflectToAttr": true,
+          "docs": "Heading weight",
+          "docsTags": [],
+          "default": "\"regular\"",
+          "values": [
+            {
+              "value": "bold",
+              "type": "string"
+            },
+            {
+              "value": "light",
+              "type": "string"
+            },
+            {
+              "value": "regular",
+              "type": "string"
+            },
+            {
+              "value": "semibold",
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "listeners": [],
+      "styles": [],
+      "slots": [],
+      "parts": [],
+      "dependents": [],
+      "dependencies": [],
+      "dependencyGraph": {}
+    }
+  ]
+}
