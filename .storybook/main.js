@@ -6,6 +6,7 @@ module.exports = {
   "addons": [
     "@storybook/addon-links",
     "@storybook/addon-essentials",
-    '@pxtrn/storybook-addon-docs-stencil'
+    '@pxtrn/storybook-addon-docs-stencil',
+    '@storybook/addon-a11y'
   ]
 }
