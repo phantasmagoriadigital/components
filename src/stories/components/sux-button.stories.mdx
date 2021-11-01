@@ -1,0 +1,653 @@
+import { extractArgTypes } from '@pxtrn/storybook-addon-docs-stencil';
+import { Meta, Story, Canvas, ArgsTable } from '@storybook/addon-docs/blocks';
+import { html, render } from 'lit-html';
+
+<Meta title="Components/Controls/Button" component="sux-button" argTypes={extractArgTypes('sux-button')} />
+
+# Button
+
+Buttons allow users to perform an action or to navigate to another page. They have multiple styles for various needs, and are ideal for calling attention to where a user needs to do something in order to move forward in a flow.
+
+export const Default = args => {
+  return html`
+    <div style="padding: 10%; display: flex; justify-content: center; gap:16px;">
+      <sux-button
+        .label="${args.label}"
+        .name="${args.name}"
+        .type="${args.type}"
+        variant="cta"
+        .size="${args.size}"
+        .quiet="${args.quiet}"
+        .disabled="${args.disabled}"
+        .icon-start="${args.iconStart}"
+        .icon-end="${args.iconEnd}"
+        .is-loading="${args.isLoading}"
+      >
+        Button CTA
+      </sux-button>
+      <sux-button
+        .label="${args.label}"
+        .name="${args.name}"
+        .type="${args.type}"
+        variant="Primary"
+        .size="${args.size}"
+        .quiet="${args.quiet}"
+        .disabled="${args.disabled}"
+        .icon-start="${args.iconStart}"
+        .icon-end="${args.iconEnd}"
+        .is-loading="${args.isLoading}"
+      >
+        Button Primary
+      </sux-button>
+      <sux-button
+        .label="${args.label}"
+        .name="${args.name}"
+        .type="${args.type}"
+        variant="secondary"
+        .size="${args.size}"
+        .quiet="${args.quiet}"
+        .disabled="${args.disabled}"
+        .icon-start="${args.iconStart}"
+        .icon-end="${args.iconEnd}"
+        .is-loading="${args.isLoading}"
+      >
+        Button Secondary
+      </sux-button>
+      <sux-button
+        .label="${args.label}"
+        .name="${args.name}"
+        .type="${args.type}"
+        variant="negative"
+        .size="${args.size}"
+        .quiet="${args.quiet}"
+        .disabled="${args.disabled}"
+        .icon-start="${args.iconStart}"
+        .icon-end="${args.iconEnd}"
+        .is-loading="${args.isLoading}"
+      >
+        Button Negative
+      </sux-button>
+    </div>
+  `;
+};
+
+<Canvas>
+  <Story name="Default">{Default.bind()}</Story>
+</Canvas>
+
+## Table of options / API
+
+<ArgsTable of="sux-button" />
+
+## Variants
+
+### CTA
+
+The call to action button communicates strong emphasis and is reserved for actions that are essential to an experience. There should only be one visible call to action button per section. There is no quiet style for this button because it is meant to be intentionally prominent.
+
+export const CTAButton = args => {
+  // const { size, disabled, secondary, iconOnly } = args
+  return html`
+    <div style="padding: 10%; display: flex; justify-content: center; gap:16px;">
+      <sux-button
+        .label="${args.label}"
+        .name="${args.name}"
+        .type="${args.type}"
+        .variant="CTA"
+        size="xl"
+        .quiet="${args.quiet}"
+        .disabled="${args.disabled}"
+        .icon-start="${args.iconStart}"
+        .icon-end="${args.iconEnd}"
+        .is-loading="${args.isLoading}"
+      >
+        CTA Button XL
+      </sux-button>
+      <sux-button
+        .label="${args.label}"
+        .name="${args.name}"
+        .type="${args.type}"
+        .variant="CTA"
+        size="l"
+        .quiet="${args.quiet}"
+        .disabled="${args.disabled}"
+        .icon-start="${args.iconStart}"
+        .icon-end="${args.iconEnd}"
+        .is-loading="${args.isLoading}"
+      >
+        CTA Button L
+      </sux-button>
+      <sux-button
+        .label="${args.label}"
+        .name="${args.name}"
+        .type="${args.type}"
+        .variant="CTA"
+        size="m"
+        .quiet="${args.quiet}"
+        .disabled="${args.disabled}"
+        .icon-start="${args.iconStart}"
+        .icon-end="${args.iconEnd}"
+        .is-loading="${args.isLoading}"
+      >
+        CTA Button M
+      </sux-button>
+      <sux-button
+        .label="${args.label}"
+        .name="${args.name}"
+        .type="${args.type}"
+        .variant="CTA"
+        size="s"
+        .quiet="${args.quiet}"
+        .disabled="${args.disabled}"
+        .icon-start="${args.iconStart}"
+        .icon-end="${args.iconEnd}"
+        .is-loading="${args.isLoading}"
+      >
+        CTA Button S
+      </sux-button>
+    </div>
+  `;
+};
+
+<Canvas>
+  <Story name="CTAButton">{CTAButton.bind()}</Story>
+</Canvas>
+
+### Primary
+
+The primary button is used for medium emphasis. It should be used in place of a call to action button when the action requires less prominence, or if there are multiple primary actions of the same importance on the page.
+
+export const PrimaryButton = args => {
+  // const { size, disabled, secondary, iconOnly } = args
+  return html`
+    <div style="padding: 10%; display: flex; justify-content: center; gap:16px;">
+      <sux-button
+        .label="${args.label}"
+        .name="${args.name}"
+        .type="${args.type}"
+        variant="primary"
+        size="xl"
+        .quiet="${args.quiet}"
+        .disabled="${args.disabled}"
+        .icon-start="${args.iconStart}"
+        .icon-end="${args.iconEnd}"
+        .is-loading="${args.isLoading}"
+      >
+        Primary Button XL
+      </sux-button>
+      <sux-button
+        .label="${args.label}"
+        .name="${args.name}"
+        .type="${args.type}"
+        variant="primary"
+        size="l"
+        .quiet="${args.quiet}"
+        .disabled="${args.disabled}"
+        .icon-start="${args.iconStart}"
+        .icon-end="${args.iconEnd}"
+        .is-loading="${args.isLoading}"
+      >
+        Primary Button L
+      </sux-button>
+      <sux-button
+        .label="${args.label}"
+        .name="${args.name}"
+        .type="${args.type}"
+        variant="primary"
+        size="m"
+        .quiet="${args.quiet}"
+        .disabled="${args.disabled}"
+        .icon-start="${args.iconStart}"
+        .icon-end="${args.iconEnd}"
+        .is-loading="${args.isLoading}"
+      >
+        Primary Button M
+      </sux-button>
+      <sux-button
+        .label="${args.label}"
+        .name="${args.name}"
+        .type="${args.type}"
+        variant="primary"
+        size="s"
+        .quiet="${args.quiet}"
+        .disabled="${args.disabled}"
+        .icon-start="${args.iconStart}"
+        .icon-end="${args.iconEnd}"
+        .is-loading="${args.isLoading}"
+      >
+        Primary Button S
+      </sux-button>
+    </div>
+  `;
+};
+
+<Canvas>
+  <Story name="PrimaryButton">{PrimaryButton.bind()}</Story>
+</Canvas>
+
+### secondary
+
+The secondary button is for low emphasis. It is meant to be paired with other button types to surface less prominent actions, and should never be the only button in a group.
+
+export const SecondaryButton = args => {
+  // const { size, disabled, secondary, iconOnly } = args
+  return html`
+    <div style="padding: 10%; display: flex; justify-content: center; gap:16px;">
+      <sux-button
+        .label="${args.label}"
+        .name="${args.name}"
+        .type="${args.type}"
+        variant="secondary"
+        size="xl"
+        .quiet="${args.quiet}"
+        .disabled="${args.disabled}"
+        .icon-start="${args.iconStart}"
+        .icon-end="${args.iconEnd}"
+        .is-loading="${args.isLoading}"
+      >
+        Secondary Button XL
+      </sux-button>
+      <sux-button
+        .label="${args.label}"
+        .name="${args.name}"
+        .type="${args.type}"
+        variant="secondary"
+        size="l"
+        .quiet="${args.quiet}"
+        .disabled="${args.disabled}"
+        .icon-start="${args.iconStart}"
+        .icon-end="${args.iconEnd}"
+        .is-loading="${args.isLoading}"
+      >
+        Secondary Button L
+      </sux-button>
+      <sux-button
+        .label="${args.label}"
+        .name="${args.name}"
+        .type="${args.type}"
+        variant="secondary"
+        size="m"
+        .quiet="${args.quiet}"
+        .disabled="${args.disabled}"
+        .icon-start="${args.iconStart}"
+        .icon-end="${args.iconEnd}"
+        .is-loading="${args.isLoading}"
+      >
+        Secondary Button M
+      </sux-button>
+      <sux-button
+        .label="${args.label}"
+        .name="${args.name}"
+        .type="${args.type}"
+        variant="secondary"
+        size="s"
+        .quiet="${args.quiet}"
+        .disabled="${args.disabled}"
+        .icon-start="${args.iconStart}"
+        .icon-end="${args.iconEnd}"
+        .is-loading="${args.isLoading}"
+      >
+        Secondary Button S
+      </sux-button>
+    </div>
+  `;
+};
+
+<Canvas>
+  <Story name="SecondaryButton">{SecondaryButton.bind()}</Story>
+</Canvas>
+
+### Negative
+
+The negative button is for emphasizing actions that can be destructive or have negative consequences if taken. It should be used sparingly.
+
+export const NegativeButton = args => {
+  // const { size, disabled, secondary, iconOnly } = args
+  return html`
+    <div style="padding: 10%; display: flex; justify-content: center; gap:16px;">
+      <sux-button
+        .label="${args.label}"
+        .name="${args.name}"
+        .type="${args.type}"
+        variant="negative"
+        size="xl"
+        .quiet="${args.quiet}"
+        .disabled="${args.disabled}"
+        .icon-start="${args.iconStart}"
+        .icon-end="${args.iconEnd}"
+        .is-loading="${args.isLoading}"
+      >
+        Negative Button XL
+      </sux-button>
+      <sux-button
+        .label="${args.label}"
+        .name="${args.name}"
+        .type="${args.type}"
+        variant="negative"
+        size="l"
+        .quiet="${args.quiet}"
+        .disabled="${args.disabled}"
+        .icon-start="${args.iconStart}"
+        .icon-end="${args.iconEnd}"
+        .is-loading="${args.isLoading}"
+      >
+        Negative Button L
+      </sux-button>
+      <sux-button
+        .label="${args.label}"
+        .name="${args.name}"
+        .type="${args.type}"
+        variant="negative"
+        size="m"
+        .quiet="${args.quiet}"
+        .disabled="${args.disabled}"
+        .icon-start="${args.iconStart}"
+        .icon-end="${args.iconEnd}"
+        .is-loading="${args.isLoading}"
+      >
+        Negative Button M
+      </sux-button>
+      <sux-button
+        .label="${args.label}"
+        .name="${args.name}"
+        .type="${args.type}"
+        variant="negative"
+        size="s"
+        .quiet="${args.quiet}"
+        .disabled="${args.disabled}"
+        .icon-start="${args.iconStart}"
+        .icon-end="${args.iconEnd}"
+        .is-loading="${args.isLoading}"
+      >
+        Negative Button S
+      </sux-button>
+    </div>
+  `;
+};
+
+<Canvas>
+  <Story name="NegativeButton">{NegativeButton.bind()}</Story>
+</Canvas>
+
+### Icon
+
+Icons can be used in buttons when additional clarity is required. Icons should not be used for decoration.
+
+Key example of four buttons with icon and label Share showing the size options available including small, medium, large, and extra-large.
+
+### Size
+
+Buttons come in four different sizes: small, medium, large, and extra-large. The medium size is the default and most frequent option. Use the other sizes sparingly; they should be used to create a hierarchy of importance within the page.
+
+Key example of primary, secondary, negative, and over background buttons, labeled Action, in both standard and quiet styles.
+
+export const ButtonSizes = args => {
+  // const { size, disabled, secondary, iconOnly } = args
+  return html`
+    <div style="padding: 10%; display: flex; justify-content: center; gap:16px; margin-bottom:10px;">
+      <sux-button
+        .label="${args.label}"
+        .name="${args.name}"
+        .type="${args.type}"
+        variant="primary"
+        size="xl"
+        .quiet="${args.quiet}"
+        .disabled="${args.disabled}"
+        .icon-start="${args.iconStart}"
+        .icon-end="${args.iconEnd}"
+        .is-loading="${args.isLoading}"
+      >
+        Primary Button XL
+      </sux-button>
+      <sux-button
+        .label="${args.label}"
+        .name="${args.name}"
+        .type="${args.type}"
+        variant="primary"
+        size="l"
+        .quiet="${args.quiet}"
+        .disabled="${args.disabled}"
+        .icon-start="${args.iconStart}"
+        .icon-end="${args.iconEnd}"
+        .is-loading="${args.isLoading}"
+      >
+        Primary Button L
+      </sux-button>
+      <sux-button
+        .label="${args.label}"
+        .name="${args.name}"
+        .type="${args.type}"
+        variant="primary"
+        size="m"
+        .quiet="${args.quiet}"
+        .disabled="${args.disabled}"
+        .icon-start="${args.iconStart}"
+        .icon-end="${args.iconEnd}"
+        .is-loading="${args.isLoading}"
+      >
+        Primary Button M
+      </sux-button>
+      <sux-button
+        .label="${args.label}"
+        .name="${args.name}"
+        .type="${args.type}"
+        variant="primary"
+        size="s"
+        .quiet="${args.quiet}"
+        .disabled="${args.disabled}"
+        .icon-start="${args.iconStart}"
+        .icon-end="${args.iconEnd}"
+        .is-loading="${args.isLoading}"
+      >
+        Primary Button S
+      </sux-button>
+    </div>
+    <h4>Quiet mode:</h4>
+    <div style="padding: 10%; display: flex; justify-content: center; gap:16px; margin-bottom:10px;">
+      <sux-button
+        .label="${args.label}"
+        .name="${args.name}"
+        .type="${args.type}"
+        variant="primary"
+        size="xl"
+        quiet="true"
+        .disabled="${args.disabled}"
+        .icon-start="${args.iconStart}"
+        .icon-end="${args.iconEnd}"
+        .is-loading="${args.isLoading}"
+      >
+        Primary Button XL
+      </sux-button>
+      <sux-button
+        .label="${args.label}"
+        .name="${args.name}"
+        .type="${args.type}"
+        variant="primary"
+        size="l"
+        quiet="true"
+        .disabled="${args.disabled}"
+        .icon-start="${args.iconStart}"
+        .icon-end="${args.iconEnd}"
+        .is-loading="${args.isLoading}"
+      >
+        Primary Button L
+      </sux-button>
+      <sux-button
+        .label="${args.label}"
+        .name="${args.name}"
+        .type="${args.type}"
+        variant="primary"
+        size="m"
+        quiet="true"
+        .disabled="${args.disabled}"
+        .icon-start="${args.iconStart}"
+        .icon-end="${args.iconEnd}"
+        .is-loading="${args.isLoading}"
+      >
+        Primary Button M
+      </sux-button>
+      <sux-button
+        .label="${args.label}"
+        .name="${args.name}"
+        .type="${args.type}"
+        variant="primary"
+        size="s"
+        quiet="true"
+        .disabled="${args.disabled}"
+        .icon-start="${args.iconStart}"
+        .icon-end="${args.iconEnd}"
+        .is-loading="${args.isLoading}"
+      >
+        Primary Button S
+      </sux-button>
+    </div>
+  `;
+};
+
+<Canvas>
+  <Story name="ButtonSizes">{ButtonSizes.bind()}</Story>
+</Canvas>
+
+### Quiet
+
+By default, buttons have a visible stroke. Quiet buttons do not have this visible stroke and should only be used for secondary actions within a button group. An exception to this is the call to action variant, which does not have a quiet style because it is meant to be intentionally prominent.
+
+Key example of disabled button, label Action.
+
+export const QuietButton = args => {
+  return html`
+    <div style="padding: 10%; display: flex; justify-content: center; gap:16px;">
+      <sux-button
+        .label="${args.label}"
+        .name="${args.name}"
+        .type="${args.type}"
+        variant="cta"
+        .size="${args.size}"
+        quiet="true"
+        .disabled="${args.disabled}"
+        .icon-start="${args.iconStart}"
+        .icon-end="${args.iconEnd}"
+        .is-loading="${args.isLoading}"
+      >
+        Button CTA
+      </sux-button>
+      <sux-button
+        .label="${args.label}"
+        .name="${args.name}"
+        .type="${args.type}"
+        variant="Primary"
+        .size="${args.size}"
+        quiet="true"
+        .disabled="${args.disabled}"
+        .icon-start="${args.iconStart}"
+        .icon-end="${args.iconEnd}"
+        .is-loading="${args.isLoading}"
+      >
+        Button Primary
+      </sux-button>
+      <sux-button
+        .label="${args.label}"
+        .name="${args.name}"
+        .type="${args.type}"
+        variant="secondary"
+        .size="${args.size}"
+        quiet="true"
+        .disabled="${args.disabled}"
+        .icon-start="${args.iconStart}"
+        .icon-end="${args.iconEnd}"
+        .is-loading="${args.isLoading}"
+      >
+        Button Secondary
+      </sux-button>
+      <sux-button
+        .label="${args.label}"
+        .name="${args.name}"
+        .type="${args.type}"
+        variant="negative"
+        .size="${args.size}"
+        quiet="true"
+        .disabled="${args.disabled}"
+        .icon-start="${args.iconStart}"
+        .icon-end="${args.iconEnd}"
+        .is-loading="${args.isLoading}"
+      >
+        Button Negative
+      </sux-button>
+    </div>
+  `;
+};
+
+<Canvas>
+  <Story name="QuietButton">{QuietButton.bind()}</Story>
+</Canvas>
+
+### Disabled
+
+A button in a disabled state shows that an action exists, but is not available in that circumstance. This state can be used to maintain layout continuity and to communicate that an action may become available later.
+
+export const DisabledButton = args => {
+  return html`
+    <div style="padding: 10%; display: flex; justify-content: center; gap:16px;">
+      <sux-button
+        .label="${args.label}"
+        .name="${args.name}"
+        .type="${args.type}"
+        variant="cta"
+        .size="${args.size}"
+        quiet="false"
+        disabled="true"
+        .icon-start="${args.iconStart}"
+        .icon-end="${args.iconEnd}"
+        .is-loading="${args.isLoading}"
+      >
+        Button CTA
+      </sux-button>
+      <sux-button
+        .label="${args.label}"
+        .name="${args.name}"
+        .type="${args.type}"
+        variant="Primary"
+        .size="${args.size}"
+        quiet="false"
+        disabled="true"
+        .icon-start="${args.iconStart}"
+        .icon-end="${args.iconEnd}"
+        .is-loading="${args.isLoading}"
+      >
+        Button Primary
+      </sux-button>
+      <sux-button
+        .label="${args.label}"
+        .name="${args.name}"
+        .type="${args.type}"
+        variant="secondary"
+        .size="${args.size}"
+        quiet="false"
+        disabled="true"
+        .icon-start="${args.iconStart}"
+        .icon-end="${args.iconEnd}"
+        .is-loading="${args.isLoading}"
+      >
+        Button Secondary
+      </sux-button>
+      <sux-button
+        .label="${args.label}"
+        .name="${args.name}"
+        .type="${args.type}"
+        variant="negative"
+        .size="${args.size}"
+        quiet="false"
+        disabled="true"
+        .icon-start="${args.iconStart}"
+        .icon-end="${args.iconEnd}"
+        .is-loading="${args.isLoading}"
+      >
+        Button Negative
+      </sux-button>
+    </div>
+  `;
+};
+
+<Canvas>
+  <Story name="DisabledButton">{DisabledButton.bind()}</Story>
+</Canvas>

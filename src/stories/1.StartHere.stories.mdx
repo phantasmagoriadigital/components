@@ -1,4 +1,4 @@
-import { Meta } from '@storybook/addon-docs/blocks'
+import { Meta } from '@storybook/addon-docs/blocks';
 
 <Meta title="Substrate DS/Start Here" />
 
@@ -16,15 +16,15 @@ be demonstrated in what is called a "story" within the Canvas (the area of the w
 reading now). Across the top of the Canvas area, you will see a Docs tab, zoom controls, a color blindness
 simulator, and a light/dark theme toggle.
 
--   The **Docs** tab includes all of the developer documentation for each component, including guidelines and usage, the full API, any variants, and instructions for cherry picking.
+- The **Docs** tab includes all of the developer documentation for each component, including guidelines and usage, the full API, any variants, and instructions for cherry picking.
 
 While viewing a component, to the right of the Canvas there is a tabbed Panel which displays Controls,
 any Action outputs associated with that demonstration, and an Accessibility audit.
 
--   The **Control** options allow you to change content in the demonstration area by altering the data given to the component via its properties.
--   The **Actions** tab provides console output where user actions like clicking or selecting should produce event target information.
--   The **Accessibilty** tab displays a11y violations of WCAG 2.0 Levels A and AA, WCAG 2.1 Level AA, Section 508, and other best practices
-    through the [aXe accessibilty engine](https://github.com/dequelabs/axe-core).
+- The **Control** options allow you to change content in the demonstration area by altering the data given to the component via its properties.
+- The **Actions** tab provides console output where user actions like clicking or selecting should produce event target information.
+- The **Accessibilty** tab displays a11y violations of WCAG 2.0 Levels A and AA, WCAG 2.1 Level AA, Section 508, and other best practices
+  through the [aXe accessibilty engine](https://github.com/dequelabs/axe-core).
 
 Display options and keyboard shortcuts are available via the ellipsis menu
 icon next to the Substrate DS logo at the top of the sidebar.
@@ -41,18 +41,36 @@ git clone https://github.com/phantasmagoriadigital/components.git
 Clone the [Substrate Componenet Respository]('https://github.com/phantasmagoriadigital/components') from GitHub.
 
 Install dependencies
+
 ```bash
 npm install
 ```
 
 To start development wit StencilJS & Storybook run `start-dev` in the terminal
+
 ```bash
 npm run start-dev
 ```
 
 Or run the Stencil and Storybook manually using:
+
 ```bash
 npm run build
 npm run start
 npm run storybook
 ```
+
+## Development Environment
+
+### Helpful VS Code extensions
+
+- **EditorConfig for VS Code** — [extension page](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)
+
+- **axe Accessibility Linter** — [extension page](https://marketplace.visualstudio.com/items?itemName=deque-systems.vscode-axe-linter)
+
+- **MDX** — [extension page](https://marketplace.visualstudio.com/items?itemName=silvenon.mdx)
+  Provides syntax highlighting and bracket matching for MDX (JSX in Markdown) files.
+
+- **ESLint** — [extension page](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+
+- **Prettier - Code formatter** — [extension page](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
