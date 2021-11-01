@@ -3,7 +3,7 @@
   display: block;
 }
 .sux-detail {
-  line-height: 130%;
+  line-height: $detail-line-height;
 
   &--serif {
     font-family: $detail-serif-font-family;

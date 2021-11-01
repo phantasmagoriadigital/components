@@ -5,20 +5,21 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
-import { BodySize, BodyVariant } from "./components/sux-body/interfaces";
+import { BodyClassification, BodySize } from "./components/sux-body/interfaces";
 import { ButtonSize, ButtonVariant } from "./components/sux-button/interfaces";
-import { DetailSize, DetailVariant, DetailWeight } from "./components/sux-detail/interfaces";
-import { HeadingSize, HeadingVariant, HeadingWeight } from "./components/sux-heading/interfaces";
+import { CodeSize } from "./components/sux-code/interfaces";
+import { DetailClassification, DetailSize, DetailWeight } from "./components/sux-detail/interfaces";
+import { HeadingClassification, HeadingSize, HeadingWeight } from "./components/sux-heading/interfaces";
 export namespace Components {
     interface SuxBody {
+        /**
+          * Classification
+         */
+        "classification": BodyClassification;
         /**
           * Size
          */
         "size": BodySize;
-        /**
-          * Variant
-         */
-        "variant": BodyVariant;
     }
     interface SuxButton {
         /**
@@ -62,21 +63,31 @@ export namespace Components {
          */
         "variant": ButtonVariant;
     }
+    interface SuxCode {
+        /**
+          * Size
+         */
+        "size": CodeSize;
+    }
     interface SuxDetail {
+        /**
+          * Classification
+         */
+        "classification": DetailClassification;
         /**
           * Size
          */
         "size": DetailSize;
         /**
-          * Variant
-         */
-        "variant": DetailVariant;
-        /**
-          * Variant
+          * Weight
          */
         "weight": DetailWeight;
     }
     interface SuxHeading {
+        /**
+          * Heading classification
+         */
+        "classification": HeadingClassification;
         /**
           * Heading  size
          */
@@ -85,10 +96,6 @@ export namespace Components {
           * Overwrite Tag
          */
         "tag"?: string;
-        /**
-          * Heading variant
-         */
-        "variant": HeadingVariant;
         /**
           * Heading weight
          */
@@ -108,6 +115,12 @@ declare global {
         prototype: HTMLSuxButtonElement;
         new (): HTMLSuxButtonElement;
     };
+    interface HTMLSuxCodeElement extends Components.SuxCode, HTMLStencilElement {
+    }
+    var HTMLSuxCodeElement: {
+        prototype: HTMLSuxCodeElement;
+        new (): HTMLSuxCodeElement;
+    };
     interface HTMLSuxDetailElement extends Components.SuxDetail, HTMLStencilElement {
     }
     var HTMLSuxDetailElement: {
@@ -123,6 +136,7 @@ declare global {
     interface HTMLElementTagNameMap {
         "sux-body": HTMLSuxBodyElement;
         "sux-button": HTMLSuxButtonElement;
+        "sux-code": HTMLSuxCodeElement;
         "sux-detail": HTMLSuxDetailElement;
         "sux-heading": HTMLSuxHeadingElement;
     }
@@ -130,13 +144,13 @@ declare global {
 declare namespace LocalJSX {
     interface SuxBody {
         /**
+          * Classification
+         */
+        "classification"?: BodyClassification;
+        /**
           * Size
          */
         "size"?: BodySize;
-        /**
-          * Variant
-         */
-        "variant"?: BodyVariant;
     }
     interface SuxButton {
         /**
@@ -180,21 +194,31 @@ declare namespace LocalJSX {
          */
         "variant"?: ButtonVariant;
     }
+    interface SuxCode {
+        /**
+          * Size
+         */
+        "size"?: CodeSize;
+    }
     interface SuxDetail {
+        /**
+          * Classification
+         */
+        "classification"?: DetailClassification;
         /**
           * Size
          */
         "size"?: DetailSize;
         /**
-          * Variant
-         */
-        "variant"?: DetailVariant;
-        /**
-          * Variant
+          * Weight
          */
         "weight"?: DetailWeight;
     }
     interface SuxHeading {
+        /**
+          * Heading classification
+         */
+        "classification"?: HeadingClassification;
         /**
           * Heading  size
          */
@@ -204,10 +228,6 @@ declare namespace LocalJSX {
          */
         "tag"?: string;
         /**
-          * Heading variant
-         */
-        "variant"?: HeadingVariant;
-        /**
           * Heading weight
          */
         "weight"?: HeadingWeight;
@@ -215,6 +235,7 @@ declare namespace LocalJSX {
     interface IntrinsicElements {
         "sux-body": SuxBody;
         "sux-button": SuxButton;
+        "sux-code": SuxCode;
         "sux-detail": SuxDetail;
         "sux-heading": SuxHeading;
     }
@@ -225,6 +246,7 @@ declare module "@stencil/core" {
         interface IntrinsicElements {
             "sux-body": LocalJSX.SuxBody & JSXBase.HTMLAttributes<HTMLSuxBodyElement>;
             "sux-button": LocalJSX.SuxButton & JSXBase.HTMLAttributes<HTMLSuxButtonElement>;
+            "sux-code": LocalJSX.SuxCode & JSXBase.HTMLAttributes<HTMLSuxCodeElement>;
             "sux-detail": LocalJSX.SuxDetail & JSXBase.HTMLAttributes<HTMLSuxDetailElement>;
             "sux-heading": LocalJSX.SuxHeading & JSXBase.HTMLAttributes<HTMLSuxHeadingElement>;
         }

@@ -1,0 +1,21 @@
+@import '../../assets/tokens/components/_code.scss';
+:host {
+  display: block;
+}
+.sux-code {
+  line-height: 150%;
+  font-family: $code-font-family;
+
+  &--s {
+    font-size: $code-s-text-size;
+  }
+  &--m {
+    font-size: $code-m-text-size;
+  }
+  &--l {
+    font-size: $code-l-text-size;
+  }
+  &--xl {
+    font-size: $code-xl-text-size;
+  }
+}

@@ -3,7 +3,13 @@
   display: block;
 }
 .sux-body {
-  line-height: 150%;
+  line-height: $body-line-height;
+  & em {
+    font-weight: $body-emphasized;
+  }
+  & strong {
+    font-style: $body-strong;
+  }
 
   &--serif {
     font-family: $body-serif-font-family;

@@ -1,6 +1,6 @@
 import { Component, Prop, h } from '@stencil/core';
-import { DetailSize, DetailVariant, DetailWeight } from './interfaces';
-import { DETAIL_SIZE, DETAIL_VARIANT, DETAIL_WEIGHT } from "../defaults/prop-defaults";
+import { DetailSize, DetailClassification, DetailWeight } from './interfaces';
+import { DETAIL_SIZE, DETAIL_CLASSIFICATION, DETAIL_WEIGHT } from "../defaults/prop-defaults";
 
 
 @Component({
@@ -21,12 +21,12 @@ export class SuxDetail {
   @Prop({ reflect: true }) size: DetailSize = DETAIL_SIZE;
 
   /**
-   * Variant
+   * Classification
    */
-  @Prop({ reflect: true }) variant: DetailVariant = DETAIL_VARIANT;
+  @Prop({ reflect: true }) classification: DetailClassification = DETAIL_CLASSIFICATION;
 
   /**
-   * Variant
+   * Weight
    */
   @Prop({ reflect: true }) weight: DetailWeight = DETAIL_WEIGHT;
 
@@ -38,14 +38,14 @@ export class SuxDetail {
         <slot />
       </span>
     );
-    const { size, variant, weight } = this
+    const { size, classification, weight } = this
     return (
       <p
         class={{
           'sux-detail': true,
-          'sux-detail--serif': variant === 'serif',
-          'sux-detail--sans-serif': variant === 'sans-serif',
-          'sux-detail--mono': variant === 'mono',
+          'sux-detail--serif': classification === 'serif',
+          'sux-detail--sans-serif': classification === 'sans-serif',
+          'sux-detail--mono': classification === 'mono',
           'sux-detail--s': size === "s",
           'sux-detail--m': size === "m",
           'sux-detail--l': size === "l",

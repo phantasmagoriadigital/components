@@ -1,5 +1,6 @@
 import { Component, h, Prop } from '@stencil/core';
-import { HeadingSize, HeadingVariant, HeadingWeight } from './interfaces';
+import { HeadingSize, HeadingClassification, HeadingWeight } from './interfaces';
+import { HEADING_SIZE, HEADING_CLASSIFICATION, HEADING_WEIGHT } from "../defaults/prop-defaults";
 
 @Component({
   tag: 'sux-heading',
@@ -16,17 +17,17 @@ export class SuxHeading {
   /**
    * Heading  size
    */
-  @Prop({ reflect: true }) size: HeadingSize = "m";
+  @Prop({ reflect: true }) size: HeadingSize = HEADING_SIZE;
 
   /**
-   * Heading variant
+   * Heading classification
    */
-  @Prop({ reflect: true }) variant: HeadingVariant = "serif";
+  @Prop({ reflect: true }) classification: HeadingClassification = HEADING_CLASSIFICATION;
 
   /**
    * Heading weight
    */
-  @Prop({ reflect: true }) weight: HeadingWeight = "regular";
+  @Prop({ reflect: true }) weight: HeadingWeight = HEADING_WEIGHT;
 
   /**
    * Overwrite Tag
@@ -58,14 +59,14 @@ export class SuxHeading {
         <slot />
       </span>
     );
-    const { size, variant, weight } = this
+    const { size, classification, weight } = this
     return (
       <Tag
         class={{
           'sux-heading': true,
-          'sux-heading--serif': variant === 'serif',
-          'sux-heading--sans-serif': variant === 'sans-serif',
-          'sux-heading--mono': variant === 'mono',
+          'sux-heading--serif': classification === 'serif',
+          'sux-heading--sans-serif': classification === 'sans-serif',
+          'sux-heading--mono': classification === 'mono',
           'sux-heading--xs': size === "xs",
           'sux-heading--s': size === "s",
           'sux-heading--m': size === "m",
