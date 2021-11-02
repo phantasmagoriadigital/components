@@ -17,11 +17,11 @@ export const Default = args => {
         .type="${args.type}"
         variant="cta"
         .size="${args.size}"
-        .quiet="${args.quiet}"
-        .disabled="${args.disabled}"
-        .icon-start="${args.iconStart}"
-        .icon-end="${args.iconEnd}"
-        .is-loading="${args.isLoading}"
+        ?quiet="${args.quiet}"
+        ?disabled="${args.disabled}"
+        ?icon-start="${args.iconStart}"
+        ?icon-end="${args.iconEnd}"
+        ?is-loading="${args.isLoading}"
       >
         Button CTA
       </sux-button>
@@ -31,11 +31,11 @@ export const Default = args => {
         .type="${args.type}"
         variant="Primary"
         .size="${args.size}"
-        .quiet="${args.quiet}"
-        .disabled="${args.disabled}"
-        .icon-start="${args.iconStart}"
-        .icon-end="${args.iconEnd}"
-        .is-loading="${args.isLoading}"
+        ?quiet="${args.quiet}"
+        ?disabled="${args.disabled}"
+        ?icon-start="${args.iconStart}"
+        ?icon-end="${args.iconEnd}"
+        ?is-loading="${args.isLoading}"
       >
         Button Primary
       </sux-button>
@@ -45,11 +45,11 @@ export const Default = args => {
         .type="${args.type}"
         variant="secondary"
         .size="${args.size}"
-        .quiet="${args.quiet}"
-        .disabled="${args.disabled}"
-        .icon-start="${args.iconStart}"
-        .icon-end="${args.iconEnd}"
-        .is-loading="${args.isLoading}"
+        ?quiet="${args.quiet}"
+        ?disabled="${args.disabled}"
+        ?icon-start="${args.iconStart}"
+        ?icon-end="${args.iconEnd}"
+        ?is-loading="${args.isLoading}"
       >
         Button Secondary
       </sux-button>
@@ -59,11 +59,11 @@ export const Default = args => {
         .type="${args.type}"
         variant="negative"
         .size="${args.size}"
-        .quiet="${args.quiet}"
-        .disabled="${args.disabled}"
-        .icon-start="${args.iconStart}"
-        .icon-end="${args.iconEnd}"
-        .is-loading="${args.isLoading}"
+        ?quiet="${args.quiet}"
+        ?disabled="${args.disabled}"
+        ?icon-start="${args.iconStart}"
+        ?icon-end="${args.iconEnd}"
+        ?is-loading="${args.isLoading}"
       >
         Button Negative
       </sux-button>
@@ -72,7 +72,7 @@ export const Default = args => {
 };
 
 <Canvas>
-  <Story name="Default">{Default.bind()}</Story>
+  <Story name="Playground">{Default.bind()}</Story>
 </Canvas>
 
 ## Table of options / API
@@ -95,11 +95,11 @@ export const CTAButton = args => {
         .type="${args.type}"
         .variant="CTA"
         size="xl"
-        .quiet="${args.quiet}"
-        .disabled="${args.disabled}"
-        .icon-start="${args.iconStart}"
-        .icon-end="${args.iconEnd}"
-        .is-loading="${args.isLoading}"
+        ?quiet="${args.quiet}"
+        ?disabled="${args.disabled}"
+        ?icon-start="${args.iconStart}"
+        ?icon-end="${args.iconEnd}"
+        ?is-loading="${args.isLoading}"
       >
         CTA Button XL
       </sux-button>
@@ -109,11 +109,11 @@ export const CTAButton = args => {
         .type="${args.type}"
         .variant="CTA"
         size="l"
-        .quiet="${args.quiet}"
-        .disabled="${args.disabled}"
-        .icon-start="${args.iconStart}"
-        .icon-end="${args.iconEnd}"
-        .is-loading="${args.isLoading}"
+        ?quiet="${args.quiet}"
+        ?disabled="${args.disabled}"
+        ?icon-start="${args.iconStart}"
+        ?icon-end="${args.iconEnd}"
+        ?is-loading="${args.isLoading}"
       >
         CTA Button L
       </sux-button>
@@ -123,11 +123,11 @@ export const CTAButton = args => {
         .type="${args.type}"
         .variant="CTA"
         size="m"
-        .quiet="${args.quiet}"
-        .disabled="${args.disabled}"
-        .icon-start="${args.iconStart}"
-        .icon-end="${args.iconEnd}"
-        .is-loading="${args.isLoading}"
+        ?quiet="${args.quiet}"
+        ?disabled="${args.disabled}"
+        ?icon-start="${args.iconStart}"
+        ?icon-end="${args.iconEnd}"
+        ?is-loading="${args.isLoading}"
       >
         CTA Button M
       </sux-button>
@@ -137,11 +137,11 @@ export const CTAButton = args => {
         .type="${args.type}"
         .variant="CTA"
         size="s"
-        .quiet="${args.quiet}"
-        .disabled="${args.disabled}"
-        .icon-start="${args.iconStart}"
-        .icon-end="${args.iconEnd}"
-        .is-loading="${args.isLoading}"
+        ?quiet="${args.quiet}"
+        ?disabled="${args.disabled}"
+        ?icon-start="${args.iconStart}"
+        ?icon-end="${args.iconEnd}"
+        ?is-loading="${args.isLoading}"
       >
         CTA Button S
       </sux-button>
@@ -150,7 +150,7 @@ export const CTAButton = args => {
 };
 
 <Canvas>
-  <Story name="CTAButton">{CTAButton.bind()}</Story>
+  <Story name="CTA">{CTAButton.bind()}</Story>
 </Canvas>
 
 ### Primary
@@ -167,11 +167,11 @@ export const PrimaryButton = args => {
         .type="${args.type}"
         variant="primary"
         size="xl"
-        .quiet="${args.quiet}"
-        .disabled="${args.disabled}"
-        .icon-start="${args.iconStart}"
-        .icon-end="${args.iconEnd}"
-        .is-loading="${args.isLoading}"
+        ?quiet="${args.quiet}"
+        ?disabled="${args.disabled}"
+        ?icon-start="${args.iconStart}"
+        ?icon-end="${args.iconEnd}"
+        ?is-loading="${args.isLoading}"
       >
         Primary Button XL
       </sux-button>
@@ -181,11 +181,11 @@ export const PrimaryButton = args => {
         .type="${args.type}"
         variant="primary"
         size="l"
-        .quiet="${args.quiet}"
-        .disabled="${args.disabled}"
-        .icon-start="${args.iconStart}"
-        .icon-end="${args.iconEnd}"
-        .is-loading="${args.isLoading}"
+        ?quiet="${args.quiet}"
+        ?disabled="${args.disabled}"
+        ?icon-start="${args.iconStart}"
+        ?icon-end="${args.iconEnd}"
+        ?is-loading="${args.isLoading}"
       >
         Primary Button L
       </sux-button>
@@ -195,11 +195,11 @@ export const PrimaryButton = args => {
         .type="${args.type}"
         variant="primary"
         size="m"
-        .quiet="${args.quiet}"
-        .disabled="${args.disabled}"
-        .icon-start="${args.iconStart}"
-        .icon-end="${args.iconEnd}"
-        .is-loading="${args.isLoading}"
+        ?quiet="${args.quiet}"
+        ?disabled="${args.disabled}"
+        ?icon-start="${args.iconStart}"
+        ?icon-end="${args.iconEnd}"
+        ?is-loading="${args.isLoading}"
       >
         Primary Button M
       </sux-button>
@@ -209,11 +209,11 @@ export const PrimaryButton = args => {
         .type="${args.type}"
         variant="primary"
         size="s"
-        .quiet="${args.quiet}"
-        .disabled="${args.disabled}"
-        .icon-start="${args.iconStart}"
-        .icon-end="${args.iconEnd}"
-        .is-loading="${args.isLoading}"
+        ?quiet="${args.quiet}"
+        ?disabled="${args.disabled}"
+        ?icon-start="${args.iconStart}"
+        ?icon-end="${args.iconEnd}"
+        ?is-loading="${args.isLoading}"
       >
         Primary Button S
       </sux-button>
@@ -222,7 +222,7 @@ export const PrimaryButton = args => {
 };
 
 <Canvas>
-  <Story name="PrimaryButton">{PrimaryButton.bind()}</Story>
+  <Story name="Primary">{PrimaryButton.bind()}</Story>
 </Canvas>
 
 ### secondary
@@ -239,11 +239,11 @@ export const SecondaryButton = args => {
         .type="${args.type}"
         variant="secondary"
         size="xl"
-        .quiet="${args.quiet}"
-        .disabled="${args.disabled}"
-        .icon-start="${args.iconStart}"
-        .icon-end="${args.iconEnd}"
-        .is-loading="${args.isLoading}"
+        ?quiet="${args.quiet}"
+        ?disabled="${args.disabled}"
+        ?icon-start="${args.iconStart}"
+        ?icon-end="${args.iconEnd}"
+        ?is-loading="${args.isLoading}"
       >
         Secondary Button XL
       </sux-button>
@@ -253,11 +253,11 @@ export const SecondaryButton = args => {
         .type="${args.type}"
         variant="secondary"
         size="l"
-        .quiet="${args.quiet}"
-        .disabled="${args.disabled}"
-        .icon-start="${args.iconStart}"
-        .icon-end="${args.iconEnd}"
-        .is-loading="${args.isLoading}"
+        ?quiet="${args.quiet}"
+        ?disabled="${args.disabled}"
+        ?icon-start="${args.iconStart}"
+        ?icon-end="${args.iconEnd}"
+        ?is-loading="${args.isLoading}"
       >
         Secondary Button L
       </sux-button>
@@ -267,11 +267,11 @@ export const SecondaryButton = args => {
         .type="${args.type}"
         variant="secondary"
         size="m"
-        .quiet="${args.quiet}"
-        .disabled="${args.disabled}"
-        .icon-start="${args.iconStart}"
-        .icon-end="${args.iconEnd}"
-        .is-loading="${args.isLoading}"
+        ?quiet="${args.quiet}"
+        ?disabled="${args.disabled}"
+        ?icon-start="${args.iconStart}"
+        ?icon-end="${args.iconEnd}"
+        ?is-loading="${args.isLoading}"
       >
         Secondary Button M
       </sux-button>
@@ -281,11 +281,11 @@ export const SecondaryButton = args => {
         .type="${args.type}"
         variant="secondary"
         size="s"
-        .quiet="${args.quiet}"
-        .disabled="${args.disabled}"
-        .icon-start="${args.iconStart}"
-        .icon-end="${args.iconEnd}"
-        .is-loading="${args.isLoading}"
+        ?quiet="${args.quiet}"
+        ?disabled="${args.disabled}"
+        ?icon-start="${args.iconStart}"
+        ?icon-end="${args.iconEnd}"
+        ?is-loading="${args.isLoading}"
       >
         Secondary Button S
       </sux-button>
@@ -294,7 +294,7 @@ export const SecondaryButton = args => {
 };
 
 <Canvas>
-  <Story name="SecondaryButton">{SecondaryButton.bind()}</Story>
+  <Story name="Secondary">{SecondaryButton.bind()}</Story>
 </Canvas>
 
 ### Negative
@@ -311,11 +311,11 @@ export const NegativeButton = args => {
         .type="${args.type}"
         variant="negative"
         size="xl"
-        .quiet="${args.quiet}"
-        .disabled="${args.disabled}"
-        .icon-start="${args.iconStart}"
-        .icon-end="${args.iconEnd}"
-        .is-loading="${args.isLoading}"
+        ?quiet="${args.quiet}"
+        ?disabled="${args.disabled}"
+        ?icon-start="${args.iconStart}"
+        ?icon-end="${args.iconEnd}"
+        ?is-loading="${args.isLoading}"
       >
         Negative Button XL
       </sux-button>
@@ -325,11 +325,11 @@ export const NegativeButton = args => {
         .type="${args.type}"
         variant="negative"
         size="l"
-        .quiet="${args.quiet}"
-        .disabled="${args.disabled}"
-        .icon-start="${args.iconStart}"
-        .icon-end="${args.iconEnd}"
-        .is-loading="${args.isLoading}"
+        ?quiet="${args.quiet}"
+        ?disabled="${args.disabled}"
+        ?icon-start="${args.iconStart}"
+        ?icon-end="${args.iconEnd}"
+        ?is-loading="${args.isLoading}"
       >
         Negative Button L
       </sux-button>
@@ -339,11 +339,11 @@ export const NegativeButton = args => {
         .type="${args.type}"
         variant="negative"
         size="m"
-        .quiet="${args.quiet}"
-        .disabled="${args.disabled}"
-        .icon-start="${args.iconStart}"
-        .icon-end="${args.iconEnd}"
-        .is-loading="${args.isLoading}"
+        ?quiet="${args.quiet}"
+        ?disabled="${args.disabled}"
+        ?icon-start="${args.iconStart}"
+        ?icon-end="${args.iconEnd}"
+        ?is-loading="${args.isLoading}"
       >
         Negative Button M
       </sux-button>
@@ -353,11 +353,11 @@ export const NegativeButton = args => {
         .type="${args.type}"
         variant="negative"
         size="s"
-        .quiet="${args.quiet}"
-        .disabled="${args.disabled}"
-        .icon-start="${args.iconStart}"
-        .icon-end="${args.iconEnd}"
-        .is-loading="${args.isLoading}"
+        ?quiet="${args.quiet}"
+        ?disabled="${args.disabled}"
+        ?icon-start="${args.iconStart}"
+        ?icon-end="${args.iconEnd}"
+        ?is-loading="${args.isLoading}"
       >
         Negative Button S
       </sux-button>
@@ -366,7 +366,7 @@ export const NegativeButton = args => {
 };
 
 <Canvas>
-  <Story name="NegativeButton">{NegativeButton.bind()}</Story>
+  <Story name="Negative">{NegativeButton.bind()}</Story>
 </Canvas>
 
 ### Icon
@@ -391,11 +391,11 @@ export const ButtonSizes = args => {
         .type="${args.type}"
         variant="primary"
         size="xl"
-        .quiet="${args.quiet}"
-        .disabled="${args.disabled}"
-        .icon-start="${args.iconStart}"
-        .icon-end="${args.iconEnd}"
-        .is-loading="${args.isLoading}"
+        ?quiet="${args.quiet}"
+        ?disabled="${args.disabled}"
+        ?icon-start="${args.iconStart}"
+        ?icon-end="${args.iconEnd}"
+        ?is-loading="${args.isLoading}"
       >
         Primary Button XL
       </sux-button>
@@ -405,11 +405,11 @@ export const ButtonSizes = args => {
         .type="${args.type}"
         variant="primary"
         size="l"
-        .quiet="${args.quiet}"
-        .disabled="${args.disabled}"
-        .icon-start="${args.iconStart}"
-        .icon-end="${args.iconEnd}"
-        .is-loading="${args.isLoading}"
+        ?quiet="${args.quiet}"
+        ?disabled="${args.disabled}"
+        ?icon-start="${args.iconStart}"
+        ?icon-end="${args.iconEnd}"
+        ?is-loading="${args.isLoading}"
       >
         Primary Button L
       </sux-button>
@@ -419,11 +419,11 @@ export const ButtonSizes = args => {
         .type="${args.type}"
         variant="primary"
         size="m"
-        .quiet="${args.quiet}"
-        .disabled="${args.disabled}"
-        .icon-start="${args.iconStart}"
-        .icon-end="${args.iconEnd}"
-        .is-loading="${args.isLoading}"
+        ?quiet="${args.quiet}"
+        ?disabled="${args.disabled}"
+        ?icon-start="${args.iconStart}"
+        ?icon-end="${args.iconEnd}"
+        ?is-loading="${args.isLoading}"
       >
         Primary Button M
       </sux-button>
@@ -433,11 +433,11 @@ export const ButtonSizes = args => {
         .type="${args.type}"
         variant="primary"
         size="s"
-        .quiet="${args.quiet}"
-        .disabled="${args.disabled}"
-        .icon-start="${args.iconStart}"
-        .icon-end="${args.iconEnd}"
-        .is-loading="${args.isLoading}"
+        ?quiet="${args.quiet}"
+        ?disabled="${args.disabled}"
+        ?icon-start="${args.iconStart}"
+        ?icon-end="${args.iconEnd}"
+        ?is-loading="${args.isLoading}"
       >
         Primary Button S
       </sux-button>
@@ -505,7 +505,7 @@ export const ButtonSizes = args => {
 };
 
 <Canvas>
-  <Story name="ButtonSizes">{ButtonSizes.bind()}</Story>
+  <Story name="Size">{ButtonSizes.bind()}</Story>
 </Canvas>
 
 ### Quiet
@@ -578,7 +578,7 @@ export const QuietButton = args => {
 };
 
 <Canvas>
-  <Story name="QuietButton">{QuietButton.bind()}</Story>
+  <Story name="Quiet">{QuietButton.bind()}</Story>
 </Canvas>
 
 ### Disabled
@@ -649,5 +649,5 @@ export const DisabledButton = args => {
 };
 
 <Canvas>
-  <Story name="DisabledButton">{DisabledButton.bind()}</Story>
+  <Story name="Disabled">{DisabledButton.bind()}</Story>
 </Canvas>

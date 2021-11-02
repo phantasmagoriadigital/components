@@ -1,0 +1,59 @@
+import { extractArgTypes } from '@pxtrn/storybook-addon-docs-stencil';
+import { Meta, Story, Canvas, ArgsTable } from '@storybook/addon-docs/blocks';
+import { html, render } from 'lit-html';
+
+<Meta title="Components/Typography/Code" component="sux-code" argTypes={extractArgTypes('sux-code')} />
+
+# Typography / Code
+
+Code is a typography component used for text that represents code.
+
+export const DefaultCode = args => {
+  return html`
+    <div style="padding: 10%; justify-content: center; gap:16px;">
+      <sux-code .size="${args.size}" >
+        return (
+            class={{
+              'sux-code': true,
+              'sux-code--s': size === "s",
+              'sux-code--m': size === "m",
+              'sux-code--l': size === "l",
+              'sux-code--xl': size === "xl",
+            }}
+          >
+            {contentEl}
+        );
+      </sux-code>
+    </div>
+  `;
+};
+
+<Canvas>
+  <Story name="Playground">{DefaultCode.bind()}</Story>
+</Canvas>
+
+## Table of options / API
+
+From the design point of view, each component has a number of options. These options and their names are platform agnostic, and each implementation should adapt these to fit into their framework.
+
+<ArgsTable of="sux-code" />
+
+### Size
+
+Code can have a variety of sizes available. These sizes are defined using T-shirt sizing in order to support multiple scales without direct correlation to pixel values.
+
+export const CodeSize = args => {
+  return html`
+    <div style="padding: 10%; justify-content: center; gap:16px;">
+      <sux-code size="s"> < ArgsTable of="sux-code" /> </sux-code>
+      <sux-code size="m"> < ArgsTable of="sux-code" /> </sux-code>
+      <sux-code size="l"> < ArgsTable of="sux-code" /> </sux-code>
+      <sux-code size="xl"> < ArgsTable of="sux-code" /> </sux-code>
+      <br />
+    </div>
+  `;
+};
+
+<Canvas>
+  <Story name="Size">{CodeSize.bind()}</Story>
+</Canvas>

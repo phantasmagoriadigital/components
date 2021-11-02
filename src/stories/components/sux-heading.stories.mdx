@@ -11,17 +11,17 @@ Heading is a typography component used to create various levels of hierarchies b
 export const DefaultHeading = args => {
   return html`
     <div style="padding: 10%; justify-content: center; gap:16px;">
-      <sux-heading .size="${args.size}" .variant="${args.variant}" .weight="${args.weight}" .tag="${args.tag}"> Headings are great to create hierarchy. </sux-heading>
+      <sux-heading .size="${args.size}" classification="serif" .weight="${args.weight}"> Headings are great to create hierarchy. </sux-heading>
       <br />
-      <sux-heading size="l" variant="sans-serif" weight="regular"> Headings are great to create hierarchy. </sux-heading>
+      <sux-heading .size="${args.size}" classification="sans-serif" .weight="${args.weight}"> Headings are great to create hierarchy. </sux-heading>
       <br />
-      <sux-heading size="l" variant="mono" weight="regular"> Headings are great to create hierarchy. </sux-heading>
+      <sux-heading .size="${args.size}" classification="mono" .weight="${args.weight}"> Headings are great to create hierarchy. </sux-heading>
     </div>
   `;
 };
 
 <Canvas>
-  <Story name="DefaultHeading">{DefaultHeading.bind()}</Story>
+  <Story name="Playground">{DefaultHeading.bind()}</Story>
 </Canvas>
 
 ## Table of options / API
@@ -37,23 +37,23 @@ Headings can be displayed in serif or sans serif (default).
 export const HeadingClassification = args => {
   return html`
     <div style="padding: 10%; justify-content: center; gap:16px;">
-      <sux-heading size="l" variant="sans-serif" weight="regular"> A Sans Serif Heading looks like this. </sux-heading>
-      <sux-heading size="m" variant="sans-serif" weight="regular"> A Sans Serif Heading looks like this. </sux-heading>
-      <sux-heading size="s" variant="sans-serif" weight="regular"> A Sans Serif Heading looks like this. </sux-heading>
+      <sux-heading size="l" classification="sans-serif" .weight="${args.weight}"> A Sans Serif Heading looks like this. </sux-heading>
+      <sux-heading size="m" classification="sans-serif" .weight="${args.weight}"> A Sans Serif Heading looks like this. </sux-heading>
+      <sux-heading size="s" classification="sans-serif" .weight="${args.weight}"> A Sans Serif Heading looks like this. </sux-heading>
       <br />
-      <sux-heading size="l" variant="serif" weight="regular"> A Serif Heading looks like this. </sux-heading>
-      <sux-heading size="m" variant="serif" weight="regular"> A Serif Heading looks like this. </sux-heading>
-      <sux-heading size="s" variant="serif" weight="regular"> A Serif Heading looks like this. </sux-heading>
+      <sux-heading size="l" classification="serif" .weight="${args.weight}"> A Serif Heading looks like this. </sux-heading>
+      <sux-heading size="m" classification="serif" .weight="${args.weight}"> A Serif Heading looks like this. </sux-heading>
+      <sux-heading size="s" classification="serif" .weight="${args.weight}"> A Serif Heading looks like this. </sux-heading>
       <br />
-      <sux-heading size="l" variant="mono" weight="regular"> A Monospace Heading looks like this. </sux-heading>
-      <sux-heading size="m" variant="mono" weight="regular"> A Monospace Heading looks like this. </sux-heading>
-      <sux-heading size="s" variant="mono" weight="regular"> A Monospace Heading looks like this. </sux-heading>
+      <sux-heading size="l" classification="mono" .weight="${args.weight}"> A Monospace Heading looks like this. </sux-heading>
+      <sux-heading size="m" classification="mono" .weight="${args.weight}"> A Monospace Heading looks like this. </sux-heading>
+      <sux-heading size="s" classification="mono" .weight="${args.weight}"> A Monospace Heading looks like this. </sux-heading>
     </div>
   `;
 };
 
 <Canvas>
-  <Story name="HeadingClassification">{HeadingClassification.bind()}</Story>
+  <Story name="Classification">{HeadingClassification.bind()}</Story>
 </Canvas>
 
 ### Weight
@@ -63,26 +63,26 @@ Heading weight is another way to create or enhance visual hierarchy, in addition
 export const HeadingWeight = args => {
   return html`
     <div style="padding: 10%; justify-content: center; gap:16px;">
-      <sux-heading size="s" variant="sans-serif" weight="light"> A Light Sans Serif Heading looks like this. </sux-heading>
-      <sux-heading size="s" variant="sans-serif" weight="regular"> A Regular Sans Serif Heading looks like this. </sux-heading>
-      <sux-heading size="s" variant="sans-serif" weight="semibold"> A Semi Bold Sans Serif Heading looks like this. </sux-heading>
-      <sux-heading size="s" variant="sans-serif" weight="bold"> A Bold Sans Serif Heading looks like this. </sux-heading>
+      <sux-heading size="s" classification="sans-serif" weight="light"> A Light Sans Serif Heading looks like this. </sux-heading>
+      <sux-heading size="s" classification="sans-serif" weight="regular"> A Regular Sans Serif Heading looks like this. </sux-heading>
+      <sux-heading size="s" classification="sans-serif" weight="semibold"> A Semi Bold Sans Serif Heading looks like this. </sux-heading>
+      <sux-heading size="s" classification="sans-serif" weight="bold"> A Bold Sans Serif Heading looks like this. </sux-heading>
       <br />
-      <sux-heading size="s" variant="serif" weight="light"> A Light Serif Heading looks like this. </sux-heading>
-      <sux-heading size="s" variant="serif" weight="regular"> A Regular Serif Heading looks like this. </sux-heading>
-      <sux-heading size="s" variant="serif" weight="semibold"> A Semi Bold Serif Heading looks like this. </sux-heading>
-      <sux-heading size="s" variant="serif" weight="bold"> A Bold Serif Heading looks like this. </sux-heading>
+      <sux-heading size="s" classification="serif" weight="light"> A Light Serif Heading looks like this. </sux-heading>
+      <sux-heading size="s" classification="serif" weight="regular"> A Regular Serif Heading looks like this. </sux-heading>
+      <sux-heading size="s" classification="serif" weight="semibold"> A Semi Bold Serif Heading looks like this. </sux-heading>
+      <sux-heading size="s" classification="serif" weight="bold"> A Bold Serif Heading looks like this. </sux-heading>
       <br />
-      <sux-heading size="s" variant="mono" weight="light"> A Light Monospace Heading looks like this. </sux-heading>
-      <sux-heading size="s" variant="mono" weight="regular"> A Regular Monospace Heading looks like this. </sux-heading>
-      <sux-heading size="s" variant="mono" weight="semibold"> A Semi Bold Monospace Heading looks like this. </sux-heading>
-      <sux-heading size="s" variant="mono" weight="bold"> A Bold Monospace Heading looks like this. </sux-heading>
+      <sux-heading size="s" classification="mono" weight="light"> A Light Monospace Heading looks like this. </sux-heading>
+      <sux-heading size="s" classification="mono" weight="regular"> A Regular Monospace Heading looks like this. </sux-heading>
+      <sux-heading size="s" classification="mono" weight="semibold"> A Semi Bold Monospace Heading looks like this. </sux-heading>
+      <sux-heading size="s" classification="mono" weight="bold"> A Bold Monospace Heading looks like this. </sux-heading>
     </div>
   `;
 };
 
 <Canvas>
-  <Story name="HeadingWeight">{HeadingWeight.bind()}</Story>
+  <Story name="Weight">{HeadingWeight.bind()}</Story>
 </Canvas>
 
 ### Size
@@ -92,17 +92,17 @@ Headings have a variety of sizes available. These sizes are defined using T-shir
 export const HeadingSize = args => {
   return html`
     <div style="padding: 10%; justify-content: center; gap:16px;">
-      <sux-heading size="xs" variant="sans-serif" weight="regular"> Extra Small heading </sux-heading>
-      <sux-heading size="s" variant="sans-serif" weight="regular"> Small heading </sux-heading>
-      <sux-heading size="m" variant="sans-serif" weight="regular"> Medium heading </sux-heading>
-      <sux-heading size="l" variant="sans-serif" weight="regular"> Large heading </sux-heading>
-      <sux-heading size="xl" variant="sans-serif" weight="regular"> X Large heading </sux-heading>
-      <sux-heading size="xxl" variant="sans-serif" weight="regular"> XX Large heading </sux-heading>
+      <sux-heading size="xs" classification="sans-serif" .weight="${args.weight}"> Extra Small heading </sux-heading>
+      <sux-heading size="s" classification="sans-serif" .weight="${args.weight}"> Small heading </sux-heading>
+      <sux-heading size="m" classification="sans-serif" .weight="${args.weight}"> Medium heading </sux-heading>
+      <sux-heading size="l" classification="sans-serif" .weight="${args.weight}"> Large heading </sux-heading>
+      <sux-heading size="xl" classification="sans-serif" .weight="${args.weight}"> X Large heading </sux-heading>
+      <sux-heading size="xxl" classification="sans-serif" .weight="${args.weight}"> XX Large heading </sux-heading>
       <br />
     </div>
   `;
 };
 
 <Canvas>
-  <Story name="HeadingSize">{HeadingSize.bind()}</Story>
+  <Story name="Size">{HeadingSize.bind()}</Story>
 </Canvas>

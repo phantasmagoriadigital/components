@@ -1,0 +1,81 @@
+import { extractArgTypes } from '@pxtrn/storybook-addon-docs-stencil';
+import { Meta, Story, Canvas, ArgsTable } from '@storybook/addon-docs/blocks';
+import { html, render } from 'lit-html';
+
+<Meta title="Components/Typography/Detail" component="sux-detail" argTypes={extractArgTypes('sux-detail')} />
+
+# Typography / Detail
+
+Detail is a typography component used for disclosing extra information or smaller items in hierarchical relationships of text.
+
+export const DefaultDetail = args => {
+  return html`
+    <div style="padding: 10%; justify-content: center; gap:16px;">
+      <sux-detail .size="${args.size}" .classification="${args.classification}" .weight="${args.weight}"> Details can accompany a heading. </sux-detail>
+    </div>
+  `;
+};
+
+<Canvas>
+  <Story name="Playground">{DefaultDetail.bind()}</Story>
+</Canvas>
+
+## Table of options / API
+
+From the design point of view, each component has a number of options. These options and their names are platform agnostic, and each implementation should adapt these to fit into their framework.
+
+<ArgsTable of="sux-detail" />
+
+### Classification
+
+Details can be displayed in serif, sans serif (default) or mono.
+
+export const DetailClassification = args => {
+  return html`
+    <div style="padding: 10%; justify-content: center; gap:16px;">
+      <sux-detail .size="${args.size}" classification="serif" .weight="${args.weight}"> Serif Details Example </sux-detail>
+      <sux-detail .size="${args.size}" classification="sans-serif" .weight="${args.weight}"> Sans Serif Details Example </sux-detail>
+      <sux-detail .size="${args.size}" classification="mono" .weight="${args.weight}"> Monospace Details Example </sux-detail>
+    </div>
+  `;
+};
+
+<Canvas>
+  <Story name="Classification">{DetailClassification.bind()}</Story>
+</Canvas>
+
+### Weight
+
+Detail weight is another way to create or enhance visual hierarchy, in addition to size. Heavier and lighter weights can add personality or style to an experience.
+
+export const DetailWeight = args => {
+  return html`
+    <div style="padding: 10%; justify-content: center; gap:16px;">
+      <sux-detail .size="${args.size}" .classification="${args.classification}" weight="light"> Light Details Example </sux-detail>
+      <sux-detail .size="${args.size}" .classification="${args.classification}" weight="regular"> Regular Details Example </sux-detail>
+    </div>
+  `;
+};
+
+<Canvas>
+  <Story name="Weight">{DetailWeight.bind()}</Story>
+</Canvas>
+
+### Size
+
+Details have a variety of sizes available. These sizes are defined using T-shirt sizing in order to support multiple scales without direct correlation to pixel values.
+
+export const Detailize = args => {
+  return html`
+    <div style="padding: 10%; justify-content: center; gap:16px;">
+      <sux-detail size="s" .classification="${args.classification}" .weight="${args.weight}"> Small Details Example </sux-detail>
+      <sux-detail size="m" .classification="${args.classification}" .weight="${args.weight}"> Medium Details Example </sux-detail>
+      <sux-detail size="l" .classification="${args.classification}" .weight="${args.weight}"> Large Details Example </sux-detail>
+      <sux-detail size="xl" .classification="${args.classification}" .weight="${args.weight}"> Extra Large Details Example </sux-detail>
+    </div>
+  `;
+};
+
+<Canvas>
+  <Story name="Size">{Detailize.bind()}</Story>
+</Canvas>
