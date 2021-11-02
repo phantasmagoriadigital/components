@@ -1,6 +1,6 @@
 import { Component, h, Prop } from '@stencil/core';
-import { BodySize, BodyVariant } from './interfaces';
-import { BODY_SIZE } from "../defaults/prop-defaults";
+import { BodySize, BodyClassification } from './interfaces';
+import { BODY_SIZE, BODY_CLASSIFICATION } from "../defaults/prop-defaults";
 
 @Component({
   tag: 'sux-body',
@@ -20,9 +20,9 @@ export class SuxBody {
   @Prop({ reflect: true }) size: BodySize = BODY_SIZE;
 
   /**
-   * Variant
+   * Classification
    */
-  @Prop({ reflect: true }) variant: BodyVariant = "serif";
+  @Prop({ reflect: true }) classification: BodyClassification = BODY_CLASSIFICATION;
 
   render() {
     /** Content element with slot  */
@@ -31,14 +31,14 @@ export class SuxBody {
         <slot />
       </span>
     );
-    const { size, variant } = this
+    const { size, classification } = this
     return (
       <p
         class={{
           'sux-body': true,
-          'sux-body--serif': variant === 'serif',
-          'sux-body--sans-serif': variant === 'sans-serif',
-          'sux-body--mono': variant === 'mono',
+          'sux-body--serif': classification === 'serif',
+          'sux-body--sans-serif': classification === 'sans-serif',
+          'sux-body--mono': classification === 'mono',
           'sux-body--xs': size === "xs",
           'sux-body--s': size === "s",
           'sux-body--m': size === "m",

@@ -3,7 +3,7 @@
   display: block;
 }
 .sux-heading {
-  line-height: 130%;
+  line-height: $heading-line-height;
 
   &--serif {
     font-family: $heading-serif-font-family;
