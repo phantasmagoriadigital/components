@@ -1,5 +1,5 @@
 {
-  "name": "substrate-ds",
+  "name": "sux-ds",
   "version": "0.0.1",
   "description": "Substrate Design System",
   "main": "dist/index.cjs.js",

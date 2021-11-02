@@ -32,7 +32,7 @@ npm run storybook
 
 ## Getting Started - CONSUMING COMPONENTS
 
-Substrate is not ready for use in production. Currently you will need to buidl and manually integrate components to experiment.
+Substrate is not ready for use in production. Currently you will need to build and manually integrate components to experiment.
 
 Check out our [Substrate DS StoryBook](https://sb.nextds.design) to see they components in their current state
 
@@ -64,4 +64,4 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-email: mike@phantasmagoria.in
+email: hello@phantasmagoria.in
