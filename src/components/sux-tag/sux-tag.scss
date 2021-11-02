@@ -1,0 +1,54 @@
+@import '../../assets/tokens/components/_tag.scss';
+:host {
+  display: block;
+}
+.sux-tag {
+  display: inline-flex;
+  font-family: $tag-font-family;
+  font-weight: $tag-font-weight;
+  color: $tag-text-color;
+  border-radius: $tag-border-radius;
+  &--info {
+    background-color: $tag-info-background-color;
+  }
+  &--warning {
+    background-color: $tag-warning-background-color;
+  }
+  &--error {
+    background-color: $tag-error-background-color;
+  }
+  &--success {
+    background-color: $tag-success-background-color;
+  }
+  &--neutral {
+    background-color: $tag-neutral-background-color;
+  }
+  &--sizeS {
+    font-size: $tag-small-text-size;
+    padding-top: $tag-small-padding-top;
+    padding-right: $tag-small-padding-right;
+    padding-bottom: $tag-small-padding-bottom;
+    padding-left: $tag-small-padding-left;
+  }
+  &--sizeM {
+    font-size: $tag-medium-text-size;
+    padding-top: $tag-medium-padding-top;
+    padding-right: $tag-medium-padding-right;
+    padding-bottom: $tag-medium-padding-bottom;
+    padding-left: $tag-medium-padding-left;
+  }
+  &--sizeL {
+    font-size: $tag-large-text-size;
+    padding-top: $tag-large-padding-top;
+    padding-right: $tag-large-padding-right;
+    padding-bottom: $tag-large-padding-bottom;
+    padding-left: $tag-large-padding-left;
+  }
+  &--sizeXL {
+    font-size: $tag-extra-large-text-size;
+    padding-top: $tag-extra-large-padding-top;
+    padding-right: $tag-extra-large-padding-right;
+    padding-bottom: $tag-extra-large-padding-bottom;
+    padding-left: $tag-extra-large-padding-left;
+  }
+}

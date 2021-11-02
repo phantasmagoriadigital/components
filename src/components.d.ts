@@ -7,9 +7,11 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 import { BodyClassification, BodySize } from "./components/sux-body/interfaces";
 import { ButtonSize, ButtonVariant } from "./components/sux-button/interfaces";
+import { CheckboxChangeEventDetail, CheckboxSize, StyleEventDetail } from "./components/sux-checkbox/interfaces";
 import { CodeSize } from "./components/sux-code/interfaces";
 import { DetailClassification, DetailSize, DetailWeight } from "./components/sux-detail/interfaces";
 import { HeadingClassification, HeadingSize, HeadingWeight } from "./components/sux-heading/interfaces";
+import { TagSize, TagVariant } from "./components/sux-tag/interfaces";
 export namespace Components {
     interface SuxBody {
         /**
@@ -63,6 +65,44 @@ export namespace Components {
          */
         "variant": ButtonVariant;
     }
+    interface SuxCheckbox {
+        /**
+          * Toggles checked state of a checkbox
+         */
+        "checked": boolean;
+        /**
+          * Disabled
+         */
+        "disabled": boolean;
+        /**
+          * Error
+         */
+        "error": boolean;
+        /**
+          * Toggles indeterminate state of a checkbox.
+         */
+        "indeterminate": boolean;
+        /**
+          * The checkbox name
+         */
+        "name": string;
+        /**
+          * quiet
+         */
+        "quiet": boolean;
+        /**
+          * Read-onlys
+         */
+        "readOnly": boolean;
+        /**
+          * Size
+         */
+        "size": CheckboxSize;
+        /**
+          * The checkbox value
+         */
+        "value": string;
+    }
     interface SuxCode {
         /**
           * Size
@@ -101,6 +141,20 @@ export namespace Components {
          */
         "weight": HeadingWeight;
     }
+    interface SuxTag {
+        /**
+          * label for the tag
+         */
+        "label": string;
+        /**
+          * Size
+         */
+        "size": TagSize;
+        /**
+          * Variant
+         */
+        "variant": TagVariant;
+    }
 }
 declare global {
     interface HTMLSuxBodyElement extends Components.SuxBody, HTMLStencilElement {
@@ -114,6 +168,12 @@ declare global {
     var HTMLSuxButtonElement: {
         prototype: HTMLSuxButtonElement;
         new (): HTMLSuxButtonElement;
+    };
+    interface HTMLSuxCheckboxElement extends Components.SuxCheckbox, HTMLStencilElement {
+    }
+    var HTMLSuxCheckboxElement: {
+        prototype: HTMLSuxCheckboxElement;
+        new (): HTMLSuxCheckboxElement;
     };
     interface HTMLSuxCodeElement extends Components.SuxCode, HTMLStencilElement {
     }
@@ -133,12 +193,20 @@ declare global {
         prototype: HTMLSuxHeadingElement;
         new (): HTMLSuxHeadingElement;
     };
+    interface HTMLSuxTagElement extends Components.SuxTag, HTMLStencilElement {
+    }
+    var HTMLSuxTagElement: {
+        prototype: HTMLSuxTagElement;
+        new (): HTMLSuxTagElement;
+    };
     interface HTMLElementTagNameMap {
         "sux-body": HTMLSuxBodyElement;
         "sux-button": HTMLSuxButtonElement;
+        "sux-checkbox": HTMLSuxCheckboxElement;
         "sux-code": HTMLSuxCodeElement;
         "sux-detail": HTMLSuxDetailElement;
         "sux-heading": HTMLSuxHeadingElement;
+        "sux-tag": HTMLSuxTagElement;
     }
 }
 declare namespace LocalJSX {
@@ -194,6 +262,60 @@ declare namespace LocalJSX {
          */
         "variant"?: ButtonVariant;
     }
+    interface SuxCheckbox {
+        /**
+          * Toggles checked state of a checkbox
+         */
+        "checked"?: boolean;
+        /**
+          * Disabled
+         */
+        "disabled"?: boolean;
+        /**
+          * Error
+         */
+        "error"?: boolean;
+        /**
+          * Toggles indeterminate state of a checkbox.
+         */
+        "indeterminate"?: boolean;
+        /**
+          * The checkbox name
+         */
+        "name"?: string;
+        /**
+          * Emitted when the checkbox loses focus.
+         */
+        "onSuxBlur"?: (event: CustomEvent<void>) => void;
+        /**
+          * Emitted when the checkbox has focus.
+         */
+        "onSuxFocus"?: (event: CustomEvent<void>) => void;
+        /**
+          * Emitted when the styles change.
+         */
+        "onSuxStyle"?: (event: CustomEvent<StyleEventDetail>) => void;
+        /**
+          * Emitted when the checked property has changed.
+         */
+        "onSuxchange"?: (event: CustomEvent<CheckboxChangeEventDetail>) => void;
+        /**
+          * quiet
+         */
+        "quiet"?: boolean;
+        /**
+          * Read-onlys
+         */
+        "readOnly"?: boolean;
+        /**
+          * Size
+         */
+        "size"?: CheckboxSize;
+        /**
+          * The checkbox value
+         */
+        "value"?: string;
+    }
     interface SuxCode {
         /**
           * Size
@@ -232,12 +354,28 @@ declare namespace LocalJSX {
          */
         "weight"?: HeadingWeight;
     }
+    interface SuxTag {
+        /**
+          * label for the tag
+         */
+        "label"?: string;
+        /**
+          * Size
+         */
+        "size"?: TagSize;
+        /**
+          * Variant
+         */
+        "variant"?: TagVariant;
+    }
     interface IntrinsicElements {
         "sux-body": SuxBody;
         "sux-button": SuxButton;
+        "sux-checkbox": SuxCheckbox;
         "sux-code": SuxCode;
         "sux-detail": SuxDetail;
         "sux-heading": SuxHeading;
+        "sux-tag": SuxTag;
     }
 }
 export { LocalJSX as JSX };
@@ -246,9 +384,11 @@ declare module "@stencil/core" {
         interface IntrinsicElements {
             "sux-body": LocalJSX.SuxBody & JSXBase.HTMLAttributes<HTMLSuxBodyElement>;
             "sux-button": LocalJSX.SuxButton & JSXBase.HTMLAttributes<HTMLSuxButtonElement>;
+            "sux-checkbox": LocalJSX.SuxCheckbox & JSXBase.HTMLAttributes<HTMLSuxCheckboxElement>;
             "sux-code": LocalJSX.SuxCode & JSXBase.HTMLAttributes<HTMLSuxCodeElement>;
             "sux-detail": LocalJSX.SuxDetail & JSXBase.HTMLAttributes<HTMLSuxDetailElement>;
             "sux-heading": LocalJSX.SuxHeading & JSXBase.HTMLAttributes<HTMLSuxHeadingElement>;
+            "sux-tag": LocalJSX.SuxTag & JSXBase.HTMLAttributes<HTMLSuxTagElement>;
         }
     }
 }
