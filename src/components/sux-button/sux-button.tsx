@@ -46,22 +46,11 @@ export class SuxButton {
   @Prop({ reflect: true }) iconStart?: boolean = false;
 
   /** optionally pass an icon to display at the end of a button - accepts ui icon names  */
-  @Prop({ reflect: false }) iconEnd?: 'icon-close' | 'icon-open' | 'icon-info';
+  @Prop({ reflect: false }) iconEnd?: boolean = false;
 
   /** optionally add a sux-loader component to the button, disabling interaction.  */
   @Prop({ reflect: true }) isLoading?: boolean = false;
 
-
-
-
-
-  // render() {
-  //   return (
-  //     <Host>
-  //       <slot></slot>
-  //     </Host>
-  //   );
-  // }
 
   render() {
     // const dir = getElementDir(this.el);
@@ -70,14 +59,14 @@ export class SuxButton {
     /** Loader component  */
     const loaderEl = (
       <div class={'loader'}>
-        loader
+         ♻️&nbsp;
       </div>
     );
 
     /** Icon Start (left side)  */
     const iconStartEl = (
       <div class={'iconStart'}>
-        iconStart
+         🚧&nbsp;&nbsp;
       </div>
     );
 
@@ -90,8 +79,8 @@ export class SuxButton {
 
     /** Icon End (right side) */
     const iconEndEl = (
-      <div class={'iconStart'}>
-        iconEnd
+      <div class={'iconEnd'}>
+         &nbsp;&nbsp;🚧
       </div>
     );
     const { size, variant, disabled, quiet } = this

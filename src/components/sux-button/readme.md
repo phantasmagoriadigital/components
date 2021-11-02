@@ -10,7 +10,7 @@
 | Property    | Attribute    | Description                                                                         | Type                                              | Default          |
 | ----------- | ------------ | ----------------------------------------------------------------------------------- | ------------------------------------------------- | ---------------- |
 | `disabled`  | `disabled`   | is the button disabled                                                              | `boolean`                                         | `false`          |
-| `iconEnd`   | `icon-end`   | optionally pass an icon to display at the end of a button - accepts ui icon names   | `"icon-close" \| "icon-info" \| "icon-open"`      | `undefined`      |
+| `iconEnd`   | `icon-end`   | optionally pass an icon to display at the end of a button - accepts ui icon names   | `boolean`                                         | `false`          |
 | `iconStart` | `icon-start` | optionally pass an icon to display at the start of a button - accepts ui icon names | `boolean`                                         | `false`          |
 | `isLoading` | `is-loading` | optionally add a sux-loader component to the button, disabling interaction.         | `boolean`                                         | `false`          |
 | `label`     | `label`      | Applies to the aria-label attribute on the button or hyperlink                      | `string`                                          | `'Button label'` |
