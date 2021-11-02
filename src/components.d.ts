@@ -11,6 +11,7 @@ import { CodeSize } from "./components/sux-code/interfaces";
 import { DetailClassification, DetailSize, DetailWeight } from "./components/sux-detail/interfaces";
 import { FieldLabelPosition, FieldLabelSize } from "./components/sux-field-label/interfaces";
 import { HeadingClassification, HeadingSize, HeadingWeight } from "./components/sux-heading/interfaces";
+import { HelpTextSize, HelpTextVariant } from "./components/sux-help-text/interfaces";
 import { TagSize, TagVariant } from "./components/sux-tag/interfaces";
 export namespace Components {
     interface SuxBody {
@@ -126,6 +127,26 @@ export namespace Components {
         "weight": HeadingWeight;
     }
     interface SuxHelpText {
+        /**
+          * disabled
+         */
+        "disabled": boolean;
+        /**
+          * Icon
+         */
+        "icon": boolean;
+        /**
+          * size
+         */
+        "size": HelpTextSize;
+        /**
+          * text
+         */
+        "text": string;
+        /**
+          * Variant
+         */
+        "variant": HelpTextVariant;
     }
     interface SuxTag {
         /**
@@ -316,6 +337,26 @@ declare namespace LocalJSX {
         "weight"?: HeadingWeight;
     }
     interface SuxHelpText {
+        /**
+          * disabled
+         */
+        "disabled"?: boolean;
+        /**
+          * Icon
+         */
+        "icon"?: boolean;
+        /**
+          * size
+         */
+        "size"?: HelpTextSize;
+        /**
+          * text
+         */
+        "text"?: string;
+        /**
+          * Variant
+         */
+        "variant"?: HelpTextVariant;
     }
     interface SuxTag {
         /**
