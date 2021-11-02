@@ -1,5 +1,5 @@
 {
-  "timestamp": "2021-11-01T17:38:01",
+  "timestamp": "2021-11-02T16:29:49",
   "compiler": {
     "name": "@stencil/core",
     "version": "2.9.0",
@@ -15,6 +15,32 @@
       "docsTags": [],
       "usage": {},
       "props": [
+        {
+          "name": "classification",
+          "type": "\"mono\" | \"sans-serif\" | \"serif\"",
+          "mutable": false,
+          "attr": "classification",
+          "reflectToAttr": true,
+          "docs": "Classification",
+          "docsTags": [],
+          "default": "BODY_CLASSIFICATION",
+          "values": [
+            {
+              "value": "mono",
+              "type": "string"
+            },
+            {
+              "value": "sans-serif",
+              "type": "string"
+            },
+            {
+              "value": "serif",
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
         {
           "name": "size",
           "type": "\"l\" | \"m\" | \"s\" | \"xl\" | \"xs\" | \"xxl\" | \"xxxl\"",
@@ -51,32 +77,6 @@
             },
             {
               "value": "xxxl",
-              "type": "string"
-            }
-          ],
-          "optional": false,
-          "required": false
-        },
-        {
-          "name": "variant",
-          "type": "\"mono\" | \"sans-serif\" | \"serif\"",
-          "mutable": false,
-          "attr": "variant",
-          "reflectToAttr": true,
-          "docs": "Variant",
-          "docsTags": [],
-          "default": "\"serif\"",
-          "values": [
-            {
-              "value": "mono",
-              "type": "string"
-            },
-            {
-              "value": "sans-serif",
-              "type": "string"
-            },
-            {
-              "value": "serif",
               "type": "string"
             }
           ],
@@ -122,24 +122,16 @@
         },
         {
           "name": "iconEnd",
-          "type": "\"icon-close\" | \"icon-info\" | \"icon-open\"",
+          "type": "boolean",
           "mutable": false,
           "attr": "icon-end",
           "reflectToAttr": false,
           "docs": "optionally pass an icon to display at the end of a button - accepts ui icon names",
           "docsTags": [],
+          "default": "false",
           "values": [
             {
-              "value": "icon-close",
-              "type": "string"
-            },
-            {
-              "value": "icon-info",
-              "type": "string"
-            },
-            {
-              "value": "icon-open",
-              "type": "string"
+              "type": "boolean"
             }
           ],
           "optional": true,
@@ -318,6 +310,154 @@
       "dependencyGraph": {}
     },
     {
+      "filePath": "./src/components/sux-code/sux-code.tsx",
+      "encapsulation": "shadow",
+      "tag": "sux-code",
+      "readme": "# sux-code\n\n\n",
+      "docs": "",
+      "docsTags": [],
+      "usage": {},
+      "props": [
+        {
+          "name": "size",
+          "type": "\"l\" | \"m\" | \"s\" | \"xl\"",
+          "mutable": false,
+          "attr": "size",
+          "reflectToAttr": true,
+          "docs": "Size",
+          "docsTags": [],
+          "default": "CODE_SIZE",
+          "values": [
+            {
+              "value": "l",
+              "type": "string"
+            },
+            {
+              "value": "m",
+              "type": "string"
+            },
+            {
+              "value": "s",
+              "type": "string"
+            },
+            {
+              "value": "xl",
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "listeners": [],
+      "styles": [],
+      "slots": [],
+      "parts": [],
+      "dependents": [],
+      "dependencies": [],
+      "dependencyGraph": {}
+    },
+    {
+      "filePath": "./src/components/sux-detail/sux-detail.tsx",
+      "encapsulation": "shadow",
+      "tag": "sux-detail",
+      "readme": "# sux-detail\n\n\n",
+      "docs": "",
+      "docsTags": [],
+      "usage": {},
+      "props": [
+        {
+          "name": "classification",
+          "type": "\"mono\" | \"sans-serif\" | \"serif\"",
+          "mutable": false,
+          "attr": "classification",
+          "reflectToAttr": true,
+          "docs": "Classification",
+          "docsTags": [],
+          "default": "DETAIL_CLASSIFICATION",
+          "values": [
+            {
+              "value": "mono",
+              "type": "string"
+            },
+            {
+              "value": "sans-serif",
+              "type": "string"
+            },
+            {
+              "value": "serif",
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "size",
+          "type": "\"l\" | \"m\" | \"s\" | \"xl\"",
+          "mutable": false,
+          "attr": "size",
+          "reflectToAttr": true,
+          "docs": "Size",
+          "docsTags": [],
+          "default": "DETAIL_SIZE",
+          "values": [
+            {
+              "value": "l",
+              "type": "string"
+            },
+            {
+              "value": "m",
+              "type": "string"
+            },
+            {
+              "value": "s",
+              "type": "string"
+            },
+            {
+              "value": "xl",
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "weight",
+          "type": "\"light\" | \"regular\"",
+          "mutable": false,
+          "attr": "weight",
+          "reflectToAttr": true,
+          "docs": "Weight",
+          "docsTags": [],
+          "default": "DETAIL_WEIGHT",
+          "values": [
+            {
+              "value": "light",
+              "type": "string"
+            },
+            {
+              "value": "regular",
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "listeners": [],
+      "styles": [],
+      "slots": [],
+      "parts": [],
+      "dependents": [],
+      "dependencies": [],
+      "dependencyGraph": {}
+    },
+    {
       "filePath": "./src/components/sux-heading/sux-heading.tsx",
       "encapsulation": "shadow",
       "tag": "sux-heading",
@@ -327,6 +467,32 @@
       "usage": {},
       "props": [
         {
+          "name": "classification",
+          "type": "\"mono\" | \"sans-serif\" | \"serif\"",
+          "mutable": false,
+          "attr": "classification",
+          "reflectToAttr": true,
+          "docs": "Heading classification",
+          "docsTags": [],
+          "default": "HEADING_CLASSIFICATION",
+          "values": [
+            {
+              "value": "mono",
+              "type": "string"
+            },
+            {
+              "value": "sans-serif",
+              "type": "string"
+            },
+            {
+              "value": "serif",
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
           "name": "size",
           "type": "\"l\" | \"m\" | \"s\" | \"xl\" | \"xs\" | \"xxl\"",
           "mutable": false,
@@ -334,7 +500,7 @@
           "reflectToAttr": true,
           "docs": "Heading  size",
           "docsTags": [],
-          "default": "\"m\"",
+          "default": "HEADING_SIZE",
           "values": [
             {
               "value": "l",
@@ -382,32 +548,6 @@
           "required": false
         },
         {
-          "name": "variant",
-          "type": "\"mono\" | \"sans-serif\" | \"serif\"",
-          "mutable": false,
-          "attr": "variant",
-          "reflectToAttr": true,
-          "docs": "Heading variant",
-          "docsTags": [],
-          "default": "\"serif\"",
-          "values": [
-            {
-              "value": "mono",
-              "type": "string"
-            },
-            {
-              "value": "sans-serif",
-              "type": "string"
-            },
-            {
-              "value": "serif",
-              "type": "string"
-            }
-          ],
-          "optional": false,
-          "required": false
-        },
-        {
           "name": "weight",
           "type": "\"bold\" | \"light\" | \"regular\" | \"semibold\"",
           "mutable": false,
@@ -415,7 +555,7 @@
           "reflectToAttr": true,
           "docs": "Heading weight",
           "docsTags": [],
-          "default": "\"regular\"",
+          "default": "HEADING_WEIGHT",
           "values": [
             {
               "value": "bold",
@@ -431,6 +571,106 @@
             },
             {
               "value": "semibold",
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "listeners": [],
+      "styles": [],
+      "slots": [],
+      "parts": [],
+      "dependents": [],
+      "dependencies": [],
+      "dependencyGraph": {}
+    },
+    {
+      "filePath": "./src/components/sux-tag/sux-tag.tsx",
+      "encapsulation": "shadow",
+      "tag": "sux-tag",
+      "readme": "# sux-tag\n\n\n",
+      "docs": "",
+      "docsTags": [],
+      "usage": {},
+      "props": [
+        {
+          "name": "label",
+          "type": "string",
+          "mutable": false,
+          "attr": "label",
+          "reflectToAttr": false,
+          "docs": "label for the tag",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "size",
+          "type": "\"l\" | \"m\" | \"s\" | \"xl\"",
+          "mutable": false,
+          "attr": "size",
+          "reflectToAttr": false,
+          "docs": "Size",
+          "docsTags": [],
+          "default": "TAG_SIZE",
+          "values": [
+            {
+              "value": "l",
+              "type": "string"
+            },
+            {
+              "value": "m",
+              "type": "string"
+            },
+            {
+              "value": "s",
+              "type": "string"
+            },
+            {
+              "value": "xl",
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "variant",
+          "type": "\"error\" | \"info\" | \"neutral\" | \"success\" | \"warning\"",
+          "mutable": false,
+          "attr": "variant",
+          "reflectToAttr": false,
+          "docs": "Variant",
+          "docsTags": [],
+          "default": "TAG_VARIANT",
+          "values": [
+            {
+              "value": "error",
+              "type": "string"
+            },
+            {
+              "value": "info",
+              "type": "string"
+            },
+            {
+              "value": "neutral",
+              "type": "string"
+            },
+            {
+              "value": "success",
+              "type": "string"
+            },
+            {
+              "value": "warning",
               "type": "string"
             }
           ],

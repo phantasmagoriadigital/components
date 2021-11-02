@@ -1,12 +1,12 @@
-import { BodySize, BodyVariant } from './interfaces';
+import { BodySize, BodyClassification } from './interfaces';
 export declare class SuxBody {
   /**
    * Size
    */
   size: BodySize;
   /**
-   * Variant
+   * Classification
    */
-  variant: BodyVariant;
+  classification: BodyClassification;
   render(): any;
 }

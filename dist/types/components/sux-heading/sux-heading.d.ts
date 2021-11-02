@@ -1,13 +1,13 @@
-import { HeadingSize, HeadingVariant, HeadingWeight } from './interfaces';
+import { HeadingSize, HeadingClassification, HeadingWeight } from './interfaces';
 export declare class SuxHeading {
   /**
    * Heading  size
    */
   size: HeadingSize;
   /**
-   * Heading variant
+   * Heading classification
    */
-  variant: HeadingVariant;
+  classification: HeadingClassification;
   /**
    * Heading weight
    */

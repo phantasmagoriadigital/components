@@ -14,10 +14,28 @@ export const SuxButton: {
   new (): SuxButton;
 };
 
+interface SuxCode extends Components.SuxCode, HTMLElement {}
+export const SuxCode: {
+  prototype: SuxCode;
+  new (): SuxCode;
+};
+
+interface SuxDetail extends Components.SuxDetail, HTMLElement {}
+export const SuxDetail: {
+  prototype: SuxDetail;
+  new (): SuxDetail;
+};
+
 interface SuxHeading extends Components.SuxHeading, HTMLElement {}
 export const SuxHeading: {
   prototype: SuxHeading;
   new (): SuxHeading;
+};
+
+interface SuxTag extends Components.SuxTag, HTMLElement {}
+export const SuxTag: {
+  prototype: SuxTag;
+  new (): SuxTag;
 };
 
 /**

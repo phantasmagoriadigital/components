@@ -1,4 +1,4 @@
-dist/
+# dist/
 www/
 loader/
 
@@ -24,7 +24,7 @@ $RECYCLE.BIN/
 Thumbs.db
 UserInterfaceState.xcuserstate
 .env
-docs.json
+# docs.json
 sb-static/0.7fed9dca904767e307ba.manager.bundle.js
 sb-static/0.eb9e1b92.iframe.bundle.js
 sb-static/4.56a273be.iframe.bundle.js

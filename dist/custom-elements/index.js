@@ -1,9 +1,19 @@
-import { attachShadow, h, proxyCustomElement } from '@stencil/core/internal/client';
+import { attachShadow, h, Host, proxyCustomElement } from '@stencil/core/internal/client';
 export { setAssetPath, setPlatformOptions } from '@stencil/core/internal/client';
 
+const HEADING_SIZE = "m";
+const HEADING_CLASSIFICATION = "serif";
+const HEADING_WEIGHT = "regular";
 const BODY_SIZE = "m";
+const BODY_CLASSIFICATION = "serif";
+const DETAIL_SIZE = "m";
+const DETAIL_CLASSIFICATION = "sans-serif";
+const DETAIL_WEIGHT = "regular";
+const CODE_SIZE = "m";
+const TAG_SIZE = "m";
+const TAG_VARIANT = "info";
 
-const suxBodyCss = ":host{display:block}.sux-body{line-height:150%}.sux-body--serif{font-family:\"IBM Plex Serif\", serif}.sux-body--sans-serif{font-family:\"IBM Plex Sans\", sans-serif}.sux-body--mono{font-family:\"IBM Plex Mono\", monospace}.sux-body--xs{font-size:12px}.sux-body--s{font-size:14px}.sux-body--m{font-size:16px}.sux-body--l{font-size:18px}.sux-body--xl{font-size:20px}.sux-body--xxl{font-size:22px}.sux-body--xxxl{font-size:24px}";
+const suxBodyCss = ":host{display:block}.sux-body{line-height:150%}.sux-body em{font-weight:italic}.sux-body strong{font-style:700}.sux-body--serif{font-family:\"IBM Plex Serif\", serif}.sux-body--sans-serif{font-family:\"IBM Plex Sans\", sans-serif}.sux-body--mono{font-family:\"IBM Plex Mono\", monospace}.sux-body--xs{font-size:12px}.sux-body--s{font-size:14px}.sux-body--m{font-size:16px}.sux-body--l{font-size:18px}.sux-body--xl{font-size:20px}.sux-body--xxl{font-size:22px}.sux-body--xxxl{font-size:24px}";
 
 let SuxBody$1 = class extends HTMLElement {
   constructor() {
@@ -20,19 +30,19 @@ let SuxBody$1 = class extends HTMLElement {
      */
     this.size = BODY_SIZE;
     /**
-     * Variant
+     * Classification
      */
-    this.variant = "serif";
+    this.classification = BODY_CLASSIFICATION;
   }
   render() {
     /** Content element with slot  */
     const contentEl = (h("span", { class: 'content' }, h("slot", null)));
-    const { size, variant } = this;
+    const { size, classification } = this;
     return (h("p", { class: {
         'sux-body': true,
-        'sux-body--serif': variant === 'serif',
-        'sux-body--sans-serif': variant === 'sans-serif',
-        'sux-body--mono': variant === 'mono',
+        'sux-body--serif': classification === 'serif',
+        'sux-body--sans-serif': classification === 'sans-serif',
+        'sux-body--mono': classification === 'mono',
         'sux-body--xs': size === "xs",
         'sux-body--s': size === "s",
         'sux-body--m': size === "m",
@@ -71,27 +81,22 @@ let SuxButton$1 = class extends HTMLElement {
     this.disabled = false;
     /** optionally pass an icon to display at the start of a button - accepts ui icon names  */
     this.iconStart = false;
+    /** optionally pass an icon to display at the end of a button - accepts ui icon names  */
+    this.iconEnd = false;
     /** optionally add a sux-loader component to the button, disabling interaction.  */
     this.isLoading = false;
   }
-  // render() {
-  //   return (
-  //     <Host>
-  //       <slot></slot>
-  //     </Host>
-  //   );
-  // }
   render() {
     // const dir = getElementDir(this.el);
     const Tag = 'button';
     /** Loader component  */
-    const loaderEl = (h("div", { class: 'loader' }, "loader"));
+    const loaderEl = (h("div", { class: 'loader' }, "\u267B\uFE0F\u00A0"));
     /** Icon Start (left side)  */
-    const iconStartEl = (h("div", { class: 'iconStart' }, "iconStart"));
+    const iconStartEl = (h("div", { class: 'iconStart' }, "\uD83D\uDEA7\u00A0\u00A0"));
     /** Content element with slot  */
     const contentEl = (h("span", { class: 'content' }, h("slot", null)));
     /** Icon End (right side) */
-    const iconEndEl = (h("div", { class: 'iconStart' }, "iconEnd"));
+    const iconEndEl = (h("div", { class: 'iconEnd' }, "\u00A0\u00A0\uD83D\uDEA7"));
     const { size, variant, disabled, quiet } = this;
     return (h(Tag, { class: {
         'sux-button': true,
@@ -110,6 +115,83 @@ let SuxButton$1 = class extends HTMLElement {
   static get style() { return suxButtonCss; }
 };
 
+const suxCodeCss = ":host{display:block}.sux-code{line-height:150%;font-family:\"IBM Plex Mono\", monospace}.sux-code--s{font-size:14px}.sux-code--m{font-size:16px}.sux-code--l{font-size:18px}.sux-code--xl{font-size:20px}";
+
+let SuxCode$1 = class extends HTMLElement {
+  constructor() {
+    super();
+    this.__registerHost();
+    attachShadow(this);
+    //--------------------------------------------------------------------------
+    //
+    //  Properties
+    //
+    //--------------------------------------------------------------------------
+    /**
+     * Size
+     */
+    this.size = CODE_SIZE;
+  }
+  render() {
+    /** Content element with slot  */
+    const contentEl = (h("span", { class: 'content' }, h("slot", null)));
+    const { size } = this;
+    return (h("code", { class: {
+        'sux-code': true,
+        'sux-code--s': size === "s",
+        'sux-code--m': size === "m",
+        'sux-code--l': size === "l",
+        'sux-code--xl': size === "xl",
+      } }, contentEl));
+  }
+  static get style() { return suxCodeCss; }
+};
+
+const suxDetailCss = ":host{display:block}.sux-detail{line-height:130%}.sux-detail--serif{font-family:\"IBM Plex Serif\", serif}.sux-detail--sans-serif{font-family:\"IBM Plex Sans\", sans-serif}.sux-detail--mono{font-family:\"IBM Plex Mono\", monospace}.sux-detail--s{font-size:10px}.sux-detail--m{font-size:12px}.sux-detail--l{font-size:14px}.sux-detail--xl{font-size:16px}.sux-detail--light{font-weight:300}.sux-detail--regular{font-weight:400}";
+
+let SuxDetail$1 = class extends HTMLElement {
+  constructor() {
+    super();
+    this.__registerHost();
+    attachShadow(this);
+    //--------------------------------------------------------------------------
+    //
+    //  Properties
+    //
+    //--------------------------------------------------------------------------
+    /**
+     * Size
+     */
+    this.size = DETAIL_SIZE;
+    /**
+     * Classification
+     */
+    this.classification = DETAIL_CLASSIFICATION;
+    /**
+     * Weight
+     */
+    this.weight = DETAIL_WEIGHT;
+  }
+  render() {
+    /** Content element with slot  */
+    const contentEl = (h("span", { class: 'content' }, h("slot", null)));
+    const { size, classification, weight } = this;
+    return (h("p", { class: {
+        'sux-detail': true,
+        'sux-detail--serif': classification === 'serif',
+        'sux-detail--sans-serif': classification === 'sans-serif',
+        'sux-detail--mono': classification === 'mono',
+        'sux-detail--s': size === "s",
+        'sux-detail--m': size === "m",
+        'sux-detail--l': size === "l",
+        'sux-detail--xl': size === "xl",
+        'sux-detail--light': weight === "light",
+        'sux-detail--regular': weight === "regular",
+      } }, contentEl));
+  }
+  static get style() { return suxDetailCss; }
+};
+
 const suxHeadingCss = ":host{display:block}.sux-heading{line-height:130%}.sux-heading--serif{font-family:\"IBM Plex Serif\", serif}.sux-heading--sans-serif{font-family:\"IBM Plex Sans\", sans-serif}.sux-heading--mono{font-family:\"IBM Plex Mono\", monospace}.sux-heading--xs{font-size:24px}.sux-heading--s{font-size:28px}.sux-heading--m{font-size:32px}.sux-heading--l{font-size:42px}.sux-heading--xl{font-size:48px}.sux-heading--xxl{font-size:64px}.sux-heading--light{font-weight:300}.sux-heading--regular{font-weight:400}.sux-heading--semibold{font-weight:600}.sux-heading--bold{font-weight:700}";
 
 let SuxHeading$1 = class extends HTMLElement {
@@ -125,15 +207,15 @@ let SuxHeading$1 = class extends HTMLElement {
     /**
      * Heading  size
      */
-    this.size = "m";
+    this.size = HEADING_SIZE;
     /**
-     * Heading variant
+     * Heading classification
      */
-    this.variant = "serif";
+    this.classification = HEADING_CLASSIFICATION;
     /**
      * Heading weight
      */
-    this.weight = "regular";
+    this.weight = HEADING_WEIGHT;
     /**
      * Overwrite Tag
      */
@@ -155,12 +237,12 @@ let SuxHeading$1 = class extends HTMLElement {
     const Tag = this.tag === null ? sizeToTag[this.size] : this.tag;
     /** Content element with slot  */
     const contentEl = (h("span", { class: 'content' }, h("slot", null)));
-    const { size, variant, weight } = this;
+    const { size, classification, weight } = this;
     return (h(Tag, { class: {
         'sux-heading': true,
-        'sux-heading--serif': variant === 'serif',
-        'sux-heading--sans-serif': variant === 'sans-serif',
-        'sux-heading--mono': variant === 'mono',
+        'sux-heading--serif': classification === 'serif',
+        'sux-heading--sans-serif': classification === 'sans-serif',
+        'sux-heading--mono': classification === 'mono',
         'sux-heading--xs': size === "xs",
         'sux-heading--s': size === "s",
         'sux-heading--m': size === "m",
@@ -176,15 +258,55 @@ let SuxHeading$1 = class extends HTMLElement {
   static get style() { return suxHeadingCss; }
 };
 
-const SuxBody = /*@__PURE__*/proxyCustomElement(SuxBody$1, [1,"sux-body",{"size":[513],"variant":[513]}]);
-const SuxButton = /*@__PURE__*/proxyCustomElement(SuxButton$1, [1,"sux-button",{"label":[513],"name":[513],"type":[1025],"variant":[513],"size":[513],"quiet":[516],"disabled":[516],"iconStart":[516,"icon-start"],"iconEnd":[1,"icon-end"],"isLoading":[516,"is-loading"]}]);
-const SuxHeading = /*@__PURE__*/proxyCustomElement(SuxHeading$1, [1,"sux-heading",{"size":[513],"variant":[513],"weight":[513],"tag":[513]}]);
+const suxTagCss = ":host{display:block}.sux-tag{display:inline-flex;font-family:\"IBM Plex Sans\", sans-serif;font-weight:400;color:#ffffff;border-radius:2px}.sux-tag--info{background-color:#0052cc}.sux-tag--warning{background-color:#eea000}.sux-tag--error{background-color:#ff5630}.sux-tag--success{background-color:#36b37e}.sux-tag--neutral{background-color:#000000}.sux-tag--sizeS{font-size:12px;padding-top:6px;padding-right:12px;padding-bottom:6px;padding-left:12px}.sux-tag--sizeM{font-size:14px;padding-top:8px;padding-right:16px;padding-bottom:8px;padding-left:16px}.sux-tag--sizeL{font-size:16px;padding-top:8px;padding-right:16px;padding-bottom:8px;padding-left:16px}.sux-tag--sizeXL{font-size:18px;padding-top:8px;padding-right:16px;padding-bottom:8px;padding-left:16px}";
+
+let SuxTag$1 = class extends HTMLElement {
+  constructor() {
+    super();
+    this.__registerHost();
+    attachShadow(this);
+    /**
+     * Size
+     */
+    this.size = TAG_SIZE;
+    /**
+     * Variant
+     */
+    this.variant = TAG_VARIANT;
+  }
+  render() {
+    const { label, size, variant } = this;
+    return (h(Host, null, h("div", { class: {
+        'sux-tag': true,
+        'sux-tag--info': variant == 'info',
+        'sux-tag--success': variant == 'success',
+        'sux-tag--warning': variant == 'warning',
+        'sux-tag--error': variant == 'error',
+        'sux-tag--neutral': variant == 'neutral',
+        'sux-tag--sizeS': size == 's',
+        'sux-tag--sizeM': size == 'm',
+        'sux-tag--sizeL': size == 'l',
+        'sux-tag--sizeXL': size == 'xl',
+      } }, h("slot", null, label))));
+  }
+  static get style() { return suxTagCss; }
+};
+
+const SuxBody = /*@__PURE__*/proxyCustomElement(SuxBody$1, [1,"sux-body",{"size":[513],"classification":[513]}]);
+const SuxButton = /*@__PURE__*/proxyCustomElement(SuxButton$1, [1,"sux-button",{"label":[513],"name":[513],"type":[1025],"variant":[513],"size":[513],"quiet":[516],"disabled":[516],"iconStart":[516,"icon-start"],"iconEnd":[4,"icon-end"],"isLoading":[516,"is-loading"]}]);
+const SuxCode = /*@__PURE__*/proxyCustomElement(SuxCode$1, [1,"sux-code",{"size":[513]}]);
+const SuxDetail = /*@__PURE__*/proxyCustomElement(SuxDetail$1, [1,"sux-detail",{"size":[513],"classification":[513],"weight":[513]}]);
+const SuxHeading = /*@__PURE__*/proxyCustomElement(SuxHeading$1, [1,"sux-heading",{"size":[513],"classification":[513],"weight":[513],"tag":[513]}]);
+const SuxTag = /*@__PURE__*/proxyCustomElement(SuxTag$1, [1,"sux-tag",{"label":[1],"size":[1],"variant":[1]}]);
 const defineCustomElements = (opts) => {
   if (typeof customElements !== 'undefined') {
     [
       SuxBody,
   SuxButton,
-  SuxHeading
+  SuxCode,
+  SuxDetail,
+  SuxHeading,
+  SuxTag
     ].forEach(cmp => {
       if (!customElements.get(cmp.is)) {
         customElements.define(cmp.is, cmp, opts);
@@ -193,4 +315,4 @@ const defineCustomElements = (opts) => {
   }
 };
 
-export { SuxBody, SuxButton, SuxHeading, defineCustomElements };
+export { SuxBody, SuxButton, SuxCode, SuxDetail, SuxHeading, SuxTag, defineCustomElements };

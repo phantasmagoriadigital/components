@@ -1,0 +1,54 @@
+:host {
+  display: block;
+}
+
+.sux-tag {
+  display: inline-flex;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 400;
+  color: #ffffff;
+  border-radius: 2px;
+}
+.sux-tag--info {
+  background-color: #0052cc;
+}
+.sux-tag--warning {
+  background-color: #eea000;
+}
+.sux-tag--error {
+  background-color: #ff5630;
+}
+.sux-tag--success {
+  background-color: #36b37e;
+}
+.sux-tag--neutral {
+  background-color: #000000;
+}
+.sux-tag--sizeS {
+  font-size: 12px;
+  padding-top: 6px;
+  padding-right: 12px;
+  padding-bottom: 6px;
+  padding-left: 12px;
+}
+.sux-tag--sizeM {
+  font-size: 14px;
+  padding-top: 8px;
+  padding-right: 16px;
+  padding-bottom: 8px;
+  padding-left: 16px;
+}
+.sux-tag--sizeL {
+  font-size: 16px;
+  padding-top: 8px;
+  padding-right: 16px;
+  padding-bottom: 8px;
+  padding-left: 16px;
+}
+.sux-tag--sizeXL {
+  font-size: 18px;
+  padding-top: 8px;
+  padding-right: 16px;
+  padding-bottom: 8px;
+  padding-left: 16px;
+}

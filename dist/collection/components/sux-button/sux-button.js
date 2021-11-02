@@ -20,28 +20,23 @@ export class SuxButton {
     this.disabled = false;
     /** optionally pass an icon to display at the start of a button - accepts ui icon names  */
     this.iconStart = false;
+    /** optionally pass an icon to display at the end of a button - accepts ui icon names  */
+    this.iconEnd = false;
     /** optionally add a sux-loader component to the button, disabling interaction.  */
     this.isLoading = false;
   }
-  // render() {
-  //   return (
-  //     <Host>
-  //       <slot></slot>
-  //     </Host>
-  //   );
-  // }
   render() {
     // const dir = getElementDir(this.el);
     const Tag = 'button';
     /** Loader component  */
-    const loaderEl = (h("div", { class: 'loader' }, "loader"));
+    const loaderEl = (h("div", { class: 'loader' }, "\u267B\uFE0F\u00A0"));
     /** Icon Start (left side)  */
-    const iconStartEl = (h("div", { class: 'iconStart' }, "iconStart"));
+    const iconStartEl = (h("div", { class: 'iconStart' }, "\uD83D\uDEA7\u00A0\u00A0"));
     /** Content element with slot  */
     const contentEl = (h("span", { class: 'content' },
       h("slot", null)));
     /** Icon End (right side) */
-    const iconEndEl = (h("div", { class: 'iconStart' }, "iconEnd"));
+    const iconEndEl = (h("div", { class: 'iconEnd' }, "\u00A0\u00A0\uD83D\uDEA7"));
     const { size, variant, disabled, quiet } = this;
     return (h(Tag, { class: {
         'sux-button': true,
@@ -223,11 +218,11 @@ export class SuxButton {
       "defaultValue": "false"
     },
     "iconEnd": {
-      "type": "string",
+      "type": "boolean",
       "mutable": false,
       "complexType": {
-        "original": "'icon-close' | 'icon-open' | 'icon-info'",
-        "resolved": "\"icon-close\" | \"icon-info\" | \"icon-open\"",
+        "original": "boolean",
+        "resolved": "boolean",
         "references": {}
       },
       "required": false,
@@ -237,7 +232,8 @@ export class SuxButton {
         "text": "optionally pass an icon to display at the end of a button - accepts ui icon names"
       },
       "attribute": "icon-end",
-      "reflect": false
+      "reflect": false,
+      "defaultValue": "false"
     },
     "isLoading": {
       "type": "boolean",

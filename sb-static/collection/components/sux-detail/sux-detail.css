@@ -1,0 +1,34 @@
+:host {
+  display: block;
+}
+
+.sux-detail {
+  line-height: 130%;
+}
+.sux-detail--serif {
+  font-family: "IBM Plex Serif", serif;
+}
+.sux-detail--sans-serif {
+  font-family: "IBM Plex Sans", sans-serif;
+}
+.sux-detail--mono {
+  font-family: "IBM Plex Mono", monospace;
+}
+.sux-detail--s {
+  font-size: 10px;
+}
+.sux-detail--m {
+  font-size: 12px;
+}
+.sux-detail--l {
+  font-size: 14px;
+}
+.sux-detail--xl {
+  font-size: 16px;
+}
+.sux-detail--light {
+  font-weight: 300;
+}
+.sux-detail--regular {
+  font-weight: 400;
+}

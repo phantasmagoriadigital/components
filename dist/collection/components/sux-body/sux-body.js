@@ -1,5 +1,5 @@
 import { Component, h, Prop } from '@stencil/core';
-import { BODY_SIZE } from "../defaults/prop-defaults";
+import { BODY_SIZE, BODY_CLASSIFICATION } from "../defaults/prop-defaults";
 export class SuxBody {
   constructor() {
     //--------------------------------------------------------------------------
@@ -12,20 +12,20 @@ export class SuxBody {
      */
     this.size = BODY_SIZE;
     /**
-     * Variant
+     * Classification
      */
-    this.variant = "serif";
+    this.classification = BODY_CLASSIFICATION;
   }
   render() {
     /** Content element with slot  */
     const contentEl = (h("span", { class: 'content' },
       h("slot", null)));
-    const { size, variant } = this;
+    const { size, classification } = this;
     return (h("p", { class: {
         'sux-body': true,
-        'sux-body--serif': variant === 'serif',
-        'sux-body--sans-serif': variant === 'sans-serif',
-        'sux-body--mono': variant === 'mono',
+        'sux-body--serif': classification === 'serif',
+        'sux-body--sans-serif': classification === 'sans-serif',
+        'sux-body--mono': classification === 'mono',
         'sux-body--xs': size === "xs",
         'sux-body--s': size === "s",
         'sux-body--m': size === "m",
@@ -67,14 +67,14 @@ export class SuxBody {
       "reflect": true,
       "defaultValue": "BODY_SIZE"
     },
-    "variant": {
+    "classification": {
       "type": "string",
       "mutable": false,
       "complexType": {
-        "original": "BodyVariant",
+        "original": "BodyClassification",
         "resolved": "\"mono\" | \"sans-serif\" | \"serif\"",
         "references": {
-          "BodyVariant": {
+          "BodyClassification": {
             "location": "import",
             "path": "./interfaces"
           }
@@ -84,11 +84,11 @@ export class SuxBody {
       "optional": false,
       "docs": {
         "tags": [],
-        "text": "Variant"
+        "text": "Classification"
       },
-      "attribute": "variant",
+      "attribute": "classification",
       "reflect": true,
-      "defaultValue": "\"serif\""
+      "defaultValue": "BODY_CLASSIFICATION"
     }
   }; }
 }

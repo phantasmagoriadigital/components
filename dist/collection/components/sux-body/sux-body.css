@@ -5,6 +5,12 @@
 .sux-body {
   line-height: 150%;
 }
+.sux-body em {
+  font-weight: italic;
+}
+.sux-body strong {
+  font-style: 700;
+}
 .sux-body--serif {
   font-family: "IBM Plex Serif", serif;
 }

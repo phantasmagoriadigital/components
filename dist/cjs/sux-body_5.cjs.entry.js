@@ -2,11 +2,10 @@
 
 Object.defineProperty(exports, '__esModule', { value: true });
 
-const index = require('./index-c08b928e.js');
+const index = require('./index-78645c8d.js');
+const propDefaults = require('./prop-defaults-dd24d61d.js');
 
-const BODY_SIZE = "m";
-
-const suxBodyCss = ":host{display:block}.sux-body{line-height:150%}.sux-body--serif{font-family:\"IBM Plex Serif\", serif}.sux-body--sans-serif{font-family:\"IBM Plex Sans\", sans-serif}.sux-body--mono{font-family:\"IBM Plex Mono\", monospace}.sux-body--xs{font-size:12px}.sux-body--s{font-size:14px}.sux-body--m{font-size:16px}.sux-body--l{font-size:18px}.sux-body--xl{font-size:20px}.sux-body--xxl{font-size:22px}.sux-body--xxxl{font-size:24px}";
+const suxBodyCss = ":host{display:block}.sux-body{line-height:150%}.sux-body em{font-weight:italic}.sux-body strong{font-style:700}.sux-body--serif{font-family:\"IBM Plex Serif\", serif}.sux-body--sans-serif{font-family:\"IBM Plex Sans\", sans-serif}.sux-body--mono{font-family:\"IBM Plex Mono\", monospace}.sux-body--xs{font-size:12px}.sux-body--s{font-size:14px}.sux-body--m{font-size:16px}.sux-body--l{font-size:18px}.sux-body--xl{font-size:20px}.sux-body--xxl{font-size:22px}.sux-body--xxxl{font-size:24px}";
 
 let SuxBody = class {
   constructor(hostRef) {
@@ -19,21 +18,21 @@ let SuxBody = class {
     /**
      * Size
      */
-    this.size = BODY_SIZE;
+    this.size = propDefaults.BODY_SIZE;
     /**
-     * Variant
+     * Classification
      */
-    this.variant = "serif";
+    this.classification = propDefaults.BODY_CLASSIFICATION;
   }
   render() {
     /** Content element with slot  */
     const contentEl = (index.h("span", { class: 'content' }, index.h("slot", null)));
-    const { size, variant } = this;
+    const { size, classification } = this;
     return (index.h("p", { class: {
         'sux-body': true,
-        'sux-body--serif': variant === 'serif',
-        'sux-body--sans-serif': variant === 'sans-serif',
-        'sux-body--mono': variant === 'mono',
+        'sux-body--serif': classification === 'serif',
+        'sux-body--sans-serif': classification === 'sans-serif',
+        'sux-body--mono': classification === 'mono',
         'sux-body--xs': size === "xs",
         'sux-body--s': size === "s",
         'sux-body--m': size === "m",
@@ -70,27 +69,22 @@ let SuxButton = class {
     this.disabled = false;
     /** optionally pass an icon to display at the start of a button - accepts ui icon names  */
     this.iconStart = false;
+    /** optionally pass an icon to display at the end of a button - accepts ui icon names  */
+    this.iconEnd = false;
     /** optionally add a sux-loader component to the button, disabling interaction.  */
     this.isLoading = false;
   }
-  // render() {
-  //   return (
-  //     <Host>
-  //       <slot></slot>
-  //     </Host>
-  //   );
-  // }
   render() {
     // const dir = getElementDir(this.el);
     const Tag = 'button';
     /** Loader component  */
-    const loaderEl = (index.h("div", { class: 'loader' }, "loader"));
+    const loaderEl = (index.h("div", { class: 'loader' }, "\u267B\uFE0F\u00A0"));
     /** Icon Start (left side)  */
-    const iconStartEl = (index.h("div", { class: 'iconStart' }, "iconStart"));
+    const iconStartEl = (index.h("div", { class: 'iconStart' }, "\uD83D\uDEA7\u00A0\u00A0"));
     /** Content element with slot  */
     const contentEl = (index.h("span", { class: 'content' }, index.h("slot", null)));
     /** Icon End (right side) */
-    const iconEndEl = (index.h("div", { class: 'iconStart' }, "iconEnd"));
+    const iconEndEl = (index.h("div", { class: 'iconEnd' }, "\u00A0\u00A0\uD83D\uDEA7"));
     const { size, variant, disabled, quiet } = this;
     return (index.h(Tag, { class: {
         'sux-button': true,
@@ -109,6 +103,49 @@ let SuxButton = class {
 };
 SuxButton.style = suxButtonCss;
 
+const suxDetailCss = ":host{display:block}.sux-detail{line-height:130%}.sux-detail--serif{font-family:\"IBM Plex Serif\", serif}.sux-detail--sans-serif{font-family:\"IBM Plex Sans\", sans-serif}.sux-detail--mono{font-family:\"IBM Plex Mono\", monospace}.sux-detail--s{font-size:10px}.sux-detail--m{font-size:12px}.sux-detail--l{font-size:14px}.sux-detail--xl{font-size:16px}.sux-detail--light{font-weight:300}.sux-detail--regular{font-weight:400}";
+
+let SuxDetail = class {
+  constructor(hostRef) {
+    index.registerInstance(this, hostRef);
+    //--------------------------------------------------------------------------
+    //
+    //  Properties
+    //
+    //--------------------------------------------------------------------------
+    /**
+     * Size
+     */
+    this.size = propDefaults.DETAIL_SIZE;
+    /**
+     * Classification
+     */
+    this.classification = propDefaults.DETAIL_CLASSIFICATION;
+    /**
+     * Weight
+     */
+    this.weight = propDefaults.DETAIL_WEIGHT;
+  }
+  render() {
+    /** Content element with slot  */
+    const contentEl = (index.h("span", { class: 'content' }, index.h("slot", null)));
+    const { size, classification, weight } = this;
+    return (index.h("p", { class: {
+        'sux-detail': true,
+        'sux-detail--serif': classification === 'serif',
+        'sux-detail--sans-serif': classification === 'sans-serif',
+        'sux-detail--mono': classification === 'mono',
+        'sux-detail--s': size === "s",
+        'sux-detail--m': size === "m",
+        'sux-detail--l': size === "l",
+        'sux-detail--xl': size === "xl",
+        'sux-detail--light': weight === "light",
+        'sux-detail--regular': weight === "regular",
+      } }, contentEl));
+  }
+};
+SuxDetail.style = suxDetailCss;
+
 const suxHeadingCss = ":host{display:block}.sux-heading{line-height:130%}.sux-heading--serif{font-family:\"IBM Plex Serif\", serif}.sux-heading--sans-serif{font-family:\"IBM Plex Sans\", sans-serif}.sux-heading--mono{font-family:\"IBM Plex Mono\", monospace}.sux-heading--xs{font-size:24px}.sux-heading--s{font-size:28px}.sux-heading--m{font-size:32px}.sux-heading--l{font-size:42px}.sux-heading--xl{font-size:48px}.sux-heading--xxl{font-size:64px}.sux-heading--light{font-weight:300}.sux-heading--regular{font-weight:400}.sux-heading--semibold{font-weight:600}.sux-heading--bold{font-weight:700}";
 
 let SuxHeading = class {
@@ -122,15 +159,15 @@ let SuxHeading = class {
     /**
      * Heading  size
      */
-    this.size = "m";
+    this.size = propDefaults.HEADING_SIZE;
     /**
-     * Heading variant
+     * Heading classification
      */
-    this.variant = "serif";
+    this.classification = propDefaults.HEADING_CLASSIFICATION;
     /**
      * Heading weight
      */
-    this.weight = "regular";
+    this.weight = propDefaults.HEADING_WEIGHT;
     /**
      * Overwrite Tag
      */
@@ -152,12 +189,12 @@ let SuxHeading = class {
     const Tag = this.tag === null ? sizeToTag[this.size] : this.tag;
     /** Content element with slot  */
     const contentEl = (index.h("span", { class: 'content' }, index.h("slot", null)));
-    const { size, variant, weight } = this;
+    const { size, classification, weight } = this;
     return (index.h(Tag, { class: {
         'sux-heading': true,
-        'sux-heading--serif': variant === 'serif',
-        'sux-heading--sans-serif': variant === 'sans-serif',
-        'sux-heading--mono': variant === 'mono',
+        'sux-heading--serif': classification === 'serif',
+        'sux-heading--sans-serif': classification === 'sans-serif',
+        'sux-heading--mono': classification === 'mono',
         'sux-heading--xs': size === "xs",
         'sux-heading--s': size === "s",
         'sux-heading--m': size === "m",
@@ -173,6 +210,40 @@ let SuxHeading = class {
 };
 SuxHeading.style = suxHeadingCss;
 
+const suxTagCss = ":host{display:block}.sux-tag{display:inline-flex;font-family:\"IBM Plex Sans\", sans-serif;font-weight:400;color:#ffffff;border-radius:2px}.sux-tag--info{background-color:#0052cc}.sux-tag--warning{background-color:#eea000}.sux-tag--error{background-color:#ff5630}.sux-tag--success{background-color:#36b37e}.sux-tag--neutral{background-color:#000000}.sux-tag--sizeS{font-size:12px;padding-top:6px;padding-right:12px;padding-bottom:6px;padding-left:12px}.sux-tag--sizeM{font-size:14px;padding-top:8px;padding-right:16px;padding-bottom:8px;padding-left:16px}.sux-tag--sizeL{font-size:16px;padding-top:8px;padding-right:16px;padding-bottom:8px;padding-left:16px}.sux-tag--sizeXL{font-size:18px;padding-top:8px;padding-right:16px;padding-bottom:8px;padding-left:16px}";
+
+let SuxTag = class {
+  constructor(hostRef) {
+    index.registerInstance(this, hostRef);
+    /**
+     * Size
+     */
+    this.size = propDefaults.TAG_SIZE;
+    /**
+     * Variant
+     */
+    this.variant = propDefaults.TAG_VARIANT;
+  }
+  render() {
+    const { label, size, variant } = this;
+    return (index.h(index.Host, null, index.h("div", { class: {
+        'sux-tag': true,
+        'sux-tag--info': variant == 'info',
+        'sux-tag--success': variant == 'success',
+        'sux-tag--warning': variant == 'warning',
+        'sux-tag--error': variant == 'error',
+        'sux-tag--neutral': variant == 'neutral',
+        'sux-tag--sizeS': size == 's',
+        'sux-tag--sizeM': size == 'm',
+        'sux-tag--sizeL': size == 'l',
+        'sux-tag--sizeXL': size == 'xl',
+      } }, index.h("slot", null, label))));
+  }
+};
+SuxTag.style = suxTagCss;
+
 exports.sux_body = SuxBody;
 exports.sux_button = SuxButton;
+exports.sux_detail = SuxDetail;
 exports.sux_heading = SuxHeading;
+exports.sux_tag = SuxTag;

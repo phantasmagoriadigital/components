@@ -18,7 +18,7 @@ export declare class SuxButton {
   /** optionally pass an icon to display at the start of a button - accepts ui icon names  */
   iconStart?: boolean;
   /** optionally pass an icon to display at the end of a button - accepts ui icon names  */
-  iconEnd?: 'icon-close' | 'icon-open' | 'icon-info';
+  iconEnd?: boolean;
   /** optionally add a sux-loader component to the button, disabling interaction.  */
   isLoading?: boolean;
   render(): any;

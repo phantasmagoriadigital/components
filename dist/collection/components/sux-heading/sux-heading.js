@@ -1,4 +1,5 @@
 import { Component, h, Prop } from '@stencil/core';
+import { HEADING_SIZE, HEADING_CLASSIFICATION, HEADING_WEIGHT } from "../defaults/prop-defaults";
 export class SuxHeading {
   constructor() {
     //--------------------------------------------------------------------------
@@ -9,15 +10,15 @@ export class SuxHeading {
     /**
      * Heading  size
      */
-    this.size = "m";
+    this.size = HEADING_SIZE;
     /**
-     * Heading variant
+     * Heading classification
      */
-    this.variant = "serif";
+    this.classification = HEADING_CLASSIFICATION;
     /**
      * Heading weight
      */
-    this.weight = "regular";
+    this.weight = HEADING_WEIGHT;
     /**
      * Overwrite Tag
      */
@@ -40,12 +41,12 @@ export class SuxHeading {
     /** Content element with slot  */
     const contentEl = (h("span", { class: 'content' },
       h("slot", null)));
-    const { size, variant, weight } = this;
+    const { size, classification, weight } = this;
     return (h(Tag, { class: {
         'sux-heading': true,
-        'sux-heading--serif': variant === 'serif',
-        'sux-heading--sans-serif': variant === 'sans-serif',
-        'sux-heading--mono': variant === 'mono',
+        'sux-heading--serif': classification === 'serif',
+        'sux-heading--sans-serif': classification === 'sans-serif',
+        'sux-heading--mono': classification === 'mono',
         'sux-heading--xs': size === "xs",
         'sux-heading--s': size === "s",
         'sux-heading--m': size === "m",
@@ -88,16 +89,16 @@ export class SuxHeading {
       },
       "attribute": "size",
       "reflect": true,
-      "defaultValue": "\"m\""
+      "defaultValue": "HEADING_SIZE"
     },
-    "variant": {
+    "classification": {
       "type": "string",
       "mutable": false,
       "complexType": {
-        "original": "HeadingVariant",
+        "original": "HeadingClassification",
         "resolved": "\"mono\" | \"sans-serif\" | \"serif\"",
         "references": {
-          "HeadingVariant": {
+          "HeadingClassification": {
             "location": "import",
             "path": "./interfaces"
           }
@@ -107,11 +108,11 @@ export class SuxHeading {
       "optional": false,
       "docs": {
         "tags": [],
-        "text": "Heading variant"
+        "text": "Heading classification"
       },
-      "attribute": "variant",
+      "attribute": "classification",
       "reflect": true,
-      "defaultValue": "\"serif\""
+      "defaultValue": "HEADING_CLASSIFICATION"
     },
     "weight": {
       "type": "string",
@@ -134,7 +135,7 @@ export class SuxHeading {
       },
       "attribute": "weight",
       "reflect": true,
-      "defaultValue": "\"regular\""
+      "defaultValue": "HEADING_WEIGHT"
     },
     "tag": {
       "type": "string",
