@@ -34,7 +34,13 @@ npm run storybook
 
 Substrate is not ready for use in production. Currently you will need to build and manually integrate components to experiment.
 
-Check out our [Substrate DS StoryBook](https://sb.nextds.design) to see they components in their current state
+Check out our [Substrate DS StoryBook](https://sb.nextds.design) to see they components in their current state.
+
+[ Experiamental ] Use the webcomponent library to play around using unpkg by adding the following to your html head:
+
+```html
+<script crossorigin type="module" src="https://unpkg.com/sux-ds@0.0.1/dist/substrate-ds/substrate-ds.esm.js"></script>
+```
 
 ## Contributing
 
