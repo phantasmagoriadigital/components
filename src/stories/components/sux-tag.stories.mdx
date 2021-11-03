@@ -32,6 +32,7 @@ export const DefaultTag = args => {
 
 ### Info
 
+<!-- Tag with Info Variant -->
 export const InfoTag = args => {
   return html`
     <div style="padding: 10%; display: flex; justify-content: center; gap:16px;">
@@ -45,4 +46,71 @@ export const InfoTag = args => {
 
 <Canvas>
   <Story name="Info">{InfoTag.bind()}</Story>
+</Canvas>
+
+### Success
+<!-- Tag with Success variant -->
+export const SuccessTag = args => {
+  return html`
+    <div style="padding: 10%; display: flex; justify-content: center; gap:16px;">
+      <sux-tag .label="${args.label}" variant="success" size="s"> Tag success </sux-tag>
+      <sux-tag .label="${args.label}" variant="success" size="m"> Tag success </sux-tag>
+      <sux-tag .label="${args.label}" variant="success" size="l"> Tag success </sux-tag>
+      <sux-tag .label="${args.label}" variant="success" size="xl"> Tag success </sux-tag>
+      `;
+};
+
+<Canvas>
+  <Story name="Success">{SuccessTag.bind()}</Story>
+</Canvas>
+
+### Warning
+<!-- Tag with Warning variant -->
+export const WarningTag = args => {
+  return html`
+    <div style="padding: 10%; display: flex; justify-content: center; gap:16px;">
+      <sux-tag .label="${args.label}" variant="warning" size="s"> Tag warning </sux-tag>
+      <sux-tag .label="${args.label}" variant="warning" size="m"> Tag warning </sux-tag>
+      <sux-tag .label="${args.label}" variant="warning" size="l"> Tag warning </sux-tag>
+      <sux-tag .label="${args.label}" variant="warning" size="xl"> Tag warning </sux-tag>
+    </div>
+  `;
+};
+
+<Canvas>
+  <Story name="Warning">{WarningTag.bind()}</Story>
+  </Canvas>
+
+### Error
+<!-- Tag with Error variant -->
+export const ErrorTag = args => {
+  return html`
+    <div style="padding: 10%; display: flex; justify-content: center; gap:16px;">
+      <sux-tag .label="${args.label}" variant="error" size="s"> Tag error </sux-tag>
+      <sux-tag .label="${args.label}" variant="error" size="m"> Tag error </sux-tag>
+      <sux-tag .label="${args.label}" variant="error" size="l"> Tag error </sux-tag>
+      <sux-tag .label="${args.label}" variant="error" size="xl"> Tag error </sux-tag>
+    </div>
+  `;
+};
+
+<Canvas>
+  <Story name="Error">{ErrorTag.bind()}</Story>
+</Canvas>
+
+### Neutral
+<!-- Tag with Neutral variant -->
+export const NeutralTag = args => {
+  return html`
+    <div style="padding: 10%; display: flex; justify-content: center; gap:16px;">
+      <sux-tag .label="${args.label}" variant="neutral" size="s"> Tag neutral </sux-tag>
+      <sux-tag .label="${args.label}" variant="neutral" size="m"> Tag neutral </sux-tag>
+      <sux-tag .label="${args.label}" variant="neutral" size="l"> Tag neutral </sux-tag>
+      <sux-tag .label="${args.label}" variant="neutral" size="xl"> Tag neutral </sux-tag>
+    </div>
+  `;
+};
+
+<Canvas>
+  <Story name="Neutral">{NeutralTag.bind()}</Story>
 </Canvas>

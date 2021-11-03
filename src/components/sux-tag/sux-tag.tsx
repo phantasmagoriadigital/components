@@ -1,6 +1,7 @@
 import { Component, Host, h, Prop } from '@stencil/core';
 import { TagSize, TagVariant } from "./interfaces";
-import { TAG_SIZE, TAG_VARIANT } from "../defaults/prop-defaults"
+// import
+import { TAG_SIZE, TAG_VARIANT } from "../defaults/prop-defaults";
 
 @Component({
   tag: 'sux-tag',
@@ -28,6 +29,7 @@ export class SuxTag {
    */
   @Prop() variant: TagVariant = TAG_VARIANT;
 
+
   render() {
     const { label, size, variant } = this
     return (
@@ -43,7 +45,7 @@ export class SuxTag {
             'sux-tag--sizeS': size == 's',
             'sux-tag--sizeM': size == 'm',
             'sux-tag--sizeL': size == 'l',
-            'sux-tag--sizeXL': size == 'xl',
+            'sux-tag--sizeXL': size == 'xl'
           }}
         >
           <slot>{label}</slot>
