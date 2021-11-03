@@ -1,4 +1,5 @@
 import { Component, Host, h, Prop } from '@stencil/core';
+// import
 import { TAG_SIZE, TAG_VARIANT } from "../defaults/prop-defaults";
 export class SuxTag {
   constructor() {
@@ -24,7 +25,7 @@ export class SuxTag {
           'sux-tag--sizeS': size == 's',
           'sux-tag--sizeM': size == 'm',
           'sux-tag--sizeL': size == 'l',
-          'sux-tag--sizeXL': size == 'xl',
+          'sux-tag--sizeXL': size == 'xl'
         } },
         h("slot", null, label))));
   }

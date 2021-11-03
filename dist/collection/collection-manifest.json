@@ -4,7 +4,9 @@
     "./components/sux-button/sux-button.js",
     "./components/sux-code/sux-code.js",
     "./components/sux-detail/sux-detail.js",
+    "./components/sux-field-label/sux-field-label.js",
     "./components/sux-heading/sux-heading.js",
+    "./components/sux-help-text/sux-help-text.js",
     "./components/sux-tag/sux-tag.js"
   ],
   "compiler": {

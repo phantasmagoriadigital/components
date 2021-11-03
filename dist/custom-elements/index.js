@@ -192,6 +192,47 @@ let SuxDetail$1 = class extends HTMLElement {
   static get style() { return suxDetailCss; }
 };
 
+const suxFieldLabelCss = ":host{display:block}:host([position=side]){display:inline-block}.sux-field-label{font-family:\"IBM Plex Sans\", sans-serif;color:#323232;margin-bottom:6px}.sux-field-label--sizeS{font-size:12px}.sux-field-label--sizeM{font-size:12px}.sux-field-label--sizeL{font-size:14px}.sux-field-label--sizeXL{font-size:16px}.sux-field-label--required icon{display:inline-block !important}.sux-field-label icon{display:none}.sux-field-label--disabled{color:#bbbbbb;cursor:none}";
+
+let SuxFieldLabel$1 = class extends HTMLElement {
+  constructor() {
+    super();
+    this.__registerHost();
+    attachShadow(this);
+    /**
+     * Size
+     */
+    this.size = 's';
+    /**
+     * position
+     */
+    this.position = 'top';
+    /**
+     * Required
+     */
+    this.required = false;
+    /**
+     * Disabled
+     */
+    this.disabled = false;
+  }
+  render() {
+    const { label, size, required, disabled, position } = this;
+    return (h(Host, null, h("div", { class: {
+        'sux-field-label': true,
+        'sux-field-label--sizeS': size === 's',
+        'sux-field-label--sizeM': size === 'm',
+        'sux-field-label--sizeL': size === 'l',
+        'sux-field-label--sizeXL': size === 'xl',
+        'sux-field-label--positionTop': position === 'top',
+        'sux-field-label--positionSide': position === 'side',
+        'sux-field-label--required': required,
+        'sux-field-label--disabled': disabled,
+      } }, h("label", null, h("slot", null, label), h("icon", null, "*")))));
+  }
+  static get style() { return suxFieldLabelCss; }
+};
+
 const suxHeadingCss = ":host{display:block}.sux-heading{line-height:130%}.sux-heading--serif{font-family:\"IBM Plex Serif\", serif}.sux-heading--sans-serif{font-family:\"IBM Plex Sans\", sans-serif}.sux-heading--mono{font-family:\"IBM Plex Mono\", monospace}.sux-heading--xs{font-size:24px}.sux-heading--s{font-size:28px}.sux-heading--m{font-size:32px}.sux-heading--l{font-size:42px}.sux-heading--xl{font-size:48px}.sux-heading--xxl{font-size:64px}.sux-heading--light{font-weight:300}.sux-heading--regular{font-weight:400}.sux-heading--semibold{font-weight:600}.sux-heading--bold{font-weight:700}";
 
 let SuxHeading$1 = class extends HTMLElement {
@@ -258,6 +299,56 @@ let SuxHeading$1 = class extends HTMLElement {
   static get style() { return suxHeadingCss; }
 };
 
+const suxHelpTextCss = ":host{display:block}.sux-help-text{font-family:\"IBM Plex Sans\", sans-serif}.sux-help-text--neutral{color:#505050}.sux-help-text--negative{color:#ff5630}.sux-help-text--sizeS{font-size:12px}.sux-help-text--sizeM{font-size:12px}.sux-help-text--sizeL{font-size:14px}.sux-help-text--sizeXL{font-size:16px}.sux-help-text--disabled{color:#bbbbbb}.sux-help-text--icon icon{display:inline-block !important}.sux-help-text icon{display:none}";
+
+let SuxHelpText$1 = class extends HTMLElement {
+  constructor() {
+    super();
+    this.__registerHost();
+    attachShadow(this);
+    //--------------------------------------------------------------------------
+    //
+    //  Properties
+    //
+    //--------------------------------------------------------------------------
+    /**
+     * text
+     */
+    this.text = '';
+    /**
+     * Variant
+     */
+    this.variant = 'neutral';
+    /**
+     * size
+     */
+    this.size = 's';
+    /**
+     * Icon
+     */
+    this.icon = false;
+    /**
+     * disabled
+     */
+    this.disabled = false;
+  }
+  render() {
+    const { variant, size, icon, disabled, text } = this;
+    return (h(Host, null, h("div", { class: {
+        'sux-help-text': true,
+        'sux-help-text--neutral': variant === 'neutral',
+        'sux-help-text--negative': variant === 'negative',
+        'sux-help-text--sizeS': size === 's',
+        'sux-help-text--sizeM': size === 'm',
+        'sux-help-text--sizeL': size === 'l',
+        'sux-help-text--sizeXL': size === 'xl',
+        'sux-help-text--icon': icon,
+        'sux-help-text--disabled': disabled
+      } }, h("icon", null, "!"), h("slot", null, text))));
+  }
+  static get style() { return suxHelpTextCss; }
+};
+
 const suxTagCss = ":host{display:block}.sux-tag{display:inline-flex;font-family:\"IBM Plex Sans\", sans-serif;font-weight:400;color:#ffffff;border-radius:2px}.sux-tag--info{background-color:#0052cc}.sux-tag--warning{background-color:#eea000}.sux-tag--error{background-color:#ff5630}.sux-tag--success{background-color:#36b37e}.sux-tag--neutral{background-color:#000000}.sux-tag--sizeS{font-size:12px;padding-top:6px;padding-right:12px;padding-bottom:6px;padding-left:12px}.sux-tag--sizeM{font-size:14px;padding-top:8px;padding-right:16px;padding-bottom:8px;padding-left:16px}.sux-tag--sizeL{font-size:16px;padding-top:8px;padding-right:16px;padding-bottom:8px;padding-left:16px}.sux-tag--sizeXL{font-size:18px;padding-top:8px;padding-right:16px;padding-bottom:8px;padding-left:16px}";
 
 let SuxTag$1 = class extends HTMLElement {
@@ -286,7 +377,7 @@ let SuxTag$1 = class extends HTMLElement {
         'sux-tag--sizeS': size == 's',
         'sux-tag--sizeM': size == 'm',
         'sux-tag--sizeL': size == 'l',
-        'sux-tag--sizeXL': size == 'xl',
+        'sux-tag--sizeXL': size == 'xl'
       } }, h("slot", null, label))));
   }
   static get style() { return suxTagCss; }
@@ -296,7 +387,9 @@ const SuxBody = /*@__PURE__*/proxyCustomElement(SuxBody$1, [1,"sux-body",{"size"
 const SuxButton = /*@__PURE__*/proxyCustomElement(SuxButton$1, [1,"sux-button",{"label":[513],"name":[513],"type":[1025],"variant":[513],"size":[513],"quiet":[516],"disabled":[516],"iconStart":[516,"icon-start"],"iconEnd":[4,"icon-end"],"isLoading":[516,"is-loading"]}]);
 const SuxCode = /*@__PURE__*/proxyCustomElement(SuxCode$1, [1,"sux-code",{"size":[513]}]);
 const SuxDetail = /*@__PURE__*/proxyCustomElement(SuxDetail$1, [1,"sux-detail",{"size":[513],"classification":[513],"weight":[513]}]);
+const SuxFieldLabel = /*@__PURE__*/proxyCustomElement(SuxFieldLabel$1, [1,"sux-field-label",{"label":[1],"size":[1],"position":[1],"required":[4],"disabled":[4]}]);
 const SuxHeading = /*@__PURE__*/proxyCustomElement(SuxHeading$1, [1,"sux-heading",{"size":[513],"classification":[513],"weight":[513],"tag":[513]}]);
+const SuxHelpText = /*@__PURE__*/proxyCustomElement(SuxHelpText$1, [1,"sux-help-text",{"text":[1],"variant":[1],"size":[1],"icon":[4],"disabled":[4]}]);
 const SuxTag = /*@__PURE__*/proxyCustomElement(SuxTag$1, [1,"sux-tag",{"label":[1],"size":[1],"variant":[1]}]);
 const defineCustomElements = (opts) => {
   if (typeof customElements !== 'undefined') {
@@ -305,7 +398,9 @@ const defineCustomElements = (opts) => {
   SuxButton,
   SuxCode,
   SuxDetail,
+  SuxFieldLabel,
   SuxHeading,
+  SuxHelpText,
   SuxTag
     ].forEach(cmp => {
       if (!customElements.get(cmp.is)) {
@@ -315,4 +410,4 @@ const defineCustomElements = (opts) => {
   }
 };
 
-export { SuxBody, SuxButton, SuxCode, SuxDetail, SuxHeading, SuxTag, defineCustomElements };
+export { SuxBody, SuxButton, SuxCode, SuxDetail, SuxFieldLabel, SuxHeading, SuxHelpText, SuxTag, defineCustomElements };

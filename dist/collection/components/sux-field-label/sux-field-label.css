@@ -1,0 +1,35 @@
+:host {
+  display: block;
+}
+
+:host([position=side]) {
+  display: inline-block;
+}
+
+.sux-field-label {
+  font-family: "IBM Plex Sans", sans-serif;
+  color: #323232;
+  margin-bottom: 6px;
+}
+.sux-field-label--sizeS {
+  font-size: 12px;
+}
+.sux-field-label--sizeM {
+  font-size: 12px;
+}
+.sux-field-label--sizeL {
+  font-size: 14px;
+}
+.sux-field-label--sizeXL {
+  font-size: 16px;
+}
+.sux-field-label--required icon {
+  display: inline-block !important;
+}
+.sux-field-label icon {
+  display: none;
+}
+.sux-field-label--disabled {
+  color: #bbbbbb;
+  cursor: none;
+}

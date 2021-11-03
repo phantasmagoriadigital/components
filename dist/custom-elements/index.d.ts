@@ -26,10 +26,22 @@ export const SuxDetail: {
   new (): SuxDetail;
 };
 
+interface SuxFieldLabel extends Components.SuxFieldLabel, HTMLElement {}
+export const SuxFieldLabel: {
+  prototype: SuxFieldLabel;
+  new (): SuxFieldLabel;
+};
+
 interface SuxHeading extends Components.SuxHeading, HTMLElement {}
 export const SuxHeading: {
   prototype: SuxHeading;
   new (): SuxHeading;
+};
+
+interface SuxHelpText extends Components.SuxHelpText, HTMLElement {}
+export const SuxHelpText: {
+  prototype: SuxHelpText;
+  new (): SuxHelpText;
 };
 
 interface SuxTag extends Components.SuxTag, HTMLElement {}
