@@ -9,7 +9,9 @@ import { BodyClassification, BodySize } from "./components/sux-body/interfaces";
 import { ButtonSize, ButtonVariant } from "./components/sux-button/interfaces";
 import { CodeSize } from "./components/sux-code/interfaces";
 import { DetailClassification, DetailSize, DetailWeight } from "./components/sux-detail/interfaces";
+import { FieldLabelPosition, FieldLabelSize } from "./components/sux-field-label/interfaces";
 import { HeadingClassification, HeadingSize, HeadingWeight } from "./components/sux-heading/interfaces";
+import { HelpTextSize, HelpTextVariant } from "./components/sux-help-text/interfaces";
 import { TagSize, TagVariant } from "./components/sux-tag/interfaces";
 export namespace Components {
     interface SuxBody {
@@ -84,6 +86,28 @@ export namespace Components {
          */
         "weight": DetailWeight;
     }
+    interface SuxFieldLabel {
+        /**
+          * Disabled
+         */
+        "disabled": boolean;
+        /**
+          * Label
+         */
+        "label": string;
+        /**
+          * position
+         */
+        "position": FieldLabelPosition;
+        /**
+          * Required
+         */
+        "required": boolean;
+        /**
+          * Size
+         */
+        "size": FieldLabelSize;
+    }
     interface SuxHeading {
         /**
           * Heading classification
@@ -101,6 +125,28 @@ export namespace Components {
           * Heading weight
          */
         "weight": HeadingWeight;
+    }
+    interface SuxHelpText {
+        /**
+          * disabled
+         */
+        "disabled": boolean;
+        /**
+          * Icon
+         */
+        "icon": boolean;
+        /**
+          * size
+         */
+        "size": HelpTextSize;
+        /**
+          * text
+         */
+        "text": string;
+        /**
+          * Variant
+         */
+        "variant": HelpTextVariant;
     }
     interface SuxTag {
         /**
@@ -142,11 +188,23 @@ declare global {
         prototype: HTMLSuxDetailElement;
         new (): HTMLSuxDetailElement;
     };
+    interface HTMLSuxFieldLabelElement extends Components.SuxFieldLabel, HTMLStencilElement {
+    }
+    var HTMLSuxFieldLabelElement: {
+        prototype: HTMLSuxFieldLabelElement;
+        new (): HTMLSuxFieldLabelElement;
+    };
     interface HTMLSuxHeadingElement extends Components.SuxHeading, HTMLStencilElement {
     }
     var HTMLSuxHeadingElement: {
         prototype: HTMLSuxHeadingElement;
         new (): HTMLSuxHeadingElement;
+    };
+    interface HTMLSuxHelpTextElement extends Components.SuxHelpText, HTMLStencilElement {
+    }
+    var HTMLSuxHelpTextElement: {
+        prototype: HTMLSuxHelpTextElement;
+        new (): HTMLSuxHelpTextElement;
     };
     interface HTMLSuxTagElement extends Components.SuxTag, HTMLStencilElement {
     }
@@ -159,7 +217,9 @@ declare global {
         "sux-button": HTMLSuxButtonElement;
         "sux-code": HTMLSuxCodeElement;
         "sux-detail": HTMLSuxDetailElement;
+        "sux-field-label": HTMLSuxFieldLabelElement;
         "sux-heading": HTMLSuxHeadingElement;
+        "sux-help-text": HTMLSuxHelpTextElement;
         "sux-tag": HTMLSuxTagElement;
     }
 }
@@ -236,6 +296,28 @@ declare namespace LocalJSX {
          */
         "weight"?: DetailWeight;
     }
+    interface SuxFieldLabel {
+        /**
+          * Disabled
+         */
+        "disabled"?: boolean;
+        /**
+          * Label
+         */
+        "label"?: string;
+        /**
+          * position
+         */
+        "position"?: FieldLabelPosition;
+        /**
+          * Required
+         */
+        "required"?: boolean;
+        /**
+          * Size
+         */
+        "size"?: FieldLabelSize;
+    }
     interface SuxHeading {
         /**
           * Heading classification
@@ -253,6 +335,28 @@ declare namespace LocalJSX {
           * Heading weight
          */
         "weight"?: HeadingWeight;
+    }
+    interface SuxHelpText {
+        /**
+          * disabled
+         */
+        "disabled"?: boolean;
+        /**
+          * Icon
+         */
+        "icon"?: boolean;
+        /**
+          * size
+         */
+        "size"?: HelpTextSize;
+        /**
+          * text
+         */
+        "text"?: string;
+        /**
+          * Variant
+         */
+        "variant"?: HelpTextVariant;
     }
     interface SuxTag {
         /**
@@ -273,7 +377,9 @@ declare namespace LocalJSX {
         "sux-button": SuxButton;
         "sux-code": SuxCode;
         "sux-detail": SuxDetail;
+        "sux-field-label": SuxFieldLabel;
         "sux-heading": SuxHeading;
+        "sux-help-text": SuxHelpText;
         "sux-tag": SuxTag;
     }
 }
@@ -285,7 +391,9 @@ declare module "@stencil/core" {
             "sux-button": LocalJSX.SuxButton & JSXBase.HTMLAttributes<HTMLSuxButtonElement>;
             "sux-code": LocalJSX.SuxCode & JSXBase.HTMLAttributes<HTMLSuxCodeElement>;
             "sux-detail": LocalJSX.SuxDetail & JSXBase.HTMLAttributes<HTMLSuxDetailElement>;
+            "sux-field-label": LocalJSX.SuxFieldLabel & JSXBase.HTMLAttributes<HTMLSuxFieldLabelElement>;
             "sux-heading": LocalJSX.SuxHeading & JSXBase.HTMLAttributes<HTMLSuxHeadingElement>;
+            "sux-help-text": LocalJSX.SuxHelpText & JSXBase.HTMLAttributes<HTMLSuxHelpTextElement>;
             "sux-tag": LocalJSX.SuxTag & JSXBase.HTMLAttributes<HTMLSuxTagElement>;
         }
     }

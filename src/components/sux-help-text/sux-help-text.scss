@@ -1,0 +1,36 @@
+@import '../../assets/tokens/components/_help-text.scss';
+:host {
+  display: block;
+}
+.sux-help-text {
+  font-family: $help-text-font-family;
+  &--neutral {
+    color: $help-text-neutral-text-color;
+  }
+  &--negative {
+    color: $help-text-negative-text-color;
+  }
+  &--sizeS {
+    font-size: $help-text-small-text-size;
+  }
+  &--sizeM {
+    font-size: $help-text-medium-text-size;
+  }
+  &--sizeL {
+    font-size: $help-text-large-text-size;
+  }
+  &--sizeXL {
+    font-size: $help-text-extra-large-text-size;
+  }
+  &--disabled {
+    color: $help-text-disabled-text-color;
+  }
+  &--icon {
+    icon {
+      display: inline-block !important;
+    }
+  }
+  icon {
+    display: none;
+  }
+}
