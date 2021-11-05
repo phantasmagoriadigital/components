@@ -1,0 +1,67 @@
+@import '../../assets/tokens/components/_text-field.scss';
+:host {
+  display: block;
+}
+.sux-form-field {
+  display: flex;
+  .sux-text-field-icon--error {
+    position: absolute;
+    align-self: flex-end;
+  }
+}
+.sux-text-field {
+  border: $text-field-border-color $text-field-border-width solid;
+  border-radius: $text-field-border-radius;
+  &::placeholder {
+    color: $text-field-placeholder-text-color;
+    font-style: italic;
+  }
+  &:focus-visible {
+    outline: $text-field-focus-outline-width $text-field-focus-outline-color solid;
+    outline-offset: $text-field-focus-outline-offset;
+  }
+  &:focus:not(:focus-visible) {
+    outline: none;
+  }
+  &:focus-visible {
+    outline: $text-field-focus-outline-width $text-field-focus-outline-color solid;
+    // outline-offset: $text-field-focus-outline-offset;
+  }
+  &:hover {
+    border-color: $text-field-hover-border-color;
+  }
+  &--disabled {
+    cursor: none;
+  }
+  &--error {
+    border-color: $text-field-error-border-color;
+  }
+  &--sizeS {
+    font-size: $text-field-small-font-size;
+    padding-top: $text-field-small-padding-top;
+    padding-bottom: $text-field-small-padding-bottom;
+    padding-left: $text-field-small-padding-left;
+    padding-right: $text-field-small-padding-right;
+  }
+  &--sizeM {
+    font-size: $text-field-medium-font-size;
+    padding-top: $text-field-medium-padding-top;
+    padding-bottom: $text-field-medium-padding-bottom;
+    padding-left: $text-field-medium-padding-left;
+    padding-right: $text-field-medium-padding-right;
+  }
+  &--sizeL {
+    font-size: $text-field-large-font-size;
+    padding-top: $text-field-large-padding-top;
+    padding-bottom: $text-field-large-padding-bottom;
+    padding-left: $text-field-large-padding-left;
+    padding-right: $text-field-large-padding-right;
+  }
+  &--sizeXL {
+    font-size: $text-field-extra-large-font-size;
+    padding-top: $text-field-extra-large-padding-top;
+    padding-bottom: $text-field-extra-large-padding-bottom;
+    padding-left: $text-field-extra-large-padding-left;
+    padding-right: $text-field-extra-large-padding-right;
+  }
+}
