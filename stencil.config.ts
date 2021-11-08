@@ -11,6 +11,7 @@ export const config: Config = {
     })
     // sass()
   ],
+  globalStyle: './src/assets/tokens/css/all/tokens.css',
   outputTargets: [
     {
       type: 'dist',
