@@ -12,7 +12,12 @@ import { DetailClassification, DetailSize, DetailWeight } from "./components/sux
 import { FieldLabelPosition, FieldLabelSize } from "./components/sux-field-label/interfaces";
 import { HeadingClassification, HeadingSize, HeadingWeight } from "./components/sux-heading/interfaces";
 import { HelpTextSize, HelpTextVariant } from "./components/sux-help-text/interfaces";
-import { TagSize, TagVariant } from "./components/sux-tag/interfaces";
+import { IconSize } from "./components/sux-icon/interfaces";
+import { LabelPosition } from "./components/sux-picker/interfaces";
+import { RadioSize } from "./components/sux-radio/interfaces";
+import { TagSize, TagState, TagVariant } from "./components/sux-tag/interfaces";
+import { TextAreaSize } from "./components/sux-text-area/innterfaces";
+import { TextFieldSize, TextFieldType } from "./components/sux-text-field/interfaces";
 export namespace Components {
     interface SuxBody {
         /**
@@ -65,6 +70,44 @@ export namespace Components {
           * specify the appearance style of the button, defaults to solid.
          */
         "variant": ButtonVariant;
+    }
+    interface SuxCheckbox {
+        /**
+          * Checked value of checkbox
+         */
+        "checked": boolean;
+        /**
+          * disable the checkbox
+         */
+        "disabled": boolean;
+        /**
+          * Error
+         */
+        "error": boolean;
+        /**
+          * Help text
+         */
+        "helpText": string;
+        /**
+          * Indeterminate state of checkbox
+         */
+        "indeterminate": boolean;
+        /**
+          * Label for the checkbox
+         */
+        "label": string;
+        /**
+          * The checkbox name
+         */
+        "name": string;
+        /**
+          * Read only
+         */
+        "readonly": boolean;
+        /**
+          * Value
+         */
+        "value": string;
     }
     interface SuxCode {
         /**
@@ -148,6 +191,158 @@ export namespace Components {
          */
         "variant": HelpTextVariant;
     }
+    interface SuxIcon {
+        /**
+          * Name of the icon
+         */
+        "icon": string;
+        /**
+          * Size
+         */
+        "size": IconSize;
+    }
+    interface SuxMenuItem {
+        /**
+          * active
+         */
+        "active": boolean;
+        /**
+          * disabled
+         */
+        "disabled": boolean;
+        /**
+          * no wrap
+         */
+        "noWrap": boolean;
+        /**
+          * selected
+         */
+        "selected": boolean;
+        /**
+          * value
+         */
+        "value": string;
+    }
+    interface SuxPicker {
+        /**
+          * Disabled
+         */
+        "disabled": boolean;
+        /**
+          * Error
+         */
+        "error": boolean;
+        /**
+          * Help Text
+         */
+        "helpText": string;
+        /**
+          * label
+         */
+        "label": string;
+        /**
+          * Label position
+         */
+        "labelPosition": LabelPosition;
+        /**
+          * Placeholder
+         */
+        "placeholder": string;
+        /**
+          * quiet
+         */
+        "quiet": boolean;
+        /**
+          * Read only
+         */
+        "readonly": boolean;
+        /**
+          * Required
+         */
+        "required": boolean;
+        /**
+          * Value
+         */
+        "value": string;
+        /**
+          * Width
+         */
+        "width": string;
+    }
+    interface SuxRadio {
+        /**
+          * Checked state
+         */
+        "checked": boolean;
+        /**
+          * disabled state
+         */
+        "disabled": boolean;
+        /**
+          * label for the radio button
+         */
+        "label"?: string;
+        /**
+          * Name of the radio
+         */
+        "name": string;
+        /**
+          * size of the radio button
+         */
+        "size": RadioSize;
+        /**
+          * Value of the radio
+         */
+        "value": string;
+    }
+    interface SuxRadioGroup {
+        /**
+          * The validation error text
+         */
+        "errorText"?: string;
+        /**
+          * The help or explanation text
+         */
+        "helpText"?: string;
+        /**
+          * Presentational only. Renders the Radio Group as invalid.
+         */
+        "invalid": boolean;
+        /**
+          * The label of the radio group. For HTML content, use the `label` slot instead.
+         */
+        "label"?: string;
+        /**
+          * The name of the radio group - submitted with form data. Must match the name of the radios in the group.
+         */
+        "name": string;
+        /**
+          * The value of the current selected radio in the group. Changing this will also mark that radio as checked in the UI.
+         */
+        "value"?: any | null;
+    }
+    interface SuxSwitch {
+        /**
+          * Checked state of the switch
+         */
+        "checked": boolean;
+        /**
+          * Disabled state of the switch
+         */
+        "disabled": boolean;
+        /**
+          * Label for the switch
+         */
+        "label": string;
+        /**
+          * Name of the switch
+         */
+        "name": string;
+        /**
+          * Value of the switch
+         */
+        "value": string;
+    }
     interface SuxTag {
         /**
           * label for the tag
@@ -158,9 +353,125 @@ export namespace Components {
          */
         "size": TagSize;
         /**
+          * State
+         */
+        "state": TagState;
+        /**
           * Variant
          */
         "variant": TagVariant;
+    }
+    interface SuxTextArea {
+        /**
+          * disabled input
+         */
+        "disabled": boolean;
+        /**
+          * Error
+         */
+        "error": boolean;
+        /**
+          * Error message
+         */
+        "errorText": string;
+        /**
+          * Help text
+         */
+        "helpText": string;
+        /**
+          * Label text
+         */
+        "label": string;
+        /**
+          * Label position
+         */
+        "labelPosition": 'top' | 'side';
+        /**
+          * Placeholder text
+         */
+        "placeholder": string;
+        /**
+          * read only
+         */
+        "readonly": boolean;
+        /**
+          * Required
+         */
+        "required": boolean;
+        /**
+          * size of the input
+         */
+        "size": TextAreaSize;
+        /**
+          * valid icon
+         */
+        "validIcon": boolean;
+        /**
+          * value of the input
+         */
+        "value": string;
+        /**
+          * width of the input
+         */
+        "width": string;
+    }
+    interface SuxTextField {
+        /**
+          * disabled input
+         */
+        "disabled": boolean;
+        /**
+          * Error
+         */
+        "error": boolean;
+        /**
+          * Error message
+         */
+        "errorText": string;
+        /**
+          * Help text
+         */
+        "helpText": string;
+        /**
+          * Label text
+         */
+        "label": string;
+        /**
+          * Label position
+         */
+        "labelPosition": 'top' | 'side';
+        /**
+          * Placeholder text
+         */
+        "placeholder": string;
+        /**
+          * read only
+         */
+        "readonly": boolean;
+        /**
+          * Required
+         */
+        "required": boolean;
+        /**
+          * size of the input
+         */
+        "size": TextFieldSize;
+        /**
+          * Input type
+         */
+        "type": TextFieldType;
+        /**
+          * valid icon
+         */
+        "validIcon": boolean;
+        /**
+          * value of the input
+         */
+        "value": string;
+        /**
+          * width of the input
+         */
+        "width": string;
     }
 }
 declare global {
@@ -175,6 +486,12 @@ declare global {
     var HTMLSuxButtonElement: {
         prototype: HTMLSuxButtonElement;
         new (): HTMLSuxButtonElement;
+    };
+    interface HTMLSuxCheckboxElement extends Components.SuxCheckbox, HTMLStencilElement {
+    }
+    var HTMLSuxCheckboxElement: {
+        prototype: HTMLSuxCheckboxElement;
+        new (): HTMLSuxCheckboxElement;
     };
     interface HTMLSuxCodeElement extends Components.SuxCode, HTMLStencilElement {
     }
@@ -206,21 +523,78 @@ declare global {
         prototype: HTMLSuxHelpTextElement;
         new (): HTMLSuxHelpTextElement;
     };
+    interface HTMLSuxIconElement extends Components.SuxIcon, HTMLStencilElement {
+    }
+    var HTMLSuxIconElement: {
+        prototype: HTMLSuxIconElement;
+        new (): HTMLSuxIconElement;
+    };
+    interface HTMLSuxMenuItemElement extends Components.SuxMenuItem, HTMLStencilElement {
+    }
+    var HTMLSuxMenuItemElement: {
+        prototype: HTMLSuxMenuItemElement;
+        new (): HTMLSuxMenuItemElement;
+    };
+    interface HTMLSuxPickerElement extends Components.SuxPicker, HTMLStencilElement {
+    }
+    var HTMLSuxPickerElement: {
+        prototype: HTMLSuxPickerElement;
+        new (): HTMLSuxPickerElement;
+    };
+    interface HTMLSuxRadioElement extends Components.SuxRadio, HTMLStencilElement {
+    }
+    var HTMLSuxRadioElement: {
+        prototype: HTMLSuxRadioElement;
+        new (): HTMLSuxRadioElement;
+    };
+    interface HTMLSuxRadioGroupElement extends Components.SuxRadioGroup, HTMLStencilElement {
+    }
+    var HTMLSuxRadioGroupElement: {
+        prototype: HTMLSuxRadioGroupElement;
+        new (): HTMLSuxRadioGroupElement;
+    };
+    interface HTMLSuxSwitchElement extends Components.SuxSwitch, HTMLStencilElement {
+    }
+    var HTMLSuxSwitchElement: {
+        prototype: HTMLSuxSwitchElement;
+        new (): HTMLSuxSwitchElement;
+    };
     interface HTMLSuxTagElement extends Components.SuxTag, HTMLStencilElement {
     }
     var HTMLSuxTagElement: {
         prototype: HTMLSuxTagElement;
         new (): HTMLSuxTagElement;
     };
+    interface HTMLSuxTextAreaElement extends Components.SuxTextArea, HTMLStencilElement {
+    }
+    var HTMLSuxTextAreaElement: {
+        prototype: HTMLSuxTextAreaElement;
+        new (): HTMLSuxTextAreaElement;
+    };
+    interface HTMLSuxTextFieldElement extends Components.SuxTextField, HTMLStencilElement {
+    }
+    var HTMLSuxTextFieldElement: {
+        prototype: HTMLSuxTextFieldElement;
+        new (): HTMLSuxTextFieldElement;
+    };
     interface HTMLElementTagNameMap {
         "sux-body": HTMLSuxBodyElement;
         "sux-button": HTMLSuxButtonElement;
+        "sux-checkbox": HTMLSuxCheckboxElement;
         "sux-code": HTMLSuxCodeElement;
         "sux-detail": HTMLSuxDetailElement;
         "sux-field-label": HTMLSuxFieldLabelElement;
         "sux-heading": HTMLSuxHeadingElement;
         "sux-help-text": HTMLSuxHelpTextElement;
+        "sux-icon": HTMLSuxIconElement;
+        "sux-menu-item": HTMLSuxMenuItemElement;
+        "sux-picker": HTMLSuxPickerElement;
+        "sux-radio": HTMLSuxRadioElement;
+        "sux-radio-group": HTMLSuxRadioGroupElement;
+        "sux-switch": HTMLSuxSwitchElement;
         "sux-tag": HTMLSuxTagElement;
+        "sux-text-area": HTMLSuxTextAreaElement;
+        "sux-text-field": HTMLSuxTextFieldElement;
     }
 }
 declare namespace LocalJSX {
@@ -275,6 +649,56 @@ declare namespace LocalJSX {
           * specify the appearance style of the button, defaults to solid.
          */
         "variant"?: ButtonVariant;
+    }
+    interface SuxCheckbox {
+        /**
+          * Checked value of checkbox
+         */
+        "checked"?: boolean;
+        /**
+          * disable the checkbox
+         */
+        "disabled"?: boolean;
+        /**
+          * Error
+         */
+        "error"?: boolean;
+        /**
+          * Help text
+         */
+        "helpText"?: string;
+        /**
+          * Indeterminate state of checkbox
+         */
+        "indeterminate"?: boolean;
+        /**
+          * Label for the checkbox
+         */
+        "label"?: string;
+        /**
+          * The checkbox name
+         */
+        "name"?: string;
+        /**
+          * Fired when an element has lost focus
+         */
+        "onSuxblur"?: (event: CustomEvent<any>) => void;
+        /**
+          * Fired when the value of the input changes
+         */
+        "onSuxchange"?: (event: CustomEvent<any>) => void;
+        /**
+          * Fired when an alteration to the input's value is committed by the user
+         */
+        "onSuxinput"?: (event: CustomEvent<any>) => void;
+        /**
+          * Read only
+         */
+        "readonly"?: boolean;
+        /**
+          * Value
+         */
+        "value"?: string;
     }
     interface SuxCode {
         /**
@@ -358,6 +782,198 @@ declare namespace LocalJSX {
          */
         "variant"?: HelpTextVariant;
     }
+    interface SuxIcon {
+        /**
+          * Name of the icon
+         */
+        "icon"?: string;
+        /**
+          * Size
+         */
+        "size"?: IconSize;
+    }
+    interface SuxMenuItem {
+        /**
+          * active
+         */
+        "active"?: boolean;
+        /**
+          * disabled
+         */
+        "disabled"?: boolean;
+        /**
+          * no wrap
+         */
+        "noWrap"?: boolean;
+        /**
+          * Fires when the element loses focus
+         */
+        "onSuxblur"?: (event: CustomEvent<any>) => void;
+        /**
+          * Fires when the value of the input changes
+         */
+        "onSuxchange"?: (event: CustomEvent<any>) => void;
+        /**
+          * tabindex
+         */
+        "onSuxclick"?: (event: CustomEvent<any>) => void;
+        /**
+          * Fires when an alteration to the input's value is made
+         */
+        "onSuxinput"?: (event: CustomEvent<any>) => void;
+        /**
+          * selected
+         */
+        "selected"?: boolean;
+        /**
+          * value
+         */
+        "value"?: string;
+    }
+    interface SuxPicker {
+        /**
+          * Disabled
+         */
+        "disabled"?: boolean;
+        /**
+          * Error
+         */
+        "error"?: boolean;
+        /**
+          * Help Text
+         */
+        "helpText"?: string;
+        /**
+          * label
+         */
+        "label"?: string;
+        /**
+          * Label position
+         */
+        "labelPosition"?: LabelPosition;
+        /**
+          * Placeholder
+         */
+        "placeholder"?: string;
+        /**
+          * quiet
+         */
+        "quiet"?: boolean;
+        /**
+          * Read only
+         */
+        "readonly"?: boolean;
+        /**
+          * Required
+         */
+        "required"?: boolean;
+        /**
+          * Value
+         */
+        "value"?: string;
+        /**
+          * Width
+         */
+        "width"?: string;
+    }
+    interface SuxRadio {
+        /**
+          * Checked state
+         */
+        "checked"?: boolean;
+        /**
+          * disabled state
+         */
+        "disabled"?: boolean;
+        /**
+          * label for the radio button
+         */
+        "label"?: string;
+        /**
+          * Name of the radio
+         */
+        "name"?: string;
+        /**
+          * Fired when an element has lost focus
+         */
+        "onSuxblur"?: (event: CustomEvent<any>) => void;
+        /**
+          * Fired when an element has lost focus
+         */
+        "onSuxchange"?: (event: CustomEvent<any>) => void;
+        /**
+          * size of the radio button
+         */
+        "size"?: RadioSize;
+        /**
+          * Value of the radio
+         */
+        "value"?: string;
+    }
+    interface SuxRadioGroup {
+        /**
+          * The validation error text
+         */
+        "errorText"?: string;
+        /**
+          * The help or explanation text
+         */
+        "helpText"?: string;
+        /**
+          * Presentational only. Renders the Radio Group as invalid.
+         */
+        "invalid"?: boolean;
+        /**
+          * The label of the radio group. For HTML content, use the `label` slot instead.
+         */
+        "label"?: string;
+        /**
+          * The name of the radio group - submitted with form data. Must match the name of the radios in the group.
+         */
+        "name"?: string;
+        /**
+          * Fired when the value of the input changes - [HTMLElement/input_event](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/input_event)
+         */
+        "onSuxchange"?: (event: CustomEvent<any>) => void;
+        /**
+          * The value of the current selected radio in the group. Changing this will also mark that radio as checked in the UI.
+         */
+        "value"?: any | null;
+    }
+    interface SuxSwitch {
+        /**
+          * Checked state of the switch
+         */
+        "checked"?: boolean;
+        /**
+          * Disabled state of the switch
+         */
+        "disabled"?: boolean;
+        /**
+          * Label for the switch
+         */
+        "label"?: string;
+        /**
+          * Name of the switch
+         */
+        "name"?: string;
+        /**
+          * Fires when the element loses focus
+         */
+        "onSuxblur"?: (event: CustomEvent<any>) => void;
+        /**
+          * Fires when the value of the input changes
+         */
+        "onSuxchange"?: (event: CustomEvent<any>) => void;
+        /**
+          * Fires when an alteration to the input's value is made
+         */
+        "onSuxinput"?: (event: CustomEvent<any>) => void;
+        /**
+          * Value of the switch
+         */
+        "value"?: string;
+    }
     interface SuxTag {
         /**
           * label for the tag
@@ -368,19 +984,168 @@ declare namespace LocalJSX {
          */
         "size"?: TagSize;
         /**
+          * State
+         */
+        "state"?: TagState;
+        /**
           * Variant
          */
         "variant"?: TagVariant;
     }
+    interface SuxTextArea {
+        /**
+          * disabled input
+         */
+        "disabled"?: boolean;
+        /**
+          * Error
+         */
+        "error"?: boolean;
+        /**
+          * Error message
+         */
+        "errorText"?: string;
+        /**
+          * Help text
+         */
+        "helpText"?: string;
+        /**
+          * Label text
+         */
+        "label"?: string;
+        /**
+          * Label position
+         */
+        "labelPosition"?: 'top' | 'side';
+        /**
+          * Fired when an element has lost focus
+         */
+        "onSuxblur"?: (event: CustomEvent<any>) => void;
+        /**
+          * /**     Fired when the value of the input changes
+         */
+        "onSuxchange"?: (event: CustomEvent<any>) => void;
+        /**
+          * Fired when an alteration to the input's value is committed by the user
+         */
+        "onSuxinput"?: (event: CustomEvent<any>) => void;
+        /**
+          * Placeholder text
+         */
+        "placeholder"?: string;
+        /**
+          * read only
+         */
+        "readonly"?: boolean;
+        /**
+          * Required
+         */
+        "required"?: boolean;
+        /**
+          * size of the input
+         */
+        "size"?: TextAreaSize;
+        /**
+          * valid icon
+         */
+        "validIcon"?: boolean;
+        /**
+          * value of the input
+         */
+        "value"?: string;
+        /**
+          * width of the input
+         */
+        "width"?: string;
+    }
+    interface SuxTextField {
+        /**
+          * disabled input
+         */
+        "disabled"?: boolean;
+        /**
+          * Error
+         */
+        "error"?: boolean;
+        /**
+          * Error message
+         */
+        "errorText"?: string;
+        /**
+          * Help text
+         */
+        "helpText"?: string;
+        /**
+          * Label text
+         */
+        "label"?: string;
+        /**
+          * Label position
+         */
+        "labelPosition"?: 'top' | 'side';
+        /**
+          * Fired when an element has lost focus
+         */
+        "onSuxblur"?: (event: CustomEvent<any>) => void;
+        /**
+          * /**     Fired when the value of the input changes
+         */
+        "onSuxchange"?: (event: CustomEvent<any>) => void;
+        /**
+          * Fired when an alteration to the input's value is committed by the user
+         */
+        "onSuxinput"?: (event: CustomEvent<any>) => void;
+        /**
+          * Placeholder text
+         */
+        "placeholder"?: string;
+        /**
+          * read only
+         */
+        "readonly"?: boolean;
+        /**
+          * Required
+         */
+        "required"?: boolean;
+        /**
+          * size of the input
+         */
+        "size"?: TextFieldSize;
+        /**
+          * Input type
+         */
+        "type"?: TextFieldType;
+        /**
+          * valid icon
+         */
+        "validIcon"?: boolean;
+        /**
+          * value of the input
+         */
+        "value"?: string;
+        /**
+          * width of the input
+         */
+        "width"?: string;
+    }
     interface IntrinsicElements {
         "sux-body": SuxBody;
         "sux-button": SuxButton;
+        "sux-checkbox": SuxCheckbox;
         "sux-code": SuxCode;
         "sux-detail": SuxDetail;
         "sux-field-label": SuxFieldLabel;
         "sux-heading": SuxHeading;
         "sux-help-text": SuxHelpText;
+        "sux-icon": SuxIcon;
+        "sux-menu-item": SuxMenuItem;
+        "sux-picker": SuxPicker;
+        "sux-radio": SuxRadio;
+        "sux-radio-group": SuxRadioGroup;
+        "sux-switch": SuxSwitch;
         "sux-tag": SuxTag;
+        "sux-text-area": SuxTextArea;
+        "sux-text-field": SuxTextField;
     }
 }
 export { LocalJSX as JSX };
@@ -389,12 +1154,21 @@ declare module "@stencil/core" {
         interface IntrinsicElements {
             "sux-body": LocalJSX.SuxBody & JSXBase.HTMLAttributes<HTMLSuxBodyElement>;
             "sux-button": LocalJSX.SuxButton & JSXBase.HTMLAttributes<HTMLSuxButtonElement>;
+            "sux-checkbox": LocalJSX.SuxCheckbox & JSXBase.HTMLAttributes<HTMLSuxCheckboxElement>;
             "sux-code": LocalJSX.SuxCode & JSXBase.HTMLAttributes<HTMLSuxCodeElement>;
             "sux-detail": LocalJSX.SuxDetail & JSXBase.HTMLAttributes<HTMLSuxDetailElement>;
             "sux-field-label": LocalJSX.SuxFieldLabel & JSXBase.HTMLAttributes<HTMLSuxFieldLabelElement>;
             "sux-heading": LocalJSX.SuxHeading & JSXBase.HTMLAttributes<HTMLSuxHeadingElement>;
             "sux-help-text": LocalJSX.SuxHelpText & JSXBase.HTMLAttributes<HTMLSuxHelpTextElement>;
+            "sux-icon": LocalJSX.SuxIcon & JSXBase.HTMLAttributes<HTMLSuxIconElement>;
+            "sux-menu-item": LocalJSX.SuxMenuItem & JSXBase.HTMLAttributes<HTMLSuxMenuItemElement>;
+            "sux-picker": LocalJSX.SuxPicker & JSXBase.HTMLAttributes<HTMLSuxPickerElement>;
+            "sux-radio": LocalJSX.SuxRadio & JSXBase.HTMLAttributes<HTMLSuxRadioElement>;
+            "sux-radio-group": LocalJSX.SuxRadioGroup & JSXBase.HTMLAttributes<HTMLSuxRadioGroupElement>;
+            "sux-switch": LocalJSX.SuxSwitch & JSXBase.HTMLAttributes<HTMLSuxSwitchElement>;
             "sux-tag": LocalJSX.SuxTag & JSXBase.HTMLAttributes<HTMLSuxTagElement>;
+            "sux-text-area": LocalJSX.SuxTextArea & JSXBase.HTMLAttributes<HTMLSuxTextAreaElement>;
+            "sux-text-field": LocalJSX.SuxTextField & JSXBase.HTMLAttributes<HTMLSuxTextFieldElement>;
         }
     }
 }

@@ -1,4 +1,4 @@
-import { TagSize, TagVariant } from "./interfaces";
+import { TagSize, TagVariant, TagState } from "./interfaces";
 export declare class SuxTag {
   /**
    * label for the tag
@@ -12,5 +12,9 @@ export declare class SuxTag {
    * Variant
    */
   variant: TagVariant;
+  /**
+   * State
+   */
+  state: TagState;
   render(): any;
 }

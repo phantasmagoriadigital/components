@@ -1,0 +1,13 @@
+/**
+ * Do not edit directly
+ * Generated on Fri, 05 Nov 2021 09:53:27 GMT
+ */
+
+:root {
+  --code-xs-text-size: var(--font-size-2);
+  --code-s-text-size: var(--font-size-3);
+  --code-m-text-size: var(--font-size-4);
+  --code-l-text-size: var(--font-size-5);
+  --code-xl-text-size: var(--font-size-6);
+  --code-font-family: var(--font-family-mono);
+}

@@ -1,0 +1,21 @@
+/**
+ * Do not edit directly
+ * Generated on Fri, 05 Nov 2021 09:53:27 GMT
+ */
+
+:root {
+  --heading-line-height: var(--line-height-1);
+  --heading-bold-font-weight: var(--font-weight-bold);
+  --heading-semi-bold-font-weight: var(--font-weight-semi-bold);
+  --heading-regular-font-weight: var(--font-weight-regular);
+  --heading-light-font-weight: var(--font-weight-light);
+  --heading-xs-text-size: var(--font-size-8);
+  --heading-s-text-size: var(--font-size-10);
+  --heading-m-text-size: var(--font-size-12);
+  --heading-l-text-size: var(--font-size-17);
+  --heading-xl-text-size: var(--font-size-20);
+  --heading-xxl-text-size: var(--font-size-24);
+  --heading-mono-font-family: var(--font-family-mono);
+  --heading-sans-serif-font-family: var(--font-family-sans-serif);
+  --heading-serif-font-family: var(--font-family-serif);
+}

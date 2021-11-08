@@ -20,7 +20,7 @@ export class SuxFieldLabel {
   }
   render() {
     const { label, size, required, disabled, position } = this;
-    return (h(Host, null,
+    return (h(Host, { position: position },
       h("div", { class: {
           'sux-field-label': true,
           'sux-field-label--sizeS': size === 's',

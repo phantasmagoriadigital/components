@@ -9,6 +9,7 @@
   <script type="module" src="/build/substrate-ds.esm.js"></script>
   <script nomodule src="/build/substrate-ds.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="./assets/tokens/css/all/tokens.css" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;600;700&family=IBM+Plex+Sans:wght@300;400;600;700&family=IBM+Plex+Serif:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
@@ -35,11 +36,38 @@
 
     <sux-heading>Heading with default values</sux-heading>
     
-    <sux-tag variant="info" size="s">info</sux-tag>
-    <sux-tag variant="error" size="m">error</sux-tag>
-    <sux-tag variant="success" size="l">success</sux-tag>
-    <sux-tag variant="warning" size="xl">warnning</sux-tag>
-    <sux-tag variant="neutral" >neutral</sux-tag>
+    <sux-tag state="info" variant="solid" size="s">info</sux-tag>
+    <sux-tag state="info" variant="solid" size="m">info</sux-tag>
+    <sux-tag state="info" variant="solid" size="l">info</sux-tag>
+    <sux-tag state="info" variant="solid" size="xl">info</sux-tag>
+    <sux-tag state="error" variant="solid" size="m">error</sux-tag>
+    <sux-tag state="success" variant="solid" size="l">success</sux-tag>
+    <sux-tag state="warning" variant="solid" size="xl">warnning</sux-tag>
+    <sux-tag state="neutral" variant="solid" >neutral</sux-tag>
+    <sux-tag state="info" variant="inverted" size="s">info</sux-tag>
+    <sux-tag state="info" variant="inverted" size="m">info</sux-tag>
+    <sux-tag state="info" variant="inverted" size="l">info</sux-tag>
+    <sux-tag state="info" variant="inverted" size="xl">info</sux-tag>
+    <sux-tag state="error" variant="inverted" size="m">error</sux-tag>
+    <sux-tag state="success" variant="inverted" size="l">success</sux-tag>
+    <sux-tag state="warning" variant="inverted" size="xl">warnning</sux-tag>
+    <sux-tag state="neutral" variant="outlined" >neutral</sux-tag>
+    <sux-tag state="info" variant="outlined" size="s">info</sux-tag>
+    <sux-tag state="info" variant="outlined" size="m">info</sux-tag>
+    <sux-tag state="info" variant="outlined" size="l">info</sux-tag>
+    <sux-tag state="info" variant="outlined" size="xl">info</sux-tag>
+    <sux-tag state="error" variant="outlined" size="m">error</sux-tag>
+    <sux-tag state="success" variant="outlined" size="l">success</sux-tag>
+    <sux-tag state="warning" variant="outlined" size="xl">warnning</sux-tag>
+    <sux-tag state="neutral" variant="outlined" >neutral</sux-tag>
+    <sux-tag state="info" variant="borderless" size="s">info</sux-tag>
+    <sux-tag state="info" variant="borderless" size="m">info</sux-tag>
+    <sux-tag state="info" variant="borderless" size="l">info</sux-tag>
+    <sux-tag state="info" variant="borderless" size="xl">info</sux-tag>
+    <sux-tag state="error" variant="borderless" size="m">error</sux-tag>
+    <sux-tag state="success" variant="borderless" size="l">success</sux-tag>
+    <sux-tag state="warning" variant="borderless" size="xl">warnning</sux-tag>
+    <sux-tag state="neutral" variant="borderless" >neutral</sux-tag>
 
     <sux-field-label required size="xl">This  is a label</sux-field-label>
     <input type="text">
@@ -64,14 +92,18 @@
 
     <sux-text-area></sux-text-area>
 
-    <sux-checkbox></sux-checkbox>
+    <sux-checkbox>This is a checkbox label</sux-checkbox>
+    <sux-checkbox error>This is a checkbox label</sux-checkbox>
+    <sux-checkbox disabled>This is a checkbox label</sux-checkbox>
 
-    <sux-radio-group value="one">
+    <sux-radio-group value="one" label="this">
       <sux-radio value="one" label="one">This is a radio</sux-radio>
       <sux-radio value="two" label="two">This is a radio1</sux-radio>
 
     </sux-radio-group>
     <input type="radio"></input>
+
+    <sux-switch label="this is a switch" value="on">test</sux-switch>
   </div>
 
 </body>

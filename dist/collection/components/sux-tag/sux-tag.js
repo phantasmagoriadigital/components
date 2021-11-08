@@ -11,17 +11,25 @@ export class SuxTag {
      * Variant
      */
     this.variant = TAG_VARIANT;
+    /**
+     * State
+     */
+    this.state = 'info';
   }
   render() {
-    const { label, size, variant } = this;
+    const { label, size, variant, state } = this;
     return (h(Host, null,
       h("div", { class: {
           'sux-tag': true,
-          'sux-tag--info': variant == 'info',
-          'sux-tag--success': variant == 'success',
-          'sux-tag--warning': variant == 'warning',
-          'sux-tag--error': variant == 'error',
-          'sux-tag--neutral': variant == 'neutral',
+          '--info': state == 'info',
+          '--success': state == 'success',
+          '--warning': state == 'warning',
+          '--error': state == 'error',
+          '--neutral': state == 'neutral',
+          'sux-tag--solid': variant == 'solid',
+          'sux-tag--inverted': variant == 'inverted',
+          'sux-tag--outlined': variant == 'outlined',
+          'sux-tag--borderless': variant == 'borderless',
           'sux-tag--sizeS': size == 's',
           'sux-tag--sizeM': size == 'm',
           'sux-tag--sizeL': size == 'l',
@@ -83,7 +91,7 @@ export class SuxTag {
       "mutable": false,
       "complexType": {
         "original": "TagVariant",
-        "resolved": "\"error\" | \"info\" | \"neutral\" | \"success\" | \"warning\"",
+        "resolved": "\"borderless\" | \"inverted\" | \"outlined\" | \"solid\"",
         "references": {
           "TagVariant": {
             "location": "import",
@@ -100,6 +108,29 @@ export class SuxTag {
       "attribute": "variant",
       "reflect": false,
       "defaultValue": "TAG_VARIANT"
+    },
+    "state": {
+      "type": "string",
+      "mutable": false,
+      "complexType": {
+        "original": "TagState",
+        "resolved": "\"error\" | \"info\" | \"neutral\" | \"success\" | \"warning\"",
+        "references": {
+          "TagState": {
+            "location": "import",
+            "path": "./interfaces"
+          }
+        }
+      },
+      "required": false,
+      "optional": false,
+      "docs": {
+        "tags": [],
+        "text": "State"
+      },
+      "attribute": "state",
+      "reflect": false,
+      "defaultValue": "'info'"
     }
   }; }
 }

@@ -1,0 +1,36 @@
+/**
+ * Do not edit directly
+ * Generated on Fri, 05 Nov 2021 09:53:27 GMT
+ */
+
+:root {
+  --tag-extra-large-padding-left: 16;
+  --tag-extra-large-padding-bottom: 8;
+  --tag-extra-large-padding-right: 16;
+  --tag-extra-large-padding-top: 8;
+  --tag-extra-large-text-size: var(--font-size-5);
+  --tag-large-padding-left: 16;
+  --tag-large-padding-bottom: 8;
+  --tag-large-padding-right: 16;
+  --tag-large-padding-top: 8;
+  --tag-large-text-size: var(--font-size-4);
+  --tag-medium-padding-left: 16;
+  --tag-medium-padding-bottom: 8;
+  --tag-medium-padding-right: 16;
+  --tag-medium-padding-top: 8;
+  --tag-medium-text-size: var(--font-size-3);
+  --tag-small-padding-left: 12;
+  --tag-small-padding-bottom: 6;
+  --tag-small-padding-right: 12;
+  --tag-small-padding-top: 6;
+  --tag-small-text-size: var(--font-size-2);
+  --tag-neutral-background-color: var(--color-status-neutral);
+  --tag-warning-background-color: var(--color-status-warning);
+  --tag-error-background-color: var(--color-status-error);
+  --tag-success-background-color: var(--color-status-success);
+  --tag-info-background-color: var(--color-status-info);
+  --tag-border-radius: var(--border-radius-2);
+  --tag-text-color: var(--color-white);
+  --tag-font-weight: var(--font-weight-regular);
+  --tag-font-family: var(--font-family-sans-serif);
+}

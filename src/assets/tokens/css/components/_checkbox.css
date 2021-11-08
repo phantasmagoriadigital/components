@@ -1,0 +1,12 @@
+/**
+ * Do not edit directly
+ * Generated on Fri, 05 Nov 2021 09:53:27 GMT
+ */
+
+:root {
+  --checkbox-hover-border-color: var(--color-status-info);
+  --checkbox-checked-color: var(--color-status-info);
+  --checkbox-background-color: var(--color-white);
+  --checkbox-label-color: var(--color-status-info);
+  --checkbox-border-color: var(--color-status-info);
+}
