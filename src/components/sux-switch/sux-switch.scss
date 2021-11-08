@@ -1,3 +1,122 @@
 :host {
   display: block;
 }
+.sux-form-field {
+  position: relative;
+}
+.sux-switch {
+  position: relative;
+  &_label {
+    // unselected track
+    &::before {
+      position: relative;
+      display: flex;
+      content: '';
+      border-radius: 16px;
+      border: 1px solid;
+      border-color: var(--switch-track-unselected-border-color);
+      background-color: var(--switch-track-unselected-background-color);
+      height: 24px;
+      width: 40px;
+      z-index: 2;
+      transition: 0.1s background-color linear;
+    }
+    // unselected handle
+    &::after {
+      position: absolute;
+      content: '';
+      top: 19px;
+      left: 1px;
+      z-index: 3;
+      height: 22px;
+      width: 22px;
+      border-radius: 50%;
+      border: 1px solid var(--switch-handle-unselected-border-color);
+      background-color: var(--switch-handle-unselected-background-color);
+      transition: 0.1s left linear, 0.1s border-color linear;
+    }
+  }
+  &_input {
+    appearance: none;
+    -webkit-appearance: none;
+    margin: 0;
+
+    // Style for checked state
+    &:checked {
+      + .sux-switch_label {
+        // checked track
+        &::before {
+          border-color: var(--switch-track-selected-border-color);
+          background-color: var(--switch-track-selected-background-color);
+        }
+        // checked handle
+        &::after {
+          left: 17px;
+          background-color: var(--switch-handle-selected-background-color);
+          border-color: var(--switch-handle-selected-border-color);
+        }
+      }
+    }
+
+    // Style for disabled state
+    &:disabled {
+      + .sux-switch_label {
+        cursor: not-allowed;
+        // disabled track
+        &::before {
+          border-color: var(--switch-track-disabled-border-color);
+          background-color: var(--switch-track-disabled-background-color);
+        }
+        // disabled handle
+        &::after {
+          background-color: var(--switch-handle-disabled-background-color);
+          border-color: var(--switch-handle-disabled-border-color);
+        }
+      }
+    }
+  }
+
+  // style for hover state
+  &:hover {
+    .sux-switch_input {
+      &:not(:disabled),
+      &:checked:not(:disabled) {
+        + .sux-switch_label {
+          // selected hover track
+          &::before {
+            border-color: var(--switch-track-selected-hover-border-color);
+            background-color: var(--switch-track-selected-hover-background-color);
+          }
+          // selected hover handle
+          &::after {
+            border-color: var(--switch-handle-selected-hover-border-color);
+            background-color: var(--switch-handle-selected-hover-background-color);
+          }
+        }
+      }
+
+      &:not(:disabled) {
+        + .sux-switch_label {
+          // unselected hover track
+          &::before {
+            background-color: var(--switch-track-unselected-hover-background-color);
+            border-color: var(--switch-track-unselected-hover-border-color);
+          }
+          // unselected hover handle
+          &::after {
+            background-color: var(--switch-handle-unselected-hover-background-color);
+            border-color: var(--switch-handle-unselected-hover-border-color);
+          }
+        }
+      }
+
+      &:checked:not(:disabled) {
+        + .sux-switch_label {
+          &::before {
+            background-color: var(--switch-track-selected-background-color);
+          }
+        }
+      }
+    }
+  }
+}

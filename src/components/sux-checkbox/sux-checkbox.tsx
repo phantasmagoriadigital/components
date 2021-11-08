@@ -11,7 +11,7 @@ export class SuxCheckbox {
   //--------------------------------------------------------------------------
   // Element
   //--------------------------------------------------------------------------
-  @Element() el: HTMLElement;
+  @Element() el: HTMLSuxCheckboxElement;
   checkboxId = `sux-input-${++id}`
   private _inputEl?: HTMLInputElement
 
@@ -144,6 +144,7 @@ export class SuxCheckbox {
       name,
       value,
       indeterminate,
+      error
     } = this
     if (!this.indeterminate) {
       renderHiddenInput(
@@ -163,6 +164,7 @@ export class SuxCheckbox {
               'sux-checkbox': true,
               'sux-checkbox--indeterminate': indeterminate,
               'sux-checkbox--has-text': helpText !== undefined,
+              'sux-checkbox--error': error
             }}
           >
             <input

@@ -30,11 +30,29 @@
       transform: rotate(0deg);
       border-right: 0;
       border-top: 0;
-      border-bottom: 2px solid $checkbox-border-color;
+      border-bottom: 2px solid var(--checkbox-border-color);
       left: 4px;
     }
   }
+  &--error {
+    input[type='checkbox'] {
+      + label {
+        color: var(--checkbox-error-label-color) !important;
 
+        &::before {
+          border: 1px solid var(--checkbox-error-border-color) !important;
+        }
+      }
+      &:checked {
+        + label {
+          &::after {
+            border-right: 2px solid var(--checkbox-error-checked-color) !important;
+            border-top: 2px solid var(--checkbox-error-checked-color) !important;
+          }
+        }
+      }
+    }
+  }
   input[type='checkbox'] {
     -webkit-appearance: none;
     appearance: none;
@@ -48,6 +66,7 @@
       letter-spacing: 0.5px;
       cursor: pointer;
       margin-left: -7px;
+      font-family: var(--checkbox-label-font-family);
 
       // Box
       &::before {
@@ -57,8 +76,8 @@
         height: 1.125rem;
         width: 1.125rem;
         margin: 0 0.625rem 0 0;
-        background-color: $checkbox-background-color;
-        border: 1px solid $checkbox-border-color;
+        background-color: var(--checkbox-background-color);
+        border: 1px solid var(--checkbox-border-color);
       }
     }
 
@@ -73,12 +92,12 @@
           height: 6px;
           width: 12px;
           left: 3px;
-          border-right: 2px solid $checkbox-checked-color;
-          border-top: 2px solid $checkbox-checked-color;
+          border-right: 2px solid var(--checkbox-checked-color);
+          border-top: 2px solid var(--checkbox-checked-color);
           transform: rotate(125deg);
         }
         &::before {
-          border-color: $checkbox-border-color;
+          border-color: var(--checkbox-border-color);
         }
       }
     }
@@ -86,6 +105,10 @@
     &:disabled {
       + label {
         cursor: not-allowed;
+        color: var(--checkbox-disabled-label-color);
+        &::before {
+          border-color: var(--checkbox-disabled-border-color);
+        }
       }
     }
   }
@@ -93,7 +116,7 @@
   input[type='checkbox']:not(:disabled):hover {
     + label {
       &::before {
-        border-color: $checkbox-hover-border-color;
+        border-color: var(--checkbox-hover-border-color);
       }
     }
   }

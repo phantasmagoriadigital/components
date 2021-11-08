@@ -4,18 +4,18 @@
 }
 .sux-code {
   line-height: 150%;
-  font-family: $code-font-family;
+  font-family: var(--code-font-family);
 
   &--s {
-    font-size: $code-s-text-size;
+    font-size: var(--code-s-text-size);
   }
   &--m {
-    font-size: $code-m-text-size;
+    font-size: var(--code-m-text-size);
   }
   &--l {
-    font-size: $code-l-text-size;
+    font-size: var(--code-l-text-size);
   }
   &--xl {
-    font-size: $code-xl-text-size;
+    font-size: var(--code-xl-text-size);
   }
 }

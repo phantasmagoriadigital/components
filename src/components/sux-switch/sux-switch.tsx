@@ -1,4 +1,5 @@
-import { Component, Host, h, Element, Prop, State, Event, EventEmitter, Watch } from '@stencil/core';
+import { Component, Host, Element, h, Prop, State, Event, EventEmitter } from '@stencil/core';
+import { renderHiddenInput } from "../../utils/utils";
 let id = 0;
 
 @Component({
@@ -11,7 +12,7 @@ export class SuxSwitch {
   //--------------------------------------------------------------------------
   // Element
   //--------------------------------------------------------------------------
-  // @Element () el!: HTMLSuxSwitchElement
+  @Element() el!: HTMLSuxSwitchElement
 
   //--------------------------------------------------------------------------
   // State
@@ -65,13 +66,66 @@ export class SuxSwitch {
    */
   @Event({ eventName: 'suxblur' }) suxBlur: EventEmitter;
 
-  @Watch('label')
+  connectedCallback() {
+    this._onChange = this._onChange.bind(this)
+    this._onInput = this._onInput.bind(this)
+  }
+
+  private _onChange(e: Event): void {
+    const target = e.target as HTMLInputElement
+    this.checked = target.checked
+    this.suxChange.emit(this.checked)
+  }
+
+  private _onInput(e: Event) {
+    const target = e.target as HTMLInputElement
+    this.value = target.value
+    this.suxInput.emit()
+  }
+
+  private _onBlur = () => {
+    this.suxBlur.emit()
+  }
+
 
 
   render() {
+    const { switchId, checked, disabled, name, value, label } = this
+    renderHiddenInput(
+      true,
+      this.el,
+      this.name,
+      this.value ? this.value : 'on',
+      this.disabled,
+      this.checked
+    )
     return (
-      <Host>
-        <slot></slot>
+      <Host
+        class="sux-form-field"
+      >
+        <div
+          class={{
+            'sux-switch': true,
+            'sux-switch--checked': checked,
+          }}
+        >
+          <input
+            role="switch"
+            type="checkbox"
+            class="sux-switch_input"
+            name={name}
+            id={switchId}
+            disabled={disabled}
+            checked={checked}
+            value={value}
+            aria-checked={`${checked}`}
+            onChange={this._onChange}
+            onInput={this._onInput}
+            onBlur={() => this._onBlur()}
+          />
+          <label class="sux-switch_label" htmlFor={switchId}>{label}</label>
+        </div>
+
       </Host>
     );
   }

@@ -9,21 +9,21 @@
   align-items: center;
   justify-content: center;
 
-  border-radius: $button-border-radius;
-  border-width: $button-border-width;
+  border-radius: var(--button-border-radius);
+  border-width: var(--button-border-width);
   border-style: solid;
   background-color: transparent;
 
-  font-family: $button-font-family;
-  font-weight: $button-font-weight;
+  font-family: var(--button-font-family);
+  font-weight: var(--button-font-weight);
 
   &:disabled {
     // opacity: 50%;
     cursor: not-allowed;
     pointer-events: none;
-    color: $button-disabled-text-color;
-    background-color: $button-disabled-background-color;
-    border-color: $button-disabled-border-color;
+    color: var(--button-disabled-text-color);
+    background-color: var(--button-disabled-background-color);
+    border-color: var(--button-disabled-border-color);
   }
   &:focus {
     outline: 2px solid rgb(52, 62, 151);
@@ -35,66 +35,69 @@
   }
   &--quiet {
     border: none !important;
+    &:hover {
+      background-color: var(--button-quiet-hover-background-color) !important;
+    }
   }
   &--sizeS {
-    font-size: $button-small-text-size;
-    padding-left: $button-small-padding-left;
-    padding-right: $button-small-padding-right;
-    padding-top: $button-small-padding-top;
-    padding-bottom: $button-small-padding-bottom;
+    font-size: var(--button-small-text-size);
+    padding-left: var(--button-small-padding-left);
+    padding-right: var(--button-small-padding-right);
+    padding-top: var(--button-small-padding-top);
+    padding-bottom: var(--button-small-padding-bottom);
   }
   &--sizeM {
-    font-size: $button-medium-text-size;
-    padding-left: $button-medium-padding-left;
-    padding-right: $button-medium-padding-right;
-    padding-top: $button-medium-padding-top;
-    padding-bottom: $button-medium-padding-bottom;
+    font-size: var(--button-medium-text-size);
+    padding-left: var(--button-medium-padding-left);
+    padding-right: var(--button-medium-padding-right);
+    padding-top: var(--button-medium-padding-top);
+    padding-bottom: var(--button-medium-padding-bottom);
   }
   &--sizeL {
-    font-size: $button-large-text-size;
-    padding-left: $button-large-padding-left;
-    padding-right: $button-large-padding-right;
-    padding-top: $button-large-padding-top;
-    padding-bottom: $button-large-padding-bottom;
+    font-size: var(--button-large-text-size);
+    padding-left: var(--button-large-padding-left);
+    padding-right: var(--button-large-padding-right);
+    padding-top: var(--button-large-padding-top);
+    padding-bottom: var(--button-large-padding-bottom);
   }
   &--sizeXL {
-    font-size: $button-extra-large-text-size;
-    padding-left: $button-extra-large-padding-left;
-    padding-right: $button-extra-large-padding-right;
-    padding-top: $button-extra-large-padding-top;
-    padding-bottom: $button-extra-large-padding-bottom;
+    font-size: var(--button-extra-large-text-size);
+    padding-left: var(--button-extra-large-padding-left);
+    padding-right: var(--button-extra-large-padding-right);
+    padding-top: var(--button-extra-large-padding-top);
+    padding-bottom: var(--button-extra-large-padding-bottom);
   }
   &--cta {
-    background-color: $button-cta-background-color;
-    color: $button-cta-text-color;
-    border-color: $button-cta-border-color;
+    background-color: var(--button-cta-default-background-color);
+    color: var(--button-cta-default-text-color);
+    border-color: var(--button-cta-default-border-color);
     &:hover {
-      background-color: $button-cta-background-color-hover;
-      color: $button-cta-text-color-hover;
+      background-color: var(--button-cta-hover-background-color);
+      color: var(--button-cta-hover-text-color);
     }
   }
   &--primary {
-    color: $button-primary-text-color;
-    border-color: $button-primary-border-color;
+    color: var(--button-primary-default-text-color);
+    border-color: var(--button-primary-default-border-color);
     &:hover {
-      background-color: $button-primary-background-color-hover;
-      color: $button-primary-text-color-hover;
+      background-color: var(--button-primary-hover-background-color);
+      color: var(--button-primary-hover-text-color);
     }
   }
   &--secondary {
-    color: $button-secondary-text-color;
-    border-color: $button-secondary-border-color;
+    color: var(--button-secondary-default-text-color);
+    border-color: var(--button-secondary-default-border-color);
     &:hover {
-      background-color: $button-secondary-background-color-hover;
-      color: $button-secondary-text-color-hover;
+      background-color: var(--button-secondary-hover-background-color);
+      color: var(--button-secondary-hover-text-color);
     }
   }
   &--negative {
-    color: $button-negative-text-color;
-    border-color: $button-negative-border-color;
+    color: var(--button-negative-default-text-color);
+    border-color: var(--button-negative-default-border-color);
     &:hover {
-      background-color: $button-negative-background-color-hover;
-      color: $button-negative-text-color-hover;
+      background-color: var(--button-negative-hover-background-color);
+      color: var(--button-negative-hover-text-color);
     }
   }
 }

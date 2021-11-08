@@ -1,5 +1,5 @@
 import { Component, Host, h, Prop } from '@stencil/core';
-import { TagSize, TagVariant } from "./interfaces";
+import { TagSize, TagVariant, TagState } from "./interfaces";
 // import
 import { TAG_SIZE, TAG_VARIANT } from "../defaults/prop-defaults";
 
@@ -29,19 +29,29 @@ export class SuxTag {
    */
   @Prop() variant: TagVariant = TAG_VARIANT;
 
+  /**
+   * State
+   */
+  @Prop() state: TagState = 'info';
+
 
   render() {
-    const { label, size, variant } = this
+    const { label, size, variant, state } = this
     return (
       <Host>
         <div
           class={{
             'sux-tag': true,
-            'sux-tag--info': variant == 'info',
-            'sux-tag--success': variant == 'success',
-            'sux-tag--warning': variant == 'warning',
-            'sux-tag--error': variant == 'error',
-            'sux-tag--neutral': variant == 'neutral',
+            '--info': state == 'info',
+            '--success': state == 'success',
+            '--warning': state == 'warning',
+            '--error': state == 'error',
+            '--neutral': state == 'neutral',
+            'sux-tag--solid': variant == 'solid',
+            'sux-tag--inverted': variant == 'inverted',
+            'sux-tag--outlined': variant == 'outlined',
+            'sux-tag--borderless': variant == 'borderless',
+
             'sux-tag--sizeS': size == 's',
             'sux-tag--sizeM': size == 'm',
             'sux-tag--sizeL': size == 'l',
