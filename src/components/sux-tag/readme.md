@@ -11,7 +11,8 @@
 | --------- | --------- | ----------------- | ---------------------------------------------------------- | ------------- |
 | `label`   | `label`   | label for the tag | `string`                                                   | `undefined`   |
 | `size`    | `size`    | Size              | `"l" \| "m" \| "s" \| "xl"`                                | `TAG_SIZE`    |
-| `variant` | `variant` | Variant           | `"error" \| "info" \| "neutral" \| "success" \| "warning"` | `TAG_VARIANT` |
+| `state`   | `state`   | State             | `"error" \| "info" \| "neutral" \| "success" \| "warning"` | `'info'`      |
+| `variant` | `variant` | Variant           | `"borderless" \| "inverted" \| "outlined" \| "solid"`      | `TAG_VARIANT` |
 
 
 ----------------------------------------------

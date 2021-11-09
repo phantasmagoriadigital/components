@@ -1,0 +1,10 @@
+/**
+ * Do not edit directly
+ * Generated on Fri, 05 Nov 2021 09:53:27 GMT
+ */
+
+:root {
+  --radio-label-color: var(--color-status-success);
+  --radio-background-color: var(--color-status-error);
+  --radio-border-color: var(--color-status-success);
+}

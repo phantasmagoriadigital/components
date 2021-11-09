@@ -6,20 +6,20 @@
   display: inline-block;
 }
 .sux-field-label {
-  font-family: $field-label-font-family;
-  color: $field-label-text-color;
-  margin-bottom: $field-label-margin-bottom;
+  font-family: var(--field-label-font-family);
+  color: var(--field-label-text-color);
+  margin-bottom: var(--field-label-margin-bottom);
   &--sizeS {
-    font-size: $field-label-small-font-size;
+    font-size: var(--field-label-small-font-size);
   }
   &--sizeM {
-    font-size: $field-label-medium-font-size;
+    font-size: var(--field-label-medium-font-size);
   }
   &--sizeL {
-    font-size: $field-label-large-font-size;
+    font-size: var(--field-label-large-font-size);
   }
   &--sizeXL {
-    font-size: $field-label-extra-large-font-size;
+    font-size: var(--field-label-extra-large-font-size);
   }
   // &--positionTop {
   //   // position: relative;
@@ -34,7 +34,7 @@
     display: none;
   }
   &--disabled {
-    color: $field-label-disabled-text-color;
+    color: var(--field-label-disabled-text-color);
     cursor: none;
   }
 }

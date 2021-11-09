@@ -1,0 +1,22 @@
+:host {
+  display: block;
+}
+.hidden,
+:host([hidden]) {
+  display: none;
+}
+::slotted(sux-radio) {
+  display: block;
+  margin-bottom: 0.625rem; //10px
+}
+
+::slotted(sux-radio:last-of-type) {
+  margin-bottom: 0;
+}
+.sux-form-field {
+  font-family: var(--radio-label-font-family);
+  margin: 0.5rem;
+  .sux-label {
+    margin-bottom: 0.5rem;
+  }
+}

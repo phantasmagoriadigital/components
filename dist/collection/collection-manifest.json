@@ -2,12 +2,21 @@
   "entries": [
     "./components/sux-body/sux-body.js",
     "./components/sux-button/sux-button.js",
+    "./components/sux-checkbox/sux-checkbox.js",
     "./components/sux-code/sux-code.js",
     "./components/sux-detail/sux-detail.js",
     "./components/sux-field-label/sux-field-label.js",
     "./components/sux-heading/sux-heading.js",
     "./components/sux-help-text/sux-help-text.js",
-    "./components/sux-tag/sux-tag.js"
+    "./components/sux-icon/sux-icon.js",
+    "./components/sux-menu-item/sux-menu-item.js",
+    "./components/sux-picker/sux-picker.js",
+    "./components/sux-radio/sux-radio.js",
+    "./components/sux-radio-group/sux-radio-group.js",
+    "./components/sux-switch/sux-switch.js",
+    "./components/sux-tag/sux-tag.js",
+    "./components/sux-text-area/sux-text-area.js",
+    "./components/sux-text-field/sux-text-field.js"
   ],
   "compiler": {
     "name": "@stencil/core",

@@ -1,44 +1,43 @@
-@import '../../assets/tokens/components/_body.scss';
 :host {
   display: block;
 }
 .sux-body {
-  line-height: $body-line-height;
+  line-height: var(--body-line-height);
   & em {
-    font-weight: $body-emphasized;
+    font-weight: var(--body-emphasized);
   }
   & strong {
-    font-style: $body-strong;
+    font-style: var(--body-strong);
   }
 
   &--serif {
-    font-family: $body-serif-font-family;
+    font-family: var(--body-serif-font-family);
   }
   &--sans-serif {
-    font-family: $body-sans-serif-font-family;
+    font-family: var(--body-sans-serif-font-family);
   }
   &--mono {
-    font-family: $body-mono-font-family;
+    font-family: var(--body-mono-font-family);
   }
   &--xs {
-    font-size: $body-xs-text-size;
+    font-size: var(--body-xs-text-size);
   }
   &--s {
-    font-size: $body-s-text-size;
+    font-size: var(--body-s-text-size);
   }
   &--m {
-    font-size: $body-m-text-size;
+    font-size: var(--body-m-text-size);
   }
   &--l {
-    font-size: $body-l-text-size;
+    font-size: var(--body-l-text-size);
   }
   &--xl {
-    font-size: $body-xl-text-size;
+    font-size: var(--body-xl-text-size);
   }
   &--xxl {
-    font-size: $body-xxl-text-size;
+    font-size: var(--body-xxl-text-size);
   }
   &--xxxl {
-    font-size: $body-xxxl-text-size;
+    font-size: var(--body-xxxl-text-size);
   }
 }

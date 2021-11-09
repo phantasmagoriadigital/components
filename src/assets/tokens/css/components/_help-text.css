@@ -1,0 +1,15 @@
+/**
+ * Do not edit directly
+ * Generated on Fri, 05 Nov 2021 09:53:27 GMT
+ */
+
+:root {
+  --help-text-disabled-text-color: var(--color-neutral-500);
+  --help-text-extra-large-text-size: var(--font-size-4);
+  --help-text-large-text-size: var(--font-size-3);
+  --help-text-medium-text-size: var(--font-size-2);
+  --help-text-small-text-size: var(--font-size-2);
+  --help-text-negative-text-color: var(--color-status-error);
+  --help-text-neutral-text-color: var(--color-neutral-800);
+  --help-text-font-family: var(--font-family-sans-serif);
+}

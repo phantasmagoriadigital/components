@@ -1,0 +1,54 @@
+/**
+ * Do not edit directly
+ * Generated on Fri, 05 Nov 2021 09:53:27 GMT
+ */
+
+:root {
+  --button-extra-large-padding-bottom: 20;
+  --button-extra-large-padding-top: 20;
+  --button-extra-large-padding-right: 16;
+  --button-extra-large-padding-left: 16;
+  --button-extra-large-text-size: var(--font-size-6);
+  --button-large-padding-bottom: 16;
+  --button-large-padding-top: 16;
+  --button-large-padding-right: 16;
+  --button-large-padding-left: 16;
+  --button-large-text-size: var(--font-size-5);
+  --button-medium-padding-bottom: 12;
+  --button-medium-padding-top: 12;
+  --button-medium-padding-right: 16;
+  --button-medium-padding-left: 16;
+  --button-medium-text-size: var(--font-size-4);
+  --button-small-padding-bottom: 8;
+  --button-small-padding-top: 8;
+  --button-small-padding-right: 16;
+  --button-small-padding-left: 16;
+  --button-small-text-size: var(--font-size-3);
+  --button-disabled-border-color: var(--color-neutral-300);
+  --button-disabled-text-color: var(--color-neutral-500);
+  --button-disabled-background-color: var(--color-neutral-300);
+  --button-negative-text-color-hover: var(--color-secondary-dark-15);
+  --button-negative-background-color-hover: var(--color-secondary-100);
+  --button-negative-border-color: var(--color-secondary-100);
+  --button-negative-text-color: var(--color-secondary-100);
+  --button-negative-background-color: var(--color-secondary-100);
+  --button-secondary-text-color-hover: var(--color-neutral-700);
+  --button-secondary-background-color-hover: var(--color-neutral-500);
+  --button-secondary-border-color: var(--color-neutral-500);
+  --button-secondary-text-color: var(--color-neutral-500);
+  --button-secondary-background-color: var(--color-secondary-100);
+  --button-primary-text-color-hover: var(--color-neutral-800);
+  --button-primary-background-color-hover: var(--color-neutral-700);
+  --button-primary-border-color: var(--color-neutral-700);
+  --button-primary-text-color: var(--color-neutral-700);
+  --button-primary-background-color: var(--color-primary-100);
+  --button-cta-text-color-hover: var(--color-white);
+  --button-cta-background-color-hover: var(--color-primary-dark-15);
+  --button-cta-border-color: var(--color-primary-100);
+  --button-cta-text-color: var(--color-white);
+  --button-cta-background-color: var(--color-primary-100);
+  --button-font-weight: var(--font-weight-bold);
+  --button-font-family: var(--font-family-serif);
+  --button-border-width: var(--border-width-1);
+  --button-border-radius: var(--border-radius-4);
+}

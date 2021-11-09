@@ -41,7 +41,7 @@ export class SuxFieldLabel {
   render() {
     const { label, size, required, disabled, position } = this
     return (
-      <Host>
+      <Host position={position}>
         <div
           class={{
             'sux-field-label': true,

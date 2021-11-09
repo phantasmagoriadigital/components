@@ -3,45 +3,45 @@
   display: block;
 }
 .sux-heading {
-  line-height: $heading-line-height;
+  line-height: var(--heading-line-height);
 
   &--serif {
-    font-family: $heading-serif-font-family;
+    font-family: var(--heading-serif-font-family);
   }
   &--sans-serif {
-    font-family: $heading-sans-serif-font-family;
+    font-family: var(--heading-sans-serif-font-family);
   }
   &--mono {
-    font-family: $heading-mono-font-family;
+    font-family: var(--heading-mono-font-family);
   }
   &--xs {
-    font-size: $heading-xs-text-size;
+    font-size: var(--heading-xs-text-size);
   }
   &--s {
-    font-size: $heading-s-text-size;
+    font-size: var(--heading-s-text-size);
   }
   &--m {
-    font-size: $heading-m-text-size;
+    font-size: var(--heading-m-text-size);
   }
   &--l {
-    font-size: $heading-l-text-size;
+    font-size: var(--heading-l-text-size);
   }
   &--xl {
-    font-size: $heading-xl-text-size;
+    font-size: var(--heading-xl-text-size);
   }
   &--xxl {
-    font-size: $heading-xxl-text-size;
+    font-size: var(--heading-xxl-text-size);
   }
   &--light {
-    font-weight: $heading-light-font-weight;
+    font-weight: var(--heading-light-font-weight);
   }
   &--regular {
-    font-weight: $heading-regular-font-weight;
+    font-weight: var(--heading-regular-font-weight);
   }
   &--semibold {
-    font-weight: $heading-semi-bold-font-weight;
+    font-weight: var(--heading-semi-bold-font-weight);
   }
   &--bold {
-    font-weight: $heading-bold-font-weight;
+    font-weight: var(--heading-bold-font-weight);
   }
 }

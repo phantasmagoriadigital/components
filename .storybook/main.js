@@ -4,6 +4,7 @@ module.exports = {
     '../src/stories/*.stories.@(js|jsx|ts|tsx)'
   ],
   "addons": [
+    // '@storybook-design-token',
     "@storybook/addon-links",
     "@storybook/addon-essentials",
     '@pxtrn/storybook-addon-docs-stencil',

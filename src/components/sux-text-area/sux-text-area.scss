@@ -1,0 +1,61 @@
+@import '../../assets/tokens/components/_text-area.scss';
+
+:host {
+  display: block;
+}
+.sux-text-area {
+  border: var(--text-area-border-color) var(--text-area-border-width) solid;
+  border-radius: var(--text-area-border-radius);
+  &::placeholder {
+    color: var(--text-area-placeholder-text-color);
+    font-style: italic;
+  }
+  &:focus-visible {
+    outline: var(--text-area-focus-outline-width) var(--text-area-focus-outline-color) solid;
+    outline-offset: var(--text-area-focus-outline-offset);
+  }
+  &:focus:not(:focus-visible) {
+    outline: none;
+  }
+  &:focus-visible {
+    outline: var(--text-area-focus-outline-width) var(--text-area-focus-outline-color) solid;
+    // outline-offset: var(--text-area-focus-outline-offset);
+  }
+  &:hover {
+    border-color: var(--text-area-hover-border-color);
+  }
+  &--disabled {
+    cursor: none;
+  }
+  &--error {
+    border-color: var(--text-area-error-border-color);
+  }
+  &--sizeS {
+    font-size: var(--text-area-small-font-size);
+    padding-top: var(--text-area-small-padding-top);
+    padding-bottom: var(--text-area-small-padding-bottom);
+    padding-left: var(--text-area-small-padding-left);
+    padding-right: var(--text-area-small-padding-right);
+  }
+  &--sizeM {
+    font-size: var(--text-area-medium-font-size);
+    padding-top: var(--text-area-medium-padding-top);
+    padding-bottom: var(--text-area-medium-padding-bottom);
+    padding-left: var(--text-area-medium-padding-left);
+    padding-right: var(--text-area-medium-padding-right);
+  }
+  &--sizeL {
+    font-size: var(--text-area-large-font-size);
+    padding-top: var(--text-area-large-padding-top);
+    padding-bottom: var(--text-area-large-padding-bottom);
+    padding-left: var(--text-area-large-padding-left);
+    padding-right: var(--text-area-large-padding-right);
+  }
+  &--sizeXL {
+    font-size: var(--text-area-extra-large-font-size);
+    padding-top: var(--text-area-extra-large-padding-top);
+    padding-bottom: var(--text-area-extra-large-padding-bottom);
+    padding-left: var(--text-area-extra-large-padding-left);
+    padding-right: var(--text-area-extra-large-padding-right);
+  }
+}

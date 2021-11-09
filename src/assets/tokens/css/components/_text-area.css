@@ -1,0 +1,39 @@
+/**
+ * Do not edit directly
+ * Generated on Fri, 05 Nov 2021 09:53:27 GMT
+ */
+
+:root {
+  --text-area-hover-border-style: solid;
+  --text-area-extra-large-padding-right: 10;
+  --text-area-extra-large-padding-left: 10;
+  --text-area-extra-large-padding-bottom: 10;
+  --text-area-extra-large-padding-top: 10;
+  --text-area-extra-large-font-size: var(--font-size-6);
+  --text-area-large-padding-right: 10;
+  --text-area-large-padding-left: 10;
+  --text-area-large-padding-bottom: 10;
+  --text-area-large-padding-top: 10;
+  --text-area-large-font-size: var(--font-size-5);
+  --text-area-medium-padding-right: 8;
+  --text-area-medium-padding-left: 8;
+  --text-area-medium-padding-bottom: 8;
+  --text-area-medium-padding-top: 8;
+  --text-area-medium-font-size: var(--font-size-4);
+  --text-area-small-padding-right: 6;
+  --text-area-small-padding-left: 6;
+  --text-area-small-padding-bottom: 6;
+  --text-area-small-padding-top: 6;
+  --text-area-small-font-size: var(--font-size-2);
+  --text-area-hover-border-width: var(--border-width-1);
+  --text-area-hover-border-color: var(--color-status-info);
+  --text-area-error-border-width: var(--border-width-1);
+  --text-area-error-border-color: var(--color-status-error);
+  --text-area-focus-outline-offset: 2;
+  --text-area-focus-outline-width: var(--border-width-2);
+  --text-area-focus-outline-color: var(--color-status-info);
+  --text-area-placeholder-text-color: var(--color-neutral-500);
+  --text-area-border-radius: var(--border-radius-4);
+  --text-area-border-width: var(--border-width-1);
+  --text-area-border-color: var(--color-neutral-800);
+}

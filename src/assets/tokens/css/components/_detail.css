@@ -1,0 +1,17 @@
+/**
+ * Do not edit directly
+ * Generated on Fri, 05 Nov 2021 09:53:27 GMT
+ */
+
+:root {
+  --detail-line-height: var(--line-height-1);
+  --detail-regular-font-weight: var(--font-weight-regular);
+  --detail-light-font-weight: var(--font-weight-light);
+  --detail-s-text-size: var(--font-size-1);
+  --detail-m-text-size: var(--font-size-2);
+  --detail-l-text-size: var(--font-size-3);
+  --detail-xl-text-size: var(--font-size-4);
+  --detail-mono-font-family: var(--font-family-mono);
+  --detail-sans-serif-font-family: var(--font-family-sans-serif);
+  --detail-serif-font-family: var(--font-family-serif);
+}

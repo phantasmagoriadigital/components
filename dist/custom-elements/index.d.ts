@@ -14,6 +14,12 @@ export const SuxButton: {
   new (): SuxButton;
 };
 
+interface SuxCheckbox extends Components.SuxCheckbox, HTMLElement {}
+export const SuxCheckbox: {
+  prototype: SuxCheckbox;
+  new (): SuxCheckbox;
+};
+
 interface SuxCode extends Components.SuxCode, HTMLElement {}
 export const SuxCode: {
   prototype: SuxCode;
@@ -44,10 +50,58 @@ export const SuxHelpText: {
   new (): SuxHelpText;
 };
 
+interface SuxIcon extends Components.SuxIcon, HTMLElement {}
+export const SuxIcon: {
+  prototype: SuxIcon;
+  new (): SuxIcon;
+};
+
+interface SuxMenuItem extends Components.SuxMenuItem, HTMLElement {}
+export const SuxMenuItem: {
+  prototype: SuxMenuItem;
+  new (): SuxMenuItem;
+};
+
+interface SuxPicker extends Components.SuxPicker, HTMLElement {}
+export const SuxPicker: {
+  prototype: SuxPicker;
+  new (): SuxPicker;
+};
+
+interface SuxRadio extends Components.SuxRadio, HTMLElement {}
+export const SuxRadio: {
+  prototype: SuxRadio;
+  new (): SuxRadio;
+};
+
+interface SuxRadioGroup extends Components.SuxRadioGroup, HTMLElement {}
+export const SuxRadioGroup: {
+  prototype: SuxRadioGroup;
+  new (): SuxRadioGroup;
+};
+
+interface SuxSwitch extends Components.SuxSwitch, HTMLElement {}
+export const SuxSwitch: {
+  prototype: SuxSwitch;
+  new (): SuxSwitch;
+};
+
 interface SuxTag extends Components.SuxTag, HTMLElement {}
 export const SuxTag: {
   prototype: SuxTag;
   new (): SuxTag;
+};
+
+interface SuxTextArea extends Components.SuxTextArea, HTMLElement {}
+export const SuxTextArea: {
+  prototype: SuxTextArea;
+  new (): SuxTextArea;
+};
+
+interface SuxTextField extends Components.SuxTextField, HTMLElement {}
+export const SuxTextField: {
+  prototype: SuxTextField;
+  new (): SuxTextField;
 };
 
 /**

@@ -1,0 +1,20 @@
+/**
+ * Do not edit directly
+ * Generated on Fri, 05 Nov 2021 09:53:27 GMT
+ */
+
+:root {
+  --body-emphasized: var(--font-style-italic);
+  --body-strong: var(--font-weight-bold);
+  --body-line-height: var(--line-height-2);
+  --body-xs-text-size: var(--font-size-2);
+  --body-s-text-size: var(--font-size-3);
+  --body-m-text-size: var(--font-size-4);
+  --body-l-text-size: var(--font-size-5);
+  --body-xl-text-size: var(--font-size-6);
+  --body-xxl-text-size: var(--font-size-7);
+  --body-xxxl-text-size: var(--font-size-8);
+  --body-mono-font-family: var(--font-family-mono);
+  --body-sans-serif-font-family: var(--font-family-sans-serif);
+  --body-serif-font-family: var(--font-family-serif);
+}

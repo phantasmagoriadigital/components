@@ -16,6 +16,21 @@
 | `variant`  | `variant`  | Variant     | `"negative" \| "neutral"`   | `'neutral'` |
 
 
+## Dependencies
+
+### Used by
+
+ - [sux-text-area](../sux-text-area)
+ - [sux-text-field](../sux-text-field)
+
+### Graph
+```mermaid
+graph TD;
+  sux-text-area --> sux-help-text
+  sux-text-field --> sux-help-text
+  style sux-help-text fill:#f9f,stroke:#333,stroke-width:4px
+```
+
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*
