@@ -150,11 +150,11 @@ export class SuxTextField {
       <Host>
         <div class="sux-form-field" part="form-field">
           <sux-field-label size={size} position={labelPosition} required={required}>{label}</sux-field-label>
-          <icon
+          {/* <icon
             class={{
               'sux-text-field-icon--error': error,
             }}
-          >!</icon>
+          >!</icon> */}
           <input
             disabled={disabled}
             placeholder={placeholder}

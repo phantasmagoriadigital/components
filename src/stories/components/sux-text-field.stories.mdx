@@ -1,0 +1,27 @@
+import { extractArgTypes } from '@pxtrn/storybook-addon-docs-stencil';
+import { Meta, Story, Canvas, ArgsTable } from '@storybook/addon-docs/blocks';
+import { html, render } from 'lit-html';
+
+<Meta title="Components/Text-field" component="sux-text-field" argTypes={extractArgTypes('sux-text-field')} />
+
+# Text-field
+
+Buttons allow users to perform an action or to navigate to another page. They have multiple styles for various needs, and are ideal for calling attention to where a user needs to do something in order to move forward in a flow.
+
+export const DefaultTextfield = args => {
+  return html`
+    <div style="padding: 10%; display: flex; justify-content: center; gap:16px;">
+      <sux-text-field label="Label" .labelPosition="${args.labelPosition}"> Text-field label </sux-text-field>
+    </div>
+  `;
+};
+
+<Canvas>
+  <Story name="Playground">{DefaultTextfield.bind()}</Story>
+</Canvas>
+
+## Table of options / API
+
+<ArgsTable of="sux-text-field" />
+
+## Variants

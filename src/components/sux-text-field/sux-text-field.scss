@@ -4,6 +4,9 @@
 }
 .sux-form-field {
   display: flex;
+  &[position='top'] {
+    flex-direction: column;
+  }
   .sux-text-field-icon--error {
     position: absolute;
     align-self: flex-end;

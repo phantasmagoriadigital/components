@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Mon, 08 Nov 2021 16:36:20 GMT
+ * Generated on Tue, 09 Nov 2021 05:28:15 GMT
  */
 
 :root {
@@ -304,14 +304,14 @@
   --tag-borderless-error-border-color: var(--color-neutrals-transparent);
   --tag-borderless-warning-background-color: var(--color-neutrals-transparent);
   --tag-borderless-warning-border-color: var(--color-neutrals-transparent);
-  --tag-borderless-sucess-background-color: var(--color-neutrals-transparent);
-  --tag-borderless-sucess-border-color: var(--color-neutrals-transparent);
+  --tag-borderless-success-background-color: var(--color-neutrals-transparent);
+  --tag-borderless-success-border-color: var(--color-neutrals-transparent);
   --tag-borderless-info-background-color: var(--color-neutrals-transparent);
   --tag-borderless-info-border-color: var(--color-neutrals-transparent);
   --tag-outlined-neutral-background-color: var(--color-neutrals-transparent);
   --tag-outlined-error-background-color: var(--color-neutrals-transparent);
   --tag-outlined-warning-background-color: var(--color-neutrals-transparent);
-  --tag-outlined-sucess-background-color: var(--color-neutrals-transparent);
+  --tag-outlined-success-background-color: var(--color-neutrals-transparent);
   --tag-outlined-info-background-color: var(--color-neutrals-transparent);
   --tag-solid-neutral-text-color: var(--color-neutrals-white);
   --tag-solid-error-text-color: var(--color-neutrals-white);
@@ -567,7 +567,7 @@
   --tag-borderless-neutral-text-color: var(--semantic-color-neutral-default-text-color);
   --tag-borderless-error-text-color: var(--semantic-color-negative-default-text-color);
   --tag-borderless-warning-text-color: var(--semantic-color-warning-default-text-color);
-  --tag-borderless-sucess-text-color: var(--semantic-color-success-default-text-color);
+  --tag-borderless-success-text-color: var(--semantic-color-success-default-text-color);
   --tag-borderless-info-text-color: var(--semantic-color-info-default-text-color);
   --tag-outlined-neutral-text-color: var(--semantic-color-neutral-default-text-color);
   --tag-outlined-neutral-border-color: var(--semantic-color-neutral-default-border-color);
@@ -575,11 +575,11 @@
   --tag-outlined-error-border-color: var(--semantic-color-negative-default-border-color);
   --tag-outlined-warning-text-color: var(--semantic-color-warning-default-text-color);
   --tag-outlined-warning-border-color: var(--semantic-color-warning-default-border-color);
-  --tag-outlined-sucess-text-color: var(--semantic-color-success-default-text-color);
-  --tag-outlined-sucess-border-color: var(--semantic-color-success-default-border-color);
+  --tag-outlined-success-text-color: var(--semantic-color-success-default-text-color);
+  --tag-outlined-success-border-color: var(--semantic-color-success-default-border-color);
   --tag-outlined-info-text-color: var(--semantic-color-info-default-text-color);
   --tag-outlined-info-border-color: var(--semantic-color-info-default-border-color);
-  --tag-inverted-neutral-text-color: var(--semantic-color-negative-default-text-color);
+  --tag-inverted-neutral-text-color: var(--semantic-color-neutral-default-text-color);
   --tag-inverted-neutral-background-color: var(--semantic-color-neutral-default-background-color);
   --tag-inverted-error-text-color: var(--semantic-color-negative-default-text-color);
   --tag-inverted-error-background-color: var(--semantic-color-negative-default-background-color);

@@ -1,0 +1,30 @@
+import { extractArgTypes } from '@pxtrn/storybook-addon-docs-stencil';
+import { Meta, Story, Canvas, ArgsTable } from '@storybook/addon-docs/blocks';
+import { html, render } from 'lit-html';
+
+<Meta title="Components/Radio" component="sux-radio" argTypes={extractArgTypes('sux-radio')} />
+
+# Radio
+
+Buttons allow users to perform an action or to navigate to another page. They have multiple styles for various needs, and are ideal for calling attention to where a user needs to do something in order to move forward in a flow.
+
+export const DefaultRadio = args => {
+  return html`
+    <div style="padding: 10%; display: flex; justify-content: center; gap:16px;">
+      <sux-radio-group label="Radio Group">
+        <sux-radio .label="${args.label}" value="1"> Radio label </sux-radio>
+        <sux-radio .label="${args.label}" value="2"> Radio label </sux-radio>
+      </sux-radio-group>
+    </div>
+  `;
+};
+
+<Canvas>
+  <Story name="Playground">{DefaultRadio.bind()}</Story>
+</Canvas>
+
+## Table of options / API
+
+<ArgsTable of="sux-Radio" />
+
+## Variants
