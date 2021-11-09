@@ -40,7 +40,7 @@ Check out our [Substrate DS StoryBook](https://sb.nextds.design) to see they com
 [ Experiamental ] Use the webcomponent library to play around using unpkg by adding the following to your html head:
 
 ```html
-<script crossorigin type="module" src="https://unpkg.com/sux-ds@0.0.1/dist/substrate-ds/substrate-ds.esm.js"></script>
+<script crossorigin type="module" src="https://unpkg.com/sux-ds@latest/dist/substrate-ds/substrate-ds.esm.js"></script>
 ```
 
 ## Contributing
