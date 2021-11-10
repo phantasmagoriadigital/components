@@ -605,9 +605,9 @@
   height: 1.125rem;
   width: 1.125rem;
   margin: 0 0.625rem 0 0;
-  border: 1px solid var(--radio-border-color);
-  border-radius: 100%;
-  background-color: var(--radio-background-color);
+  border: var(--radio-button-unselected-border-width) var(--radio-button-unselected-border-style) var(--radio-button-unselected-border-color);
+  border-radius: var(--radio-button-border-radius);
+  background-color: var(--radio-button-unselected-background-color);
 }
 .sux-radio input[type=radio] + label::after {
   position: absolute;
@@ -616,33 +616,36 @@
   content: "";
 }
 .sux-radio input[type=radio]:checked + label::before {
-  background-color: var(--radio-checked-background-color);
-  border-color: var(--radio-checked-border-color);
+  background-color: var(--radio-button-selected-background-color);
+  border-color: var(--radio-button-selected-border-color);
 }
 .sux-radio input[type=radio]:checked + label::after {
   position: absolute;
-  top: 5px;
+  top: 0px;
   display: flex;
   content: "";
-  left: 5px;
-  height: 8px;
-  width: 8px;
+  left: 0px;
+  height: var(--radio-checkmark-selected-height);
+  width: var(--radio-checkmark-selected-width);
   border-radius: 100%;
   /* box-shadow: inset 0 0 1px 0 rgba(255, 255, 255, 0.9); */
-  background-color: var(--radio-checked-border-color);
+  background-color: var(--radio-checkmark-selected-background-color);
+  border-color: var(--radio-checkmark-selected-border-color);
+  border-width: var(--radio-checkmark-selected-border-width);
+  border-style: var(--radio-checkmark-selected-border-style);
 }
 .sux-radio input[type=radio]:disabled + label {
   cursor: not-allowed;
-  color: var(--radio-disabled-color);
+  color: var(--radio-label-disabled-color);
 }
 .sux-radio input[type=radio]:disabled + label::before {
-  border-color: var(--radio-disabled-border-color);
+  border-color: var(--radio-button-disabled-border-color);
 }
 .sux-radio input[type=radio]:not(:disabled):hover + label::before, .sux-radio input[type=radio]:not(:disabled):checked:hover + label::before {
-  border-color: var(--radio-checked-hover-border-color);
+  border-color: var(--radio-button-selected-hover-border-color);
 }
 .sux-radio input[type=radio]:not(:disabled):hover + label::after, .sux-radio input[type=radio]:not(:disabled):checked:hover + label::after {
-  background-color: var(--radio-checked-hover-background-color);
+  background-color: var(--radio-checkmark-selected-hover-background-color);
 }
 
 :host([hidden]) {

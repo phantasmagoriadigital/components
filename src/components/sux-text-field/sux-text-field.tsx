@@ -148,13 +148,15 @@ export class SuxTextField {
     } = this
     return (
       <Host>
-        <div class="sux-form-field" part="form-field">
+        <div class={{
+        'sux-form-field': true,
+        '--position-top': labelPosition === 'top',
+        '--position-side': labelPosition === 'side',
+        }} part="form-field">
           <sux-field-label size={size} position={labelPosition} required={required}>{label}</sux-field-label>
-          {/* <icon
-            class={{
-              'sux-text-field-icon--error': error,
-            }}
-          >!</icon> */}
+          <div class={{
+            'sux-input': true,
+          }}>
           <input
             disabled={disabled}
             placeholder={placeholder}
@@ -175,9 +177,10 @@ export class SuxTextField {
             onInput={_onInput}
             onBlur={() => _onBlur()}
           ></input>
-        </div>
         <sux-help-text size={size}>{helpText}</sux-help-text>
         <sux-help-text size={size} variant="negative">{errorText}</sux-help-text>
+        </div>
+        </div>
       </Host >
     );
   }

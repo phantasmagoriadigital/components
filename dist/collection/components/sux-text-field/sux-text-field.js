@@ -56,23 +56,27 @@ export class SuxTextField {
   render() {
     const { disabled, error, errorText, helpText, label, labelPosition, _onChange, _onInput, _onBlur, placeholder, required, type, value, size, } = this;
     return (h(Host, null,
-      h("div", { class: "sux-form-field", part: "form-field" },
+      h("div", { class: {
+          'sux-form-field': true,
+          '--position-top': labelPosition === 'top',
+          '--position-side': labelPosition === 'side',
+        }, part: "form-field" },
         h("sux-field-label", { size: size, position: labelPosition, required: required }, label),
-        h("icon", { class: {
-            'sux-text-field-icon--error': error,
-          } }, "!"),
-        h("input", { disabled: disabled, placeholder: placeholder, required: required, value: value, class: {
-            'sux-text-field': true,
-            'sux-text-field--disabled': disabled,
-            'sux-text-field--search': type === 'search',
-            'sux-text-field--sizeS': size === 's',
-            'sux-text-field--sizeM': size === 'm',
-            'sux-text-field--sizeL': size === 'l',
-            'sux-text-field--sizeXL': size === 'xl',
-            'sux-text-field--error': error,
-          }, id: this.inputId, onChange: _onChange, onInput: _onInput, onBlur: () => _onBlur() })),
-      h("sux-help-text", { size: size }, helpText),
-      h("sux-help-text", { size: size, variant: "negative" }, errorText)));
+        h("div", { class: {
+            'sux-input': true,
+          } },
+          h("input", { disabled: disabled, placeholder: placeholder, required: required, value: value, class: {
+              'sux-text-field': true,
+              'sux-text-field--disabled': disabled,
+              'sux-text-field--search': type === 'search',
+              'sux-text-field--sizeS': size === 's',
+              'sux-text-field--sizeM': size === 'm',
+              'sux-text-field--sizeL': size === 'l',
+              'sux-text-field--sizeXL': size === 'xl',
+              'sux-text-field--error': error,
+            }, id: this.inputId, onChange: _onChange, onInput: _onInput, onBlur: () => _onBlur() }),
+          h("sux-help-text", { size: size }, helpText),
+          h("sux-help-text", { size: size, variant: "negative" }, errorText)))));
   }
   static get is() { return "sux-text-field"; }
   static get encapsulation() { return "shadow"; }

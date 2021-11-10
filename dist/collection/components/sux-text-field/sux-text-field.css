@@ -564,15 +564,26 @@
 }
 
 :host {
-  display: block;
+  display: flex;
 }
 
 .sux-form-field {
   display: flex;
 }
+.sux-form-field.--position-top {
+  flex-direction: column;
+}
+.sux-form-field.--position-side {
+  flex-direction: row;
+}
 .sux-form-field .sux-text-field-icon--error {
   position: absolute;
   align-self: flex-end;
+}
+
+.sux-input {
+  display: flex;
+  flex-direction: column;
 }
 
 .sux-text-field {
@@ -598,6 +609,11 @@
 }
 .sux-text-field--disabled {
   cursor: none;
+  border-color: var(--text-field-disabled-border-color);
+  background-color: var(--text-field-disabled-background-color);
+}
+.sux-text-field--disabled:hover {
+  border-color: var(--text-field-disabled-border-color);
 }
 .sux-text-field--error {
   border-color: var(--text-field-error-border-color);
@@ -609,12 +625,18 @@
   padding-left: var(--text-field-small-padding-left);
   padding-right: var(--text-field-small-padding-right);
 }
+.sux-text-field--sizeS::placeholder {
+  font-size: var(--text-field-small-font-size);
+}
 .sux-text-field--sizeM {
   font-size: var(--text-field-medium-font-size);
   padding-top: var(--text-field-medium-padding-top);
   padding-bottom: var(--text-field-medium-padding-bottom);
   padding-left: var(--text-field-medium-padding-left);
   padding-right: var(--text-field-medium-padding-right);
+}
+.sux-text-field--sizeM::placeholder {
+  font-size: var(--text-field-medium-font-size);
 }
 .sux-text-field--sizeL {
   font-size: var(--text-field-large-font-size);
@@ -623,10 +645,16 @@
   padding-left: var(--text-field-large-padding-left);
   padding-right: var(--text-field-large-padding-right);
 }
+.sux-text-field--sizeL::placeholder {
+  font-size: var(--text-field-large-font-size);
+}
 .sux-text-field--sizeXL {
   font-size: var(--text-field-extra-large-font-size);
   padding-top: var(--text-field-extra-large-padding-top);
   padding-bottom: var(--text-field-extra-large-padding-bottom);
   padding-left: var(--text-field-extra-large-padding-left);
   padding-right: var(--text-field-extra-large-padding-right);
+}
+.sux-text-field--sizeXL::placeholder {
+  font-size: var(--text-field-extra-large-font-size);
 }

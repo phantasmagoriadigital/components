@@ -2,7 +2,7 @@ import { extractArgTypes } from '@pxtrn/storybook-addon-docs-stencil';
 import { Meta, Story, Canvas, ArgsTable } from '@storybook/addon-docs/blocks';
 import { html, render } from 'lit-html';
 
-<Meta title="Components/Text-field" component="sux-text-field" argTypes={extractArgTypes('sux-text-field')} />
+<Meta title="Components/Form/Text-field" component="sux-text-field" argTypes={extractArgTypes('sux-text-field')} />
 
 # Text-field
 
@@ -11,7 +11,7 @@ Buttons allow users to perform an action or to navigate to another page. They ha
 export const DefaultTextfield = args => {
   return html`
     <div style="padding: 10%; display: flex; justify-content: center; gap:16px;">
-      <sux-text-field label="Label" .labelPosition="${args.labelPosition}"> Text-field label </sux-text-field>
+      <sux-text-field label="Label" .labelPosition="${args.labelPosition}" .size="${args.size}" .disabled="${args.disabled}" .error="${args.error}" .placeholder="${args.placeholder}" .label="${args.label}" .errorText="${args.errorText}" .required="${args.required}" .helpText="${args.helpText}"> Text-field label </sux-text-field>
     </div>
   `;
 };
@@ -25,3 +25,106 @@ export const DefaultTextfield = args => {
 <ArgsTable of="sux-text-field" />
 
 ## Variants
+
+### Label Position
+
+Labels can be placed either on top or on the side. Top labels are the default and are recommended because they work better with long copy, localization, and responsive layouts. Side labels are most useful when vertical space is limited.
+
+export const LabelPositionTextfield = args => {
+  return html`
+    <div style="padding: 10%; display: flex; justify-content: center; gap:16px;">
+      <sux-text-field label="Label Top" label-position="top" size="m" placeholder="input" > Text-field label </sux-text-field>
+    </div>
+    <div style="padding: 10%; display: flex; justify-content: center; gap:16px;">
+      <sux-text-field label="Label Side" label-position="side" size="m" placeholder="input" > Text-field label </sux-text-field>
+    <div>
+  `;
+};
+
+<Canvas>
+  <Story name="Label Position">{LabelPositionTextfield.bind()}</Story>
+</Canvas>
+
+### Size
+
+Labels can be placed either on top or on the side. Top labels are the default and are recommended because they work better with long copy, localization, and responsive layouts. Side labels are most useful when vertical space is limited.
+
+export const SizeTextfield = args => {
+  return html`
+    <div style="padding: 10%; display: flex; justify-content: center; gap:16px;">
+      <sux-text-field label="Label" label-position="top" size="s" placeholder="input" > Text-field label </sux-text-field>
+      <sux-text-field label="Label" label-position="top" size="m" placeholder="input" > Text-field label </sux-text-field>
+      <sux-text-field label="Label" label-position="top" size="l" placeholder="input" > Text-field label </sux-text-field>
+      <sux-text-field label="Label" label-position="top" size="xl" placeholder="input" > Text-field label </sux-text-field>
+    <div>
+  `;
+};
+
+<Canvas>
+  <Story name="Size">{SizeTextfield.bind()}</Story>
+</Canvas>
+
+### Error
+
+Labels can be placed either on top or on the side. Top labels are the default and are recommended because they work better with long copy, localization, and responsive layouts. Side labels are most useful when vertical space is limited.
+
+export const ErrorTextfield = args => {
+  return html`
+    <div style="padding: 10%; display: flex; justify-content: center; gap:16px;">
+      <sux-text-field label="Label" label-position="top" size="m" placeholder="input" error="true" > Text-field label </sux-text-field>
+    <div>
+  `;
+};
+
+<Canvas>
+  <Story name="Error">{ErrorTextfield.bind()}</Story>
+</Canvas>
+
+### Disabled
+
+Labels can be placed either on top or on the side. Top labels are the default and are recommended because they work better with long copy, localization, and responsive layouts. Side labels are most useful when vertical space is limited.
+
+export const DisabledTextfield = args => {
+  return html`
+    <div style="padding: 10%; display: flex; justify-content: center; gap:16px;">
+      <sux-text-field label="Label" label-position="top" size="m" placeholder="input" disabled="true" > Text-field label </sux-text-field>
+    <div>
+  `;
+};
+
+<Canvas>
+  <Story name="Disabled">{DisabledTextfield.bind()}</Story>
+</Canvas>
+
+### Required
+
+Labels can be placed either on top or on the side. Top labels are the default and are recommended because they work better with long copy, localization, and responsive layouts. Side labels are most useful when vertical space is limited.
+
+export const RequiredTextfield = args => {
+  return html`
+    <div style="padding: 10%; display: flex; justify-content: center; gap:16px;">
+      <sux-text-field label="Label" label-position="top" size="m" placeholder="input" required="true" > Text-field label </sux-text-field>
+    <div>
+  `;
+};
+
+<Canvas>
+  <Story name="Required">{RequiredTextfield.bind()}</Story>
+</Canvas>
+
+### Help / Error Text
+
+Labels can be placed either on top or on the side. Top labels are the default and are recommended because they work better with long copy, localization, and responsive layouts. Side labels are most useful when vertical space is limited.
+
+export const HelpErrorTextfield = args => {
+  return html`
+    <div style="padding: 10%; display: flex; justify-content: center; gap:16px;">
+      <sux-text-field label="Label" label-position="top" size="m" placeholder="input" required="true" help-text="This is help text"> Text-field label </sux-text-field>
+      <sux-text-field label="Label" label-position="top" size="m" placeholder="input" required="true" error="true" error-text="This is error text"> Text-field label </sux-text-field>
+    <div>
+  `;
+};
+
+<Canvas>
+  <Story name="HelpError">{HelpErrorTextfield.bind()}</Story>
+</Canvas>
