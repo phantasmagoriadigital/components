@@ -1,0 +1,75 @@
+import { extractArgTypes } from '@pxtrn/storybook-addon-docs-stencil';
+import { Meta, Story, Canvas, ArgsTable } from '@storybook/addon-docs/blocks';
+import { html, render } from 'lit-html';
+
+<Meta title="Components/Form/Checkbox" component="sux-checkbox" argTypes={extractArgTypes('sux-checkbox')} />
+
+# Checkbox
+
+Buttons allow users to perform an action or to navigate to another page. They have multiple styles for various needs, and are ideal for calling attention to where a user needs to do something in order to move forward in a flow.
+
+export const Defaultcheckbox = args => {
+  return html`
+    <div style="padding: 10%; display: flex; justify-content: center; gap:16px;">
+      <sux-checkbox .label="${args.label}"> Checkbox label </sux-checkbox>
+    </div>
+  `;
+};
+
+<Canvas>
+  <Story name="Playground">{Defaultcheckbox.bind()}</Story>
+</Canvas>
+
+## Table of options / API
+
+<ArgsTable of="sux-checkbox" />
+
+## Variants
+
+### indeterminate
+
+<!-- Tag with Info Variant -->
+
+export const CheckboxIndeterminate = args => {
+  return html`
+    <div style="padding: 10%; display: flex; justify-content: center; gap:16px;">
+      <sux-checkbox .label="${args.label}" indeterminate> Checkbox label </sux-checkbox>
+    </div>
+  `;
+};
+
+<Canvas>
+  <Story name="Indeterminate">{CheckboxIndeterminate.bind()}</Story>
+</Canvas>
+
+### error
+
+<!-- Tag with Info Variant -->
+
+export const CheckboxError = args => {
+  return html`
+    <div style="padding: 10%; display: flex; justify-content: center; gap:16px;">
+      <sux-checkbox .label="${args.label}" error="true"> Checkbox label </sux-checkbox>
+    </div>
+  `;
+};
+
+<Canvas>
+  <Story name="Error">{CheckboxError.bind()}</Story>
+</Canvas>
+
+### disabled
+
+<!-- Tag with Info Variant -->
+
+export const CheckboxDisabled = args => {
+  return html`
+    <div style="padding: 10%; display: flex; justify-content: center; gap:16px;">
+      <sux-checkbox .label="${args.label}" disabled> Checkbox label </sux-checkbox>
+    </div>
+  `;
+};
+
+<Canvas>
+  <Story name="Disabled">{CheckboxDisabled.bind()}</Story>
+</Canvas>

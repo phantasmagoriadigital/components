@@ -4,6 +4,7 @@
 }
 :host([position='side']) {
   display: inline-block;
+  margin-right: 32px;
 }
 .sux-field-label {
   font-family: var(--field-label-font-family);

@@ -586,14 +586,14 @@
   position: absolute;
   display: flex;
   content: "";
-  top: 5px;
+  top: 4px;
   width: 10px;
   height: 5px;
   transform: rotate(0deg);
   border-right: 0;
   border-top: 0;
-  border-bottom: 2px solid var(--checkbox-border-color);
-  left: 4px;
+  border-bottom: 3px solid var(--checkbox-border-color);
+  left: 5px;
 }
 .sux-checkbox--error input[type=checkbox] + label {
   color: var(--checkbox-error-label-color) !important;

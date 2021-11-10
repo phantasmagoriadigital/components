@@ -1,15 +1,29 @@
 @import '../../assets/tokens/components/_text-field.scss';
 :host {
-  display: block;
+  display: flex;
+
 }
+
 .sux-form-field {
   display: flex;
+  // flex-direction: row;
+  &.--position-top{
+    flex-direction: column;
+  }
+  &.--position-side{
+    flex-direction: row;
+  }
   .sux-text-field-icon--error {
     position: absolute;
     align-self: flex-end;
   }
 }
+.sux-input {
+  display: flex;
+  flex-direction: column;
+}
 .sux-text-field {
+
   border: var(--text-field-border-color) var(--text-field-border-width) solid;
   border-radius: var(--text-field-border-radius);
   &::placeholder {
@@ -32,6 +46,11 @@
   }
   &--disabled {
     cursor: none;
+    border-color: var(--text-field-disabled-border-color);
+    background-color: var(--text-field-disabled-background-color);
+    &:hover {
+      border-color: var(--text-field-disabled-border-color);
+    }
   }
   &--error {
     border-color: var(--text-field-error-border-color);
@@ -42,6 +61,9 @@
     padding-bottom: var(--text-field-small-padding-bottom);
     padding-left: var(--text-field-small-padding-left);
     padding-right: var(--text-field-small-padding-right);
+    &::placeholder {
+      font-size: var(--text-field-small-font-size);
+    }
   }
   &--sizeM {
     font-size: var(--text-field-medium-font-size);
@@ -49,6 +71,9 @@
     padding-bottom: var(--text-field-medium-padding-bottom);
     padding-left: var(--text-field-medium-padding-left);
     padding-right: var(--text-field-medium-padding-right);
+    &::placeholder {
+      font-size: var(--text-field-medium-font-size);
+    }
   }
   &--sizeL {
     font-size: var(--text-field-large-font-size);
@@ -56,6 +81,9 @@
     padding-bottom: var(--text-field-large-padding-bottom);
     padding-left: var(--text-field-large-padding-left);
     padding-right: var(--text-field-large-padding-right);
+    &::placeholder {
+      font-size: var(--text-field-large-font-size);
+    }
   }
   &--sizeXL {
     font-size: var(--text-field-extra-large-font-size);
@@ -63,5 +91,8 @@
     padding-bottom: var(--text-field-extra-large-padding-bottom);
     padding-left: var(--text-field-extra-large-padding-left);
     padding-right: var(--text-field-extra-large-padding-right);
+    &::placeholder {
+      font-size: var(--text-field-extra-large-font-size);
+    }
   }
 }
