@@ -46,7 +46,9 @@ export class SuxSwitch {
           'sux-switch': true,
           'sux-switch--checked': checked,
         } },
-        h("input", { role: "switch", type: "checkbox", class: "sux-switch_input", name: name, id: switchId, disabled: disabled, checked: checked, value: value, "aria-checked": `${checked}`, onChange: this._onChange, onInput: this._onInput, onBlur: () => this._onBlur() }),
+        h("input", { role: "switch", type: "checkbox", class: "sux-switch_input", name: name, id: switchId, disabled: disabled, checked: checked, value: value, 
+          // aria-checked={`${checked}`}
+          onChange: this._onChange, onInput: this._onInput, onBlur: () => this._onBlur() }),
         h("label", { class: "sux-switch_label", htmlFor: switchId }, label))));
   }
   static get is() { return "sux-switch"; }

@@ -1,0 +1,64 @@
+import { extractArgTypes } from '@pxtrn/storybook-addon-docs-stencil';
+import { Meta, Story, Canvas, ArgsTable } from '@storybook/addon-docs/blocks';
+import { html, render } from 'lit-html';
+
+<Meta title="Components/Form/Switch" component="sux-switch" argTypes={extractArgTypes('sux-switch')} />
+
+# Switch
+
+Switches allow users to turn an individual option on or off. They are usually used to activate or deactivate a specific setting.
+
+export const Defaultswitch = args => {
+  return html`
+    <div style="padding: 10%; display: flex; justify-content: center; gap:16px;">
+      <sux-switch .label="${args.label}" .checked="${args.checked}" .disabled="${args.disabled}"> switch label </sux-switch>
+    </div>
+  `;
+};
+
+<Canvas>
+  <Story name="Playground">{Defaultswitch.bind()}</Story>
+</Canvas>
+
+## Table of options / API
+
+<ArgsTable of="sux-switch" />
+
+## Variants
+
+### Selection
+
+Switches can either be selected or not selected.
+
+<!-- Tag with Info Variant -->
+
+export const SwitchUnselected = args => {
+  return html`
+    <div style="padding: 10%; display: flex; justify-content: center; gap:16px;">
+      <sux-switch label="unselected" checked="false"> switch label </sux-switch>
+      <sux-switch label="selected" checked="true"> switch label </sux-switch>
+    </div>
+  `;
+};
+
+<Canvas>
+  <Story name="Selection">{SwitchUnselected.bind()}</Story>
+</Canvas>
+
+
+### disabled
+A switch in a disabled state shows that a selection exists, but is not available in that circumstance. This can be used to maintain layout continuity and communicate that an action may become available later.
+
+<!-- Tag with Info Variant -->
+
+export const SwitchDisabled = args => {
+  return html`
+    <div style="padding: 10%; display: flex; justify-content: center; gap:16px;">
+      <sux-switch .label="${args.label}" disabled> switch label </sux-switch>
+    </div>
+  `;
+};
+
+<Canvas>
+  <Story name="Disabled">{SwitchDisabled.bind()}</Story>
+</Canvas>

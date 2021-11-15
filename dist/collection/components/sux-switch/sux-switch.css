@@ -574,28 +574,37 @@
 .sux-switch {
   position: relative;
 }
+.sux-switch_label {
+  font-size: var(--switch-label-font-size);
+  font-family: var(--switch-label-font-family);
+  font-family: var(--switch-label-font-weight);
+}
+.sux-switch_label:not(::before), .sux-switch_label:not(::after) {
+  display: inline-block;
+}
 .sux-switch_label::before {
   position: relative;
   display: flex;
   content: "";
-  border-radius: 16px;
-  border: 1px solid;
+  border-radius: var(--switch-track-border-radius);
+  border: var(--switch-track-border-width) solid;
   border-color: var(--switch-track-unselected-border-color);
   background-color: var(--switch-track-unselected-background-color);
-  height: 24px;
+  height: var(--switch-track-height);
   width: 40px;
   z-index: 2;
   transition: 0.1s background-color linear;
 }
 .sux-switch_label::after {
+  box-sizing: border-box;
   position: absolute;
   content: "";
   top: 19px;
-  left: 1px;
+  left: 0;
   z-index: 3;
-  height: 22px;
-  width: 22px;
-  border-radius: 50%;
+  height: var(--switch-handle-height);
+  width: var(--switch-handle-width);
+  border-radius: var(--switch-handle-border-radius);
   border: 1px solid var(--switch-handle-unselected-border-color);
   background-color: var(--switch-handle-unselected-background-color);
   transition: 0.1s left linear, 0.1s border-color linear;
@@ -610,9 +619,9 @@
   background-color: var(--switch-track-selected-background-color);
 }
 .sux-switch_input:checked + .sux-switch_label::after {
-  left: 17px;
   background-color: var(--switch-handle-selected-background-color);
   border-color: var(--switch-handle-selected-border-color);
+  left: 18px;
 }
 .sux-switch_input:disabled + .sux-switch_label {
   cursor: not-allowed;
