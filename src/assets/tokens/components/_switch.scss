@@ -1,24 +1,39 @@
 
 // Do not edit directly
-// Generated on Wed, 10 Nov 2021 11:40:46 GMT
+// Generated on Mon, 15 Nov 2021 11:08:00 GMT
 
-$switch-handle-unselected-hover-border-color: $color-neutral-700;
-$switch-handle-unselected-hover-background-color: $color-white;
-$switch-handle-unselected-border-color: $color-neutral-700;
-$switch-handle-unselected-background-color: $color-white;
-$switch-handle-selected-hover-border-color: $color-primary-100;
-$switch-handle-selected-hover-background-color: $color-white;
-$switch-handle-selected-border-color: $color-primary-100;
-$switch-handle-selected-background-color: $color-white;
-$switch-track-unselected-hover-border-color: $color-neutral-700;
-$switch-track-unselected-hover-background-color: $color-neutral-700;
-$switch-track-unselected-border-color: $color-neutral-700;
-$switch-track-unselected-background-color: $color-neutral-700;
-$switch-track-selected-hover-border-color: $color-primary-dark-30;
-$switch-track-selected-hover-background-color: $color-primary-dark-30;
-$switch-track-selected-border-color: $color-primary-100;
-$switch-track-selected-background-color: $color-primary-100;
-$switch-label-font-color: $color-neutral-800;
+$switch-handle-border-radius: 100px;
+$switch-handle-width: 24px;
+$switch-handle-height: 24px;
+$switch-track-unselected-padding-left: 40px;
+$switch-track-selected-padding-left: 40px;
+$switch-track-border-width: 1px;
+$switch-track-border-radius: 16px;
+$switch-track-height: 24px;
+$switch-handle-disabled-border-color: $core-color-grey-30;
+$switch-handle-disabled-background-color: $core-color-neutrals-white;
+$switch-handle-unselected-hover-border-color: $core-color-grey-50;
+$switch-handle-unselected-hover-background-color: $core-color-neutrals-white;
+$switch-handle-unselected-border-color: $core-color-grey-40;
+$switch-handle-unselected-background-color: $core-color-neutrals-white;
+$switch-handle-selected-hover-background-color: $core-color-neutrals-white;
+$switch-handle-selected-background-color: $core-color-neutrals-white;
+$switch-track-disabled-border-color: $core-color-grey-20;
+$switch-track-disabled-background-color: $core-color-grey-20;
+$switch-track-unselected-hover-border-color: $core-color-grey-50;
+$switch-track-unselected-hover-background-color: $core-color-grey-50;
+$switch-track-unselected-border-color: $core-color-grey-40;
+$switch-track-unselected-background-color: $core-color-grey-40;
+$switch-track-unselected-padding-bottom: $space-0;
+$switch-track-unselected-padding-right: $space-0;
+$switch-track-unselected-padding-top: $space-0;
 $switch-label-font-weight: $font-weight-regular;
 $switch-label-font-size: $font-size-4;
 $switch-label-font-family: $font-family-sans-serif;
+$switch-handle-selected-hover-border-color: $semantic-color-form-hover-background-color;
+$switch-handle-selected-border-color: $semantic-color-form-selected-border-color;
+$switch-track-selected-hover-border-color: $semantic-color-form-hover-background-color;
+$switch-track-selected-hover-background-color: $semantic-color-form-hover-background-color;
+$switch-track-selected-border-color: $semantic-color-form-selected-border-color;
+$switch-track-selected-background-color: $semantic-color-form-selected-background-color;
+$switch-label-font-color: $semantic-color-text-ui-default;
