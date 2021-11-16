@@ -6,9 +6,10 @@
 }
 .sux-switch {
   position: relative;
+  font-family: var(--switch-label-font-family);
   &_label {
     font-size: var(--switch-label-font-size);
-    font-family: var(--switch-label-font-family);
+
     font-family: var(--switch-label-font-weight);
     // display: inline-block;
     &:not(::before),&:not(::after) {
@@ -37,7 +38,7 @@
       box-sizing: border-box;
       position: absolute;
       content: '';
-      top: 19px;
+      top: 21px;
       left: 0;
       z-index: 3;
       height: var(--switch-handle-height);

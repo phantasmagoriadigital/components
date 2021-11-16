@@ -6,42 +6,42 @@
   line-height: var(--heading-line-height);
 
   &--serif {
-    font-family: var(--heading-serif-font-family);
+    font-family: var(--heading-font-family-serif);
   }
   &--sans-serif {
-    font-family: var(--heading-sans-serif-font-family);
+    font-family: var(--heading-font-family-sans-serif);
   }
   &--mono {
-    font-family: var(--heading-mono-font-family);
+    font-family: var(--heading-font-family-mono);
   }
   &--xs {
-    font-size: var(--heading-xs-text-size);
+    font-size: var(--heading-font-size-xs);
   }
   &--s {
-    font-size: var(--heading-s-text-size);
+    font-size: var(--heading-font-size-s);
   }
   &--m {
-    font-size: var(--heading-m-text-size);
+    font-size: var(--heading-font-size-m);
   }
   &--l {
-    font-size: var(--heading-l-text-size);
+    font-size: var(--heading-font-size-l);
   }
   &--xl {
-    font-size: var(--heading-xl-text-size);
+    font-size: var(--heading-font-size-xl);
   }
   &--xxl {
-    font-size: var(--heading-xxl-text-size);
+    font-size: var(--heading-font-size-xxl);
   }
   &--light {
-    font-weight: var(--heading-light-font-weight);
+    font-weight: var(--heading-font-weight-light);
   }
   &--regular {
-    font-weight: var(--heading-regular-font-weight);
+    font-weight: var(--heading-font-weight-regular);
   }
   &--semibold {
-    font-weight: var(--heading-semi-bold-font-weight);
+    font-weight: var(--heading-font-weight-semi-bold);
   }
   &--bold {
-    font-weight: var(--heading-bold-font-weight);
+    font-weight: var(--heading-font-weight-bold);
   }
 }
