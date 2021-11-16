@@ -11,33 +11,33 @@
   }
 
   &--serif {
-    font-family: var(--body-serif-font-family);
+    font-family: var(--body-font-family-serif);
   }
   &--sans-serif {
-    font-family: var(--body-sans-serif-font-family);
+    font-family: var(--body-font-family-sans-serif);
   }
   &--mono {
-    font-family: var(--body-mono-font-family);
+    font-family: var(--body-font-family-mono);
   }
   &--xs {
-    font-size: var(--body-xs-text-size);
+    font-size: var(--body-font-size-xs);
   }
   &--s {
-    font-size: var(--body-s-text-size);
+    font-size: var(--body-font-size-s);
   }
   &--m {
-    font-size: var(--body-m-text-size);
+    font-size: var(--body-font-size-m);
   }
   &--l {
-    font-size: var(--body-l-text-size);
+    font-size: var(--body-font-size-l);
   }
   &--xl {
-    font-size: var(--body-xl-text-size);
+    font-size: var(--body-font-size-xl);
   }
   &--xxl {
-    font-size: var(--body-xxl-text-size);
+    font-size: var(--body-font-size-xxl);
   }
   &--xxxl {
-    font-size: var(--body-xxxl-text-size);
+    font-size: var(--body-font-size-xxxl);
   }
 }
