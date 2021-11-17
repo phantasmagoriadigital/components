@@ -6,30 +6,30 @@
   line-height: var(--detail-line-height);
 
   &--serif {
-    font-family: var(--detail-serif-font-family);
+    font-family: var(--detail-font-family-serif);
   }
   &--sans-serif {
-    font-family: var(--detail-sans-serif-font-family);
+    font-family: var(--detail-font-family-sans-serif);
   }
   &--mono {
-    font-family: var(--detail-mono-font-family);
+    font-family: var(--detail-font-family-mono);
   }
   &--s {
-    font-size: var(--detail-s-text-size);
+    font-size: var(--detail-font-size-s);
   }
   &--m {
-    font-size: var(--detail-m-text-size);
+    font-size: var(--detail-font-size-m);
   }
   &--l {
-    font-size: var(--detail-l-text-size);
+    font-size: var(--detail-font-size-l);
   }
   &--xl {
-    font-size: var(--detail-xl-text-size);
+    font-size: var(--detail-font-size-xl);
   }
   &--light {
-    font-weight: var(--detail-light-font-weight);
+    font-weight: var(--detail-font-weight-light);
   }
   &--regular {
-    font-weight: var(--detail-regular-font-weight);
+    font-weight: var(--detail-font-weight-regular);
   }
 }

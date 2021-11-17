@@ -6,31 +6,44 @@
 }
 .sux-switch {
   position: relative;
+  font-family: var(--switch-label-font-family);
   &_label {
+    font-size: var(--switch-label-font-size);
+
+    font-family: var(--switch-label-font-weight);
+    // display: inline-block;
+    &:not(::before),&:not(::after) {
+      display: inline-block;
+    }
     // unselected track
     &::before {
       position: relative;
       display: flex;
       content: '';
-      border-radius: 16px;
-      border: 1px solid;
+      border-radius: var(--switch-track-border-radius);
+      border: var(--switch-track-border-width) solid;
       border-color: var(--switch-track-unselected-border-color);
       background-color: var(--switch-track-unselected-background-color);
-      height: 24px;
+      height:var(--switch-track-height);
       width: 40px;
+      // padding-right: var(--switch-track-unselected-padding-right);
+      // padding-left: var(--switch-track-unselected-padding-left);
+      // padding-top: var(--switch-track-unselected-padding-top);
+      // padding-bottom: var(--switch-track-unselected-padding-bottom);
       z-index: 2;
       transition: 0.1s background-color linear;
     }
     // unselected handle
     &::after {
+      box-sizing: border-box;
       position: absolute;
       content: '';
-      top: 19px;
-      left: 1px;
+      top: 21px;
+      left: 0;
       z-index: 3;
-      height: 22px;
-      width: 22px;
-      border-radius: 50%;
+      height: var(--switch-handle-height);
+      width: var(--switch-handle-width);
+      border-radius: var(--switch-handle-border-radius);
       border: 1px solid var(--switch-handle-unselected-border-color);
       background-color: var(--switch-handle-unselected-background-color);
       transition: 0.1s left linear, 0.1s border-color linear;
@@ -51,9 +64,9 @@
         }
         // checked handle
         &::after {
-          left: 17px;
           background-color: var(--switch-handle-selected-background-color);
           border-color: var(--switch-handle-selected-border-color);
+          left: 18px;
         }
       }
     }
@@ -120,3 +133,5 @@
     }
   }
 }
+
+

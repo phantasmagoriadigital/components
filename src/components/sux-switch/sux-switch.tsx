@@ -118,7 +118,7 @@ export class SuxSwitch {
             disabled={disabled}
             checked={checked}
             value={value}
-            aria-checked={`${checked}`}
+            // aria-checked={`${checked}`}
             onChange={this._onChange}
             onInput={this._onInput}
             onBlur={() => this._onBlur()}
@@ -127,6 +127,7 @@ export class SuxSwitch {
         </div>
 
       </Host>
+
     );
   }
 

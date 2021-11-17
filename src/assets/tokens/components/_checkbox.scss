@@ -1,15 +1,31 @@
 
 // Do not edit directly
-// Generated on Wed, 10 Nov 2021 11:40:46 GMT
+// Generated on Mon, 15 Nov 2021 11:08:00 GMT
 
-$checkbox-disabled-border-color: $color-neutral-500;
-$checkbox-disabled-label-color: $color-neutral-500;
-$checkbox-error-label-color: $color-status-error;
-$checkbox-error-checked-color: $color-status-error;
-$checkbox-error-border-color: $color-status-error;
-$checkbox-hover-border-color: $color-status-help;
-$checkbox-checked-color: $color-status-info;
-$checkbox-background-color: $color-white;
+$checkbox-unselected-hover-checkmark-color: $core-color-neutrals-transparent;
+$checkbox-unselected-checkmark-color: $core-color-neutrals-transparent;
 $checkbox-label-font-family: $font-family-sans-serif;
-$checkbox-label-color: $color-neutral-900;
-$checkbox-border-color: $color-status-info;
+$checkbox-disabled-border-color: $semantic-color-form-disabled;
+$checkbox-disabled-label-color: $semantic-color-form-disabled;
+$checkbox-error-label-color: $semantic-color-text-ui-negative;
+$checkbox-error-checkmark-color-color: $semantic-color-form-negative;
+$checkbox-error-border-color: $semantic-color-form-negative;
+$checkbox-indeterminate-hover-checkmark-color: $semantic-color-form-hover-background-color;
+$checkbox-indeterminate-hover-background-color: $semantic-color-form-hover-background-color;
+$checkbox-indeterminate-hover-border-color: $semantic-color-form-hover-border-color;
+$checkbox-indeterminate-checkmark-color: $semantic-color-form-default;
+$checkbox-indeterminate-label-color: $semantic-color-text-ui-default;
+$checkbox-indeterminate-background-color: $semantic-color-form-selected-background-color;
+$checkbox-indeterminate-border-color: $semantic-color-form-selected-border-color;
+$checkbox-selected-hover-checkmark-color: $semantic-color-form-hover-background-color;
+$checkbox-selected-hover-background-color: $semantic-color-form-hover-background-color;
+$checkbox-selected-hover-border-color: $semantic-color-form-hover-border-color;
+$checkbox-selected-checkmark-color: $semantic-color-form-default;
+$checkbox-selected-label-color: $semantic-color-text-ui-default;
+$checkbox-selected-background-color: $semantic-color-form-selected-background-color;
+$checkbox-selected-border-color: $semantic-color-form-selected-border-color;
+$checkbox-unselected-hover-background-color: $semantic-color-form-hover-background-color;
+$checkbox-unselected-hover-border-color: $semantic-color-form-hover-border-color;
+$checkbox-unselected-label-color: $semantic-color-text-ui-default;
+$checkbox-unselected-background-color: $semantic-color-form-unselected-background-color;
+$checkbox-unselected-border-color: $semantic-color-form-unselected-border-color;
