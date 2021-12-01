@@ -1,0 +1,22 @@
+:host {
+  display: block;
+}
+.sux-rating {
+  &--selected {
+    color:var(--rating-selected-background-color);
+    
+  }
+  &--unselected{
+    color:var(--rating-unselected-background-color);
+    
+  }
+  &--small{
+    font-size:var(--rating-small-font-size);
+  }
+  &--medium{
+    font-size:var(--rating-medium-font-size);
+  }
+  &--large{
+    font-size:var(--rating-large-font-size);
+  }
+}
