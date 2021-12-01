@@ -24,14 +24,14 @@
       position: absolute;
       display: flex;
       content: '';
-      top: 5px;
+      top: 4px;
       width: 10px;
       height: 5px;
       transform: rotate(0deg);
       border-right: 0;
       border-top: 0;
-      border-bottom: 2px solid var(--checkbox-border-color);
-      left: 4px;
+      border-bottom: 3px solid var(--checkbox-indeterminate-checkmark-color);
+      left: 5px;
     }
   }
   &--error {
@@ -46,8 +46,8 @@
       &:checked {
         + label {
           &::after {
-            border-right: 2px solid var(--checkbox-error-checked-color) !important;
-            border-top: 2px solid var(--checkbox-error-checked-color) !important;
+            border-right: 2px solid var(--checkbox-error-checkmark-color) !important;
+            border-top: 2px solid var(--checkbox-error-checkmark-color) !important;
           }
         }
       }
@@ -62,7 +62,7 @@
       display: flex;
       align-items: center;
       justify-content: flex-start;
-      color: $checkbox-label-color;
+      color: var(--checkbox-unselected-label-color);
       letter-spacing: 0.5px;
       cursor: pointer;
       margin-left: -7px;
@@ -76,8 +76,8 @@
         height: 1.125rem;
         width: 1.125rem;
         margin: 0 0.625rem 0 0;
-        background-color: var(--checkbox-background-color);
-        border: 1px solid var(--checkbox-border-color);
+        background-color: var(--checkbox-unselected-background-color);
+        border: 1px solid var(--checkbox-unselected-border-color);
       }
     }
 
@@ -92,12 +92,12 @@
           height: 6px;
           width: 12px;
           left: 3px;
-          border-right: 2px solid var(--checkbox-checked-color);
-          border-top: 2px solid var(--checkbox-checked-color);
+          border-right: 2px solid var(--checkbox-selected-checkmark-color);
+          border-top: 2px solid var(--checkbox-selected-checkmark-color);
           transform: rotate(125deg);
         }
         &::before {
-          border-color: var(--checkbox-border-color);
+          border-color: var(--checkbox-selected-border-color);
         }
       }
     }
@@ -116,7 +116,7 @@
   input[type='checkbox']:not(:disabled):hover {
     + label {
       &::before {
-        border-color: var(--checkbox-hover-border-color);
+        border-color: var(--checkbox-unselected-hover-border-color);
       }
     }
   }

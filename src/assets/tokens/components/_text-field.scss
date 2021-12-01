@@ -1,6 +1,6 @@
 
 // Do not edit directly
-// Generated on Mon, 08 Nov 2021 16:36:20 GMT
+// Generated on Mon, 15 Nov 2021 11:08:00 GMT
 
 $text-field-hover-border-style: solid;
 $text-field-extra-large-padding-right: $space-125;
@@ -24,13 +24,15 @@ $text-field-small-padding-bottom: $space-75;
 $text-field-small-padding-top: $space-75;
 $text-field-small-font-size: $font-size-2;
 $text-field-hover-border-width: $border-width-1;
-$text-field-hover-border-color: $color-status-info;
 $text-field-error-border-width: $border-width-1;
-$text-field-error-border-color: $color-status-error;
 $text-field-focus-outline-offset: $space-25;
 $text-field-focus-outline-width: $border-width-2;
-$text-field-focus-outline-color: $color-status-info;
-$text-field-placeholder-text-color: $color-neutral-500;
 $text-field-border-radius: $border-radius-4;
 $text-field-border-width: $border-width-1;
-$text-field-border-color: $color-neutral-800;
+$text-field-border-color: $core-color-grey-60;
+$text-field-disabled-background-color: $semantic-color-form-disabled;
+$text-field-disabled-border-color: $semantic-color-form-disabled;
+$text-field-hover-border-color: $semantic-color-form-hover-border-color;
+$text-field-error-border-color: $semantic-color-form-negative;
+$text-field-focus-outline-color: $semantic-color-form-selected-border-color;
+$text-field-placeholder-text-color: $semantic-color-text-ui-disabled;

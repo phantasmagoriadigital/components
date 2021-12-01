@@ -1,16 +1,37 @@
 
 // Do not edit directly
-// Generated on Mon, 08 Nov 2021 16:36:20 GMT
+// Generated on Mon, 15 Nov 2021 11:08:00 GMT
 
-$radio-disabled-background-color: $color-neutral-500;
-$radio-disabled-border-color: $color-neutral-500;
-$radio-disabled-color: $color-neutral-500;
-$radio-checked-hover-border-color: $color-primary-dark-30;
-$radio-checked-hover-background-color: $color-primary-dark-30;
-$radio-checked-background-color: $color-white;
-$radio-checked-border-color: $color-status-info;
-$radio-checked-color: $color-status-info;
+$radio-checkmark-selected-hover-border-style: solid;
+$radio-checkmark-selected-hover-border-width: 5px;
+$radio-checkmark-selected-border-style: solid;
+$radio-checkmark-selected-border-width: 5px;
+$radio-checkmark-selected-width: 8px;
+$radio-checkmark-selected-height: 8px;
+$radio-checkmark-unselected-border-style: solid;
+$radio-checkmark-unselected-border-width: 0;
+$radio-checkmark-border-radius: 100px;
+$radio-button-selected-hover-border-style: solid;
+$radio-button-selected-hover-border-width: 1px;
+$radio-button-selected-border-style: solid;
+$radio-button-selected-border-width: 1px;
+$radio-button-unselected-border-style: solid;
+$radio-button-unselected-border-width: 1px;
+$radio-button-border-radius: 100px;
 $radio-label-font-family: $font-family-sans-serif;
-$radio-label-color: $color-neutral-800;
-$radio-background-color: $color-white;
-$radio-border-color: $color-status-info;
+$radio-checkmark-selected-hover-background-color: $core-color-neutrals-white;
+$radio-checkmark-selected-background-color: $core-color-neutrals-white;
+$radio-checkmark-unselected-border-color: $core-color-neutrals-transparent;
+$radio-button-disabled-background-color: $core-color-grey-10;
+$radio-button-disabled-border-color: $core-color-grey-30;
+$radio-button-selected-hover-background-color: $core-color-neutrals-white;
+$radio-button-selected-background-color: $core-color-neutrals-white;
+$radio-button-unselected-background-color: $core-color-neutrals-white;
+$radio-label-disabled-color: $semantic-color-text-ui-disabled;
+$radio-label-color: $semantic-color-text-ui-default;
+$radio-checkmark-selected-hover-border-color: $semantic-color-controls-info-hover-border-color;
+$radio-checkmark-selected-border-color: $semantic-color-controls-info-default-border-color;
+$radio-checkmark-unselected-background-color: $semantic-color-controls-info-default-border-color;
+$radio-button-selected-hover-border-color: $semantic-color-controls-info-default-border-color;
+$radio-button-selected-border-color: $semantic-color-controls-info-default-border-color;
+$radio-button-unselected-border-color: $semantic-color-controls-info-default-border-color;

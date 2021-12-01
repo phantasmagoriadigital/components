@@ -10,12 +10,33 @@ Buttons allow users to perform an action or to navigate to another page. They ha
 
 export const DefaultTag = args => {
   return html`
-    <div style="padding: 10%; display: flex; justify-content: center; gap:16px;">
-      <sux-tag .label="${args.label}" variant="info" .size="${args.size}"> Tag info </sux-tag>
-      <sux-tag .label="${args.label}" variant="success" .size="${args.size}"> Tag success </sux-tag>
-      <sux-tag .label="${args.label}" variant="warning" .size="${args.size}"> Tag warning </sux-tag>
-      <sux-tag .label="${args.label}" variant="error" .size="${args.size}"> Tag error </sux-tag>
-      <sux-tag .label="${args.label}" variant="neutral" .size="${args.size}"> Tag neutral </sux-tag>
+    <div style="padding: 3%; display: flex; justify-content: center; gap:16px;">
+      <sux-tag .label="${args.label}" variant="solid" state="info" .size="${args.size}"> Tag info </sux-tag>
+      <sux-tag .label="${args.label}" variant="solid" state="success" .size="${args.size}"> Tag success </sux-tag>
+      <sux-tag .label="${args.label}" variant="solid" state="warning" .size="${args.size}"> Tag warning </sux-tag>
+      <sux-tag .label="${args.label}" variant="solid" state="error" .size="${args.size}"> Tag error </sux-tag>
+      <sux-tag .label="${args.label}" variant="solid" state="neutral" .size="${args.size}"> Tag neutral </sux-tag>
+    </div>
+    <div style="padding: 3%; display: flex; justify-content: center; gap:16px;">
+      <sux-tag .label="${args.label}" variant="outlined" state="info" .size="${args.size}"> Tag info </sux-tag>
+      <sux-tag .label="${args.label}" variant="outlined" state="success" .size="${args.size}"> Tag success </sux-tag>
+      <sux-tag .label="${args.label}" variant="outlined" state="warning" .size="${args.size}"> Tag warning </sux-tag>
+      <sux-tag .label="${args.label}" variant="outlined" state="error" .size="${args.size}"> Tag error </sux-tag>
+      <sux-tag .label="${args.label}" variant="outlined" state="neutral" .size="${args.size}"> Tag neutral </sux-tag>
+    </div>
+    <div style="padding: 3%; display: flex; justify-content: center; gap:16px;">
+      <sux-tag .label="${args.label}" variant="inverted" state="info" .size="${args.size}"> Tag info </sux-tag>
+      <sux-tag .label="${args.label}" variant="inverted" state="success" .size="${args.size}"> Tag success </sux-tag>
+      <sux-tag .label="${args.label}" variant="inverted" state="warning" .size="${args.size}"> Tag warning </sux-tag>
+      <sux-tag .label="${args.label}" variant="inverted" state="error" .size="${args.size}"> Tag error </sux-tag>
+      <sux-tag .label="${args.label}" variant="inverted" state="neutral" .size="${args.size}"> Tag neutral </sux-tag>
+    </div>
+    <div style="padding: 3%; display: flex; justify-content: center; gap:16px;">
+      <sux-tag .label="${args.label}" variant="borderless" state="info" .size="${args.size}"> Tag info </sux-tag>
+      <sux-tag .label="${args.label}" variant="borderless" state="success" .size="${args.size}"> Tag success </sux-tag>
+      <sux-tag .label="${args.label}" variant="borderless" state="warning" .size="${args.size}"> Tag warning </sux-tag>
+      <sux-tag .label="${args.label}" variant="borderless" state="error" .size="${args.size}"> Tag error </sux-tag>
+      <sux-tag .label="${args.label}" variant="borderless" state="neutral" .size="${args.size}"> Tag neutral </sux-tag>
     </div>
   `;
 };
@@ -30,87 +51,101 @@ export const DefaultTag = args => {
 
 ## Variants
 
-### Info
+### Solid
 
-<!-- Tag with Info Variant -->
-export const InfoTag = args => {
+<!-- Tag with Solid Variant -->
+
+export const SolidTag = args => {
   return html`
     <div style="padding: 10%; display: flex; justify-content: center; gap:16px;">
-      <sux-tag .label="${args.label}" variant="info" size="s"> Tag info </sux-tag>
-      <sux-tag .label="${args.label}" variant="info" size="m"> Tag info </sux-tag>
-      <sux-tag .label="${args.label}" variant="info" size="l"> Tag info </sux-tag>
-      <sux-tag .label="${args.label}" variant="info" size="xl"> Tag info </sux-tag>
+      <sux-tag .label="${args.label}" variant="solid" state="info" size="s"> Tag info </sux-tag>
+      <sux-tag .label="${args.label}" variant="solid" state="success" size="s"> Tag info </sux-tag>
+      <sux-tag .label="${args.label}" variant="solid" state="warning" size="s"> Tag info </sux-tag>
+      <sux-tag .label="${args.label}" variant="solid" state="error" size="s"> Tag info </sux-tag>
+      <sux-tag .label="${args.label}" variant="solid" state="neutral" size="s"> Tag info </sux-tag>
     </div>
   `;
 };
 
 <Canvas>
-  <Story name="Info">{InfoTag.bind()}</Story>
+  <Story name="Solid">{SolidTag.bind()}</Story>
 </Canvas>
 
-### Success
-<!-- Tag with Success variant -->
-export const SuccessTag = args => {
+### Outlined
+
+<!-- Tag with Outlined variant -->
+
+export const OutlinedTag = args => {
   return html`
     <div style="padding: 10%; display: flex; justify-content: center; gap:16px;">
-      <sux-tag .label="${args.label}" variant="success" size="s"> Tag success </sux-tag>
-      <sux-tag .label="${args.label}" variant="success" size="m"> Tag success </sux-tag>
-      <sux-tag .label="${args.label}" variant="success" size="l"> Tag success </sux-tag>
-      <sux-tag .label="${args.label}" variant="success" size="xl"> Tag success </sux-tag>
-      `;
+      <sux-tag .label="${args.label}" variant="outlined" state="info" size="s"> Tag outlined </sux-tag>
+      <sux-tag .label="${args.label}" variant="outlined" state="success" size="s"> Tag outlined </sux-tag>
+      <sux-tag .label="${args.label}" variant="outlined" state="warning" size="s"> Tag outlined </sux-tag>
+      <sux-tag .label="${args.label}" variant="outlined" state="error" size="s"> Tag outlined </sux-tag>
+      <sux-tag .label="${args.label}" variant="outlined" state="neutral" size="s"> Tag outlined </sux-tag>
+    </div>
+  `;
 };
 
 <Canvas>
-  <Story name="Success">{SuccessTag.bind()}</Story>
+  <Story name="Outlined">{OutlinedTag.bind()}</Story>
 </Canvas>
 
-### Warning
-<!-- Tag with Warning variant -->
-export const WarningTag = args => {
+### Inverted
+
+<!-- Tag with Inverted variant -->
+
+export const InvertedTag = args => {
   return html`
     <div style="padding: 10%; display: flex; justify-content: center; gap:16px;">
-      <sux-tag .label="${args.label}" variant="warning" size="s"> Tag warning </sux-tag>
-      <sux-tag .label="${args.label}" variant="warning" size="m"> Tag warning </sux-tag>
-      <sux-tag .label="${args.label}" variant="warning" size="l"> Tag warning </sux-tag>
-      <sux-tag .label="${args.label}" variant="warning" size="xl"> Tag warning </sux-tag>
+      <sux-tag .label="${args.label}" variant="inverted" state="info" size="s"> Tag Inverted </sux-tag>
+      <sux-tag .label="${args.label}" variant="inverted" state="success" size="s"> Tag Inverted </sux-tag>
+      <sux-tag .label="${args.label}" variant="inverted" state="warning" size="s"> Tag Inverted </sux-tag>
+      <sux-tag .label="${args.label}" variant="inverted" state="error" size="s"> Tag Inverted </sux-tag>
+      <sux-tag .label="${args.label}" variant="inverted" state="neutral" size="s"> Tag Inverted </sux-tag>
     </div>
   `;
 };
 
 <Canvas>
-  <Story name="Warning">{WarningTag.bind()}</Story>
-  </Canvas>
-
-### Error
-<!-- Tag with Error variant -->
-export const ErrorTag = args => {
-  return html`
-    <div style="padding: 10%; display: flex; justify-content: center; gap:16px;">
-      <sux-tag .label="${args.label}" variant="error" size="s"> Tag error </sux-tag>
-      <sux-tag .label="${args.label}" variant="error" size="m"> Tag error </sux-tag>
-      <sux-tag .label="${args.label}" variant="error" size="l"> Tag error </sux-tag>
-      <sux-tag .label="${args.label}" variant="error" size="xl"> Tag error </sux-tag>
-    </div>
-  `;
-};
-
-<Canvas>
-  <Story name="Error">{ErrorTag.bind()}</Story>
+  <Story name="Inverted">{InvertedTag.bind()}</Story>
 </Canvas>
 
-### Neutral
-<!-- Tag with Neutral variant -->
-export const NeutralTag = args => {
+### Borderless
+
+<!-- Tag with Borderless variant -->
+
+export const BorderlessTag = args => {
   return html`
     <div style="padding: 10%; display: flex; justify-content: center; gap:16px;">
-      <sux-tag .label="${args.label}" variant="neutral" size="s"> Tag neutral </sux-tag>
-      <sux-tag .label="${args.label}" variant="neutral" size="m"> Tag neutral </sux-tag>
-      <sux-tag .label="${args.label}" variant="neutral" size="l"> Tag neutral </sux-tag>
-      <sux-tag .label="${args.label}" variant="neutral" size="xl"> Tag neutral </sux-tag>
+      <sux-tag .label="${args.label}" variant="borderless" state="info" size="s"> Tag Borderless </sux-tag>
+      <sux-tag .label="${args.label}" variant="borderless" state="success" size="s"> Tag Borderless </sux-tag>
+      <sux-tag .label="${args.label}" variant="borderless" state="warning" size="s"> Tag Borderless </sux-tag>
+      <sux-tag .label="${args.label}" variant="borderless" state="error" size="s"> Tag Borderless </sux-tag>
+      <sux-tag .label="${args.label}" variant="borderless" state="neutral" size="s"> Tag Borderless </sux-tag>
     </div>
   `;
 };
 
 <Canvas>
-  <Story name="Neutral">{NeutralTag.bind()}</Story>
+  <Story name="Borderless">{BorderlessTag.bind()}</Story>
+</Canvas>
+
+### Size
+
+<!-- Tag with Size variant -->
+
+export const SizeTag = args => {
+  return html`
+    <div style="padding: 10%; display: flex; justify-content: center; gap:16px;">
+      <sux-tag .label="${args.label}" variant="outlined" size="s"> Tag small </sux-tag>
+      <sux-tag .label="${args.label}" variant="outlined" size="m"> Tag medium </sux-tag>
+      <sux-tag .label="${args.label}" variant="outlined" size="l"> Tag large </sux-tag>
+      <sux-tag .label="${args.label}" variant="outlined" size="xl"> Tag extra large </sux-tag>
+    </div>
+  `;
+};
+
+<Canvas>
+  <Story name="Size">{SizeTag.bind()}</Story>
 </Canvas>
