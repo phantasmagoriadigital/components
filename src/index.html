@@ -10,8 +10,10 @@
   <script nomodule src="/build/substrate-ds.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="stylesheet" href="./assets/tokens/css/all/tokens.css" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;600;700&family=IBM+Plex+Sans:wght@300;400;600;700&family=IBM+Plex+Serif:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;600;700&family=IBM+Plex+Sans:wght@300;400;600;700&family=IBM+Plex+Serif:wght@300;400;600;700&display=swap"
+    rel="stylesheet">
 </head>
 
 <body>
@@ -28,7 +30,11 @@
     <sux-heading classification="mono" size="s" weight="regular">This is a heading 1</sux-heading>
     <sux-heading classification="serif" size="s" weight="regular">This is a heading 1</sux-heading>
     <sux-heading classification="sans-serif" size="s" weight="regular">This is a heading 1</sux-heading>
-    <sux-body>Lorem ipsum dolor sit amet,<em>Emphasized</em> consectetur <strong>Strong</strong> adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</sux-body>
+    <sux-body>Lorem ipsum dolor sit amet,<em>Emphasized</em> consectetur <strong>Strong</strong> adipiscing elit, sed do
+      eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+      ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+      esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+      officia deserunt mollit anim id est laborum.</sux-body>
     <sux-detail>This is a detail</sux-detail>
 
     <code>This is a piece of code,'<button>Can this be just text?</button>' but it's supposed to be code.
@@ -43,7 +49,7 @@
     <sux-tag state="error" variant="solid" size="m">error</sux-tag>
     <sux-tag state="success" variant="solid" size="l">success</sux-tag>
     <sux-tag state="warning" variant="solid" size="xl">warnning</sux-tag>
-    <sux-tag state="neutral" variant="solid" >neutral</sux-tag>
+    <sux-tag state="neutral" variant="solid">neutral</sux-tag>
     <sux-tag state="info" variant="inverted" size="s">info</sux-tag>
     <sux-tag state="info" variant="inverted" size="m">info</sux-tag>
     <sux-tag state="info" variant="inverted" size="l">info</sux-tag>
@@ -51,7 +57,7 @@
     <sux-tag state="error" variant="inverted" size="m">error</sux-tag>
     <sux-tag state="success" variant="inverted" size="l">success</sux-tag>
     <sux-tag state="warning" variant="inverted" size="xl">warnning</sux-tag>
-    <sux-tag state="neutral" variant="outlined" >neutral</sux-tag>
+    <sux-tag state="neutral" variant="outlined">neutral</sux-tag>
     <sux-tag state="info" variant="outlined" size="s">info</sux-tag>
     <sux-tag state="info" variant="outlined" size="m">info</sux-tag>
     <sux-tag state="info" variant="outlined" size="l">info</sux-tag>
@@ -59,7 +65,7 @@
     <sux-tag state="error" variant="outlined" size="m">error</sux-tag>
     <sux-tag state="success" variant="outlined" size="l">success</sux-tag>
     <sux-tag state="warning" variant="outlined" size="xl">warnning</sux-tag>
-    <sux-tag state="neutral" variant="outlined" >neutral</sux-tag>
+    <sux-tag state="neutral" variant="outlined">neutral</sux-tag>
     <sux-tag state="info" variant="borderless" size="s">info</sux-tag>
     <sux-tag state="info" variant="borderless" size="m">info</sux-tag>
     <sux-tag state="info" variant="borderless" size="l">info</sux-tag>
@@ -67,28 +73,31 @@
     <sux-tag state="error" variant="borderless" size="m">error</sux-tag>
     <sux-tag state="success" variant="borderless" size="l">success</sux-tag>
     <sux-tag state="warning" variant="borderless" size="xl">warnning</sux-tag>
-    <sux-tag state="neutral" variant="borderless" >neutral</sux-tag>
+    <sux-tag state="neutral" variant="borderless">neutral</sux-tag>
 
-    <sux-field-label required size="xl">This  is a label</sux-field-label>
+    <sux-field-label required size="xl">This is a label</sux-field-label>
     <input type="text">
     <sux-help-text>This is a help text</sux-help-text>
 
-    <sux-field-label required="false" size="s" position="side">This  is a label</sux-field-label>
+    <sux-field-label required="false" size="s" position="side">This is a label</sux-field-label>
     <input type="checkbox">
     <sux-help-text variant="negative" icon>This is a negative help text</sux-help-text>
-    <sux-field-label required="false" size="s" position="side" disabled>This  is a label</sux-field-label>
+    <sux-field-label required="false" size="s" position="side" disabled>This is a label</sux-field-label>
     <input type="checkbox">
 
-    <sux-radio  size="small">
+    <sux-radio size="small">
       <sux-field-label position="side">Radio 1</sux-field-label>
     </sux-radio>
-    <sux-radio  size="medium">
+    <sux-radio size="medium">
       <sux-field-label position="side">Radio 2</sux-field-label>
     </sux-radio>
-    <sux-radio  size="large">Radio 3</sux-radio>
-    <sux-radio  disabled>Radio 4</sux-radio>
+    <sux-radio size="large">Radio 3</sux-radio>
+    <sux-radio disabled>Radio 4</sux-radio>
 
-    <sux-text-field required error error-text="This is an error text" placeholder="This is a placeholder" type="password" help-text="This is help" label="Name" size="xl" position="side"></sux-text-field>
+
+    <sux-text-field required error error-text="This is an error text" placeholder="This is a placeholder"
+      type="password" help-text="This is help" label="Name" size="xl"></sux-text-field>
+
 
     <sux-text-area></sux-text-area>
 
@@ -105,8 +114,9 @@
 
     <sux-switch label="this is a switch" value="on">test</sux-switch>
 
-    <sux-text-field required label-position="side" label="This is a label" help-text="help!"></sux-text-field>
-    <sux-text-field required label-position="top" label="This is a label"></sux-text-field>
+
+    <sux-rating></sux-rating>
+
   </div>
 
 </body>
